@@ -72,6 +72,7 @@ add_executable(lem_in
 		libft/ft_toupper.c
 		libft/libft.h
 		libft/get_next_line.c
+		libft/ft_strclen.c
 		src/lem_strt.c
 		inc/lem_strt.h
 		src/info_init.c)

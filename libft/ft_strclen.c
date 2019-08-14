@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strclen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbrady <dbrady@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/25 17:34:50 by dbrady            #+#    #+#             */
-/*   Updated: 2019/07/25 17:34:50 by dbrady           ###   ########.fr       */
+/*   Created: 2019/04/10 12:02:30 by dbrady            #+#    #+#             */
+/*   Updated: 2019/06/18 10:19:21 by dbrady           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+size_t	ft_strclen(const char *s, char c)
 {
-	unsigned char	*dstdst;
-	unsigned char	*srcsrc;
+	int i;
 
-	dstdst = (unsigned char *)dst;
-	srcsrc = (unsigned char *)src;
-	if (dst == src)
-		return (dst);
-	while (n)
-	{
-		*dstdst++ = *srcsrc++;
-		n--;
-	}
-	return (dst);
+	i = 0;
+	while (s[i] != '\0' && s[i] != c)
+		i++;
+	return (i);
 }

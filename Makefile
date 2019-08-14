@@ -1,10 +1,10 @@
 LM = lem_in
 
-INC = -I ./inc -I ./libft
+INC = -I ./inc -I ./libft -I ./
 
 FLAGS = -Wall -Werror -Wextra -c -g
 
-LIB = -L./ps_lib -lps -L./ps_lib/libft -lftprintf
+LIB = -L./libft -lft
 
 OBJ = src/lem_strt.o src/info_init.o
 
@@ -12,7 +12,7 @@ all: $(LM)
 
 $(LM): $(OBJ)
 	Make -C libft
-	gcc $(OBJ) $(OBJPS) $(INC) $(LIB) -o $(PS)
+	gcc $(OBJ) $(OBJPS) $(INC) $(LIB) -o $(LM)
 
 $(OBJ): %.o: %.c
 	gcc $(FLAGS) $(INC) $< -o $@

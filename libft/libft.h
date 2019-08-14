@@ -18,6 +18,8 @@
 # include <fcntl.h>
 # include <unistd.h>
 
+#define BUFF_SIZE 2048
+
 typedef struct		s_list
 {
 	void			*content;
@@ -32,6 +34,7 @@ typedef struct		s_jon
 	struct s_jon	*next;
 }					t_jon;
 
+size_t				ft_strclen(const char *s, char c);
 int					get_next_line(const int fd, char **line);
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
