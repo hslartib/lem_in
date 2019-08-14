@@ -1122,6 +1122,33 @@ libft/ft_strchr.c.s:
 	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/libft/ft_strchr.c.s
 .PHONY : libft/ft_strchr.c.s
 
+libft/ft_strclen.o: libft/ft_strclen.c.o
+
+.PHONY : libft/ft_strclen.o
+
+# target to build an object file
+libft/ft_strclen.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/libft/ft_strclen.c.o
+.PHONY : libft/ft_strclen.c.o
+
+libft/ft_strclen.i: libft/ft_strclen.c.i
+
+.PHONY : libft/ft_strclen.i
+
+# target to preprocess a source file
+libft/ft_strclen.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/libft/ft_strclen.c.i
+.PHONY : libft/ft_strclen.c.i
+
+libft/ft_strclen.s: libft/ft_strclen.c.s
+
+.PHONY : libft/ft_strclen.s
+
+# target to generate assembly for a file
+libft/ft_strclen.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/libft/ft_strclen.c.s
+.PHONY : libft/ft_strclen.c.s
+
 libft/ft_strclr.o: libft/ft_strclr.c.o
 
 .PHONY : libft/ft_strclr.o
@@ -1851,32 +1878,32 @@ libft/get_next_line.c.s:
 	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/libft/get_next_line.c.s
 .PHONY : libft/get_next_line.c.s
 
-src/init_info.o: src/init_info.c.o
+src/info_init.o: src/info_init.c.o
 
-.PHONY : src/init_info.o
+.PHONY : src/info_init.o
 
 # target to build an object file
-src/init_info.c.o:
-	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/src/init_info.c.o
-.PHONY : src/init_info.c.o
+src/info_init.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/src/info_init.c.o
+.PHONY : src/info_init.c.o
 
-src/init_info.i: src/init_info.c.i
+src/info_init.i: src/info_init.c.i
 
-.PHONY : src/init_info.i
+.PHONY : src/info_init.i
 
 # target to preprocess a source file
-src/init_info.c.i:
-	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/src/init_info.c.i
-.PHONY : src/init_info.c.i
+src/info_init.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/src/info_init.c.i
+.PHONY : src/info_init.c.i
 
-src/init_info.s: src/init_info.c.s
+src/info_init.s: src/info_init.c.s
 
-.PHONY : src/init_info.s
+.PHONY : src/info_init.s
 
 # target to generate assembly for a file
-src/init_info.c.s:
-	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/src/init_info.c.s
-.PHONY : src/init_info.c.s
+src/info_init.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/src/info_init.c.s
+.PHONY : src/info_init.c.s
 
 src/lem_strt.o: src/lem_strt.c.o
 
@@ -2025,6 +2052,9 @@ help:
 	@echo "... libft/ft_strchr.o"
 	@echo "... libft/ft_strchr.i"
 	@echo "... libft/ft_strchr.s"
+	@echo "... libft/ft_strclen.o"
+	@echo "... libft/ft_strclen.i"
+	@echo "... libft/ft_strclen.s"
 	@echo "... libft/ft_strclr.o"
 	@echo "... libft/ft_strclr.i"
 	@echo "... libft/ft_strclr.s"
@@ -2106,9 +2136,9 @@ help:
 	@echo "... libft/get_next_line.o"
 	@echo "... libft/get_next_line.i"
 	@echo "... libft/get_next_line.s"
-	@echo "... src/init_info.o"
-	@echo "... src/init_info.i"
-	@echo "... src/init_info.s"
+	@echo "... src/info_init.o"
+	@echo "... src/info_init.i"
+	@echo "... src/info_init.s"
 	@echo "... src/lem_strt.o"
 	@echo "... src/lem_strt.i"
 	@echo "... src/lem_strt.s"

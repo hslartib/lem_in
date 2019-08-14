@@ -41,6 +41,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/dbrady/School21/lem_in/libft/ft_putstr_fd.c" "/Users/dbrady/School21/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/libft/ft_putstr_fd.c.o"
   "/Users/dbrady/School21/lem_in/libft/ft_strcat.c" "/Users/dbrady/School21/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/libft/ft_strcat.c.o"
   "/Users/dbrady/School21/lem_in/libft/ft_strchr.c" "/Users/dbrady/School21/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/libft/ft_strchr.c.o"
+  "/Users/dbrady/School21/lem_in/libft/ft_strclen.c" "/Users/dbrady/School21/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/libft/ft_strclen.c.o"
   "/Users/dbrady/School21/lem_in/libft/ft_strclr.c" "/Users/dbrady/School21/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/libft/ft_strclr.c.o"
   "/Users/dbrady/School21/lem_in/libft/ft_strcmp.c" "/Users/dbrady/School21/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/libft/ft_strcmp.c.o"
   "/Users/dbrady/School21/lem_in/libft/ft_strcpy.c" "/Users/dbrady/School21/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/libft/ft_strcpy.c.o"
@@ -68,7 +69,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/dbrady/School21/lem_in/libft/ft_tolower.c" "/Users/dbrady/School21/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/libft/ft_tolower.c.o"
   "/Users/dbrady/School21/lem_in/libft/ft_toupper.c" "/Users/dbrady/School21/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/libft/ft_toupper.c.o"
   "/Users/dbrady/School21/lem_in/libft/get_next_line.c" "/Users/dbrady/School21/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/libft/get_next_line.c.o"
-  "/Users/dbrady/School21/lem_in/src/init_info.c" "/Users/dbrady/School21/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/src/init_info.c.o"
+  "/Users/dbrady/School21/lem_in/src/info_init.c" "/Users/dbrady/School21/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/src/info_init.c.o"
   "/Users/dbrady/School21/lem_in/src/lem_strt.c" "/Users/dbrady/School21/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/src/lem_strt.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
