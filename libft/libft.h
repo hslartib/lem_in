@@ -13,8 +13,9 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <string.h>
+# include <stdio.h>
 # include <stdlib.h>
+# include <fcntl.h>
 # include <unistd.h>
 
 typedef struct		s_list
@@ -24,6 +25,14 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+typedef struct		s_jon
+{
+	int				svd;
+	char			*mod;
+	struct s_jon	*next;
+}					t_jon;
+
+int					get_next_line(const int fd, char **line);
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
