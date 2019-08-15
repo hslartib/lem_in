@@ -24,18 +24,9 @@ char	**read_split()
 	t = 0;
 	while (get_next_line(0, tmp + t) > 0)
 		t++;
+	free(tmp[t]);
 	tmp[t] = NULL;
 	return (tmp);
-}
-
-int		rooms_find_name(t_room **rooms, char *name)
-{
-	int r;
-
-	r = 0;
-	while (rooms[r] && ft_strcmp(rooms[r]->name, name))
-		r++;
-	return (rooms[r] ? r : -1);
 }
 
 void	append_room(char *str, t_room **rooms, t_info *info)
@@ -72,6 +63,7 @@ int		append_link(char *link, t_room **rooms)
 	rooms[f]->links[rooms[f]->links_len - 1] = s;
 	rooms[s]->links_len += 1;
 	rooms[s]->links[rooms[s]->links_len - 1] = f;
+	ft_strdel_2d(&names);
 	return (0);
 }
 
@@ -100,25 +92,33 @@ int 	next_value(t_info *info, char **text, int i)
 
 void	info_init(t_info *info)
 {
-	t_room	**rooms;
 	char 	**text;
 	int 	t;
 
 	ft_bzero(info, sizeof(t_info));
 	info->count_ants = -1;
 	text = read_split();
-	rooms = (t_room **)malloc(sizeof(t_room *) * 24000);
-	t = -1;
-	while (++t < 24000)
-		rooms[t] = NULL;
+	init_rooms(info, text);
 	t = 0;
 	if ((t = next_value(info, text, t)) >= 0)
 		info->count_ants = ft_atoi(text[t]);
 	while ((t = next_value(info, text, t)) >= 0)
 	{
 		if (ft_strstr(text[t], " "))
-			append_room(text[t], rooms, info);
+			append_room(text[t], info->rooms, info);
 		else
-			append_link(text[t], rooms);
+			append_link(text[t], info->rooms);
 	}
+//	int i;
+//	t = -1;
+//	printf("rooms: %d | ants: %d\n", info->count_room, info->count_ants);
+//	printf("start: %d | end: %d\n", info->start, info->end);
+//	while (++t < info->count_room)
+//	{
+//		i = -1;
+//		printf("index: %d | name: %s\n", t, info->rooms[t]->name);
+//		while (++i < info->rooms[t]->links_len)
+//			printf("   len: %d | link: %d\n", info->rooms[t]->links_len, info->rooms[t]->links[i]);
+//	}
+	ft_strdel_2d(&text);
 }

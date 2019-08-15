@@ -3,119 +3,62 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hslartib <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dbrady <dbrady@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/19 14:34:17 by hslartib          #+#    #+#             */
-/*   Updated: 2019/05/03 19:04:57 by hslartib         ###   ########.fr       */
+/*   Created: 2019/04/17 13:42:19 by dbrady            #+#    #+#             */
+/*   Updated: 2019/06/18 10:19:21 by dbrady           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static t_jon		*list(const int fd)
+int				gnl_wrtoline(char **fdl, char **line)
 {
-	t_jon			*kong;
+	char	*tmp;
+	int		ret;
 
-	if (!(kong = (t_jon *)malloc(sizeof(t_jon))))
-		return (0);
-	(kong)->svd = fd;
-	if (!((kong)->mod = (char *)malloc(sizeof(1))))
-		return (0);
-	*((kong)->mod) = '\0';
-	(kong)->next = NULL;
-	return (kong);
-}
-
-static t_jon		*work_with_struct(const int fd, t_jon **mor)
-{
-	t_jon			*kong;
-
-	kong = *mor;
-	if (!kong)
+	ret = ((ft_strlen(*fdl) != ft_strclen(*fdl, '\n')) ? 1 : 0);
+	tmp = NULL;
+	(!*line) ? *line = ft_strnew(ft_strclen(*fdl, '\n')) :
+	ft_pseudo_realloc((void **)line, ft_strlen(*line),
+	(ft_strlen(*line) + ft_strclen(*fdl, '\n') + 1));
+	ft_memmove((*line + ft_strlen(*line)), *fdl, ft_strclen(*fdl, '\n'));
+	if (ret == 0)
+		ft_strdel(fdl);
+	else
 	{
-		if (!(kong = list(fd)))
-			return (0);
-		*mor = kong;
+		tmp = ft_strnew(BUFF_SIZE);
+		tmp = ft_memmove(tmp, (*fdl + ft_strclen(*fdl, '\n')
+		+ 1), ft_strlen(*fdl));
+		ft_strdel(fdl);
+		*fdl = tmp;
 	}
-	while (fd != (kong)->svd && (kong)->next)
-		(kong) = (kong)->next;
-	if (fd != (kong)->svd)
-	{
-		if (!(kong->next = list(fd)))
-			return (0);
-		kong = kong->next;
-	}
-	return (kong);
+	return (ret);
 }
 
-static int			work_with_mod(t_jon *kong, int fd)
+int				get_next_line(const int fd, char **line)
 {
-	char			mart[BUFF_SIZE + 1];
-	char			*norm;
-	int				r;
+	static char *fdm[12000];
+	int			ret;
 
-	fd = (kong)->svd;
-	r = read((kong)->svd, mart, BUFF_SIZE);
-	mart[r] = '\0';
-	if (r == -1)
+	if (fd < 0 || !line || fd >= 12000)
 		return (-1);
-	if (r == 0)
-		return (0);
-	norm = (kong)->mod;
-	if (!((kong)->mod = ft_strjoin((kong)->mod, mart)))
-		return (-1);
-	free(norm);
-	return (100);
-}
-
-static int			find_n(t_jon **kong, char **line)
-{
-	int				m;
-	char			*lom;
-	char			*venom;
-	size_t			len;
-
-	while (!(lom = ft_memchr((*kong)->mod, '\n', ft_strlen((*kong)->mod))))
-	{
-		m = work_with_mod(*kong, (*kong)->svd);
-		if (m == 0 && ft_strlen((*kong)->mod) > 0)
-			return (!(*line = ft_strdup((*kong)->mod)) ||
-			!((*kong)->mod = ft_strnew(0)) ? -1 : 0);
-		else if (m == 0)
-			return (!(*line = ft_strnew(0)) ? -1 : 0);
-		else if (m == -1)
+	ret = 0;
+	*line = NULL;
+	(!fdm[fd]) ? (fdm[fd] = ft_strnew(BUFF_SIZE)) : 0;
+	if (fdm[fd][0] == '\0')
+		if ((read(fd, fdm[fd], BUFF_SIZE)) < 0)
 			return (-1);
-	}
-	len = lom - (*kong)->mod;
-	if (!(*line = ft_strsub((*kong)->mod, 0, len)))
-		return (-1);
-	venom = (*kong)->mod;
-	if (!((*kong)->mod = ft_strsub((*kong)->mod, len + 1,
-			ft_strlen((*kong)->mod) - (len + 1))))
-		return (-1);
-	free(venom);
-	return (100);
-}
-
-int					get_next_line(const int fd, char **line)
-{
-	static t_jon	*kong;
-	t_jon			*lord;
-	int				pup;
-
-	if (fd < 0 || !line)
-		return (-1);
-	lord = work_with_struct(fd, &kong);
-	pup = find_n(&lord, line);
-	if (!pup && ft_strlen(*line) > 0)
-		return (1);
-	else if (!pup)
+	while (gnl_wrtoline(&fdm[fd], line) != 1)
 	{
-		free(kong->mod);
-		free(kong);
-		return (0);
+		(!fdm[fd]) ? (fdm[fd] = ft_strnew(BUFF_SIZE)) : 0;
+		if ((read(fd, fdm[fd], BUFF_SIZE)) == 0)
+		{
+			ft_strdel(&fdm[fd]);
+			(line[0][0] == '\0') ? 0 : (ret = 1);
+			return (ret);
+		}
 	}
-	else if (pup == -1)
-		return (-1);
+	fdm[fd][0] == '\0' ? ft_strdel(&fdm[fd]) : 0;
 	return (1);
 }

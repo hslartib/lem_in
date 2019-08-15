@@ -34,6 +34,8 @@ typedef struct		s_jon
 	struct s_jon	*next;
 }					t_jon;
 
+void				*ft_strdel_2d(char ***ap);
+void				ft_pseudo_realloc(void **ptr, size_t size_old, size_t size_new);
 size_t				ft_strclen(const char *s, char c);
 int					get_next_line(const int fd, char **line);
 t_list				*ft_lstnew(void const *content, size_t content_size);

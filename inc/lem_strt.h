@@ -33,6 +33,18 @@ typedef struct		s_info
 	int				*len_path;
 }					t_info;
 
+
+/*
+** info_init related functions
+*/
 void				info_init(t_info *info);
+int					rooms_find_name(t_room **rooms, char *name);
+int					next_value(t_info *info, char **text, int i);
+int					init_rooms(t_info *info, char **text);
+
+/*
+** finish related functions
+*/
+void				cleanup_info(t_info *info);
 
 #endif

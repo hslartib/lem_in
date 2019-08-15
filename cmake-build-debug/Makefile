@@ -852,6 +852,33 @@ libft/ft_memset.c.s:
 	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/libft/ft_memset.c.s
 .PHONY : libft/ft_memset.c.s
 
+libft/ft_pseudo_realloc.o: libft/ft_pseudo_realloc.c.o
+
+.PHONY : libft/ft_pseudo_realloc.o
+
+# target to build an object file
+libft/ft_pseudo_realloc.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/libft/ft_pseudo_realloc.c.o
+.PHONY : libft/ft_pseudo_realloc.c.o
+
+libft/ft_pseudo_realloc.i: libft/ft_pseudo_realloc.c.i
+
+.PHONY : libft/ft_pseudo_realloc.i
+
+# target to preprocess a source file
+libft/ft_pseudo_realloc.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/libft/ft_pseudo_realloc.c.i
+.PHONY : libft/ft_pseudo_realloc.c.i
+
+libft/ft_pseudo_realloc.s: libft/ft_pseudo_realloc.c.s
+
+.PHONY : libft/ft_pseudo_realloc.s
+
+# target to generate assembly for a file
+libft/ft_pseudo_realloc.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/libft/ft_pseudo_realloc.c.s
+.PHONY : libft/ft_pseudo_realloc.c.s
+
 libft/ft_putchar.o: libft/ft_putchar.c.o
 
 .PHONY : libft/ft_putchar.o
@@ -1256,6 +1283,33 @@ libft/ft_strdel.s: libft/ft_strdel.c.s
 libft/ft_strdel.c.s:
 	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/libft/ft_strdel.c.s
 .PHONY : libft/ft_strdel.c.s
+
+libft/ft_strdel_2d.o: libft/ft_strdel_2d.c.o
+
+.PHONY : libft/ft_strdel_2d.o
+
+# target to build an object file
+libft/ft_strdel_2d.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/libft/ft_strdel_2d.c.o
+.PHONY : libft/ft_strdel_2d.c.o
+
+libft/ft_strdel_2d.i: libft/ft_strdel_2d.c.i
+
+.PHONY : libft/ft_strdel_2d.i
+
+# target to preprocess a source file
+libft/ft_strdel_2d.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/libft/ft_strdel_2d.c.i
+.PHONY : libft/ft_strdel_2d.c.i
+
+libft/ft_strdel_2d.s: libft/ft_strdel_2d.c.s
+
+.PHONY : libft/ft_strdel_2d.s
+
+# target to generate assembly for a file
+libft/ft_strdel_2d.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/libft/ft_strdel_2d.c.s
+.PHONY : libft/ft_strdel_2d.c.s
 
 libft/ft_strdup.o: libft/ft_strdup.c.o
 
@@ -1905,6 +1959,60 @@ src/info_init.c.s:
 	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/src/info_init.c.s
 .PHONY : src/info_init.c.s
 
+src/info_init_misc.o: src/info_init_misc.c.o
+
+.PHONY : src/info_init_misc.o
+
+# target to build an object file
+src/info_init_misc.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/src/info_init_misc.c.o
+.PHONY : src/info_init_misc.c.o
+
+src/info_init_misc.i: src/info_init_misc.c.i
+
+.PHONY : src/info_init_misc.i
+
+# target to preprocess a source file
+src/info_init_misc.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/src/info_init_misc.c.i
+.PHONY : src/info_init_misc.c.i
+
+src/info_init_misc.s: src/info_init_misc.c.s
+
+.PHONY : src/info_init_misc.s
+
+# target to generate assembly for a file
+src/info_init_misc.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/src/info_init_misc.c.s
+.PHONY : src/info_init_misc.c.s
+
+src/lem_cleanup.o: src/lem_cleanup.c.o
+
+.PHONY : src/lem_cleanup.o
+
+# target to build an object file
+src/lem_cleanup.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/src/lem_cleanup.c.o
+.PHONY : src/lem_cleanup.c.o
+
+src/lem_cleanup.i: src/lem_cleanup.c.i
+
+.PHONY : src/lem_cleanup.i
+
+# target to preprocess a source file
+src/lem_cleanup.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/src/lem_cleanup.c.i
+.PHONY : src/lem_cleanup.c.i
+
+src/lem_cleanup.s: src/lem_cleanup.c.s
+
+.PHONY : src/lem_cleanup.s
+
+# target to generate assembly for a file
+src/lem_cleanup.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/src/lem_cleanup.c.s
+.PHONY : src/lem_cleanup.c.s
+
 src/lem_strt.o: src/lem_strt.c.o
 
 .PHONY : src/lem_strt.o
@@ -2022,6 +2130,9 @@ help:
 	@echo "... libft/ft_memset.o"
 	@echo "... libft/ft_memset.i"
 	@echo "... libft/ft_memset.s"
+	@echo "... libft/ft_pseudo_realloc.o"
+	@echo "... libft/ft_pseudo_realloc.i"
+	@echo "... libft/ft_pseudo_realloc.s"
 	@echo "... libft/ft_putchar.o"
 	@echo "... libft/ft_putchar.i"
 	@echo "... libft/ft_putchar.s"
@@ -2067,6 +2178,9 @@ help:
 	@echo "... libft/ft_strdel.o"
 	@echo "... libft/ft_strdel.i"
 	@echo "... libft/ft_strdel.s"
+	@echo "... libft/ft_strdel_2d.o"
+	@echo "... libft/ft_strdel_2d.i"
+	@echo "... libft/ft_strdel_2d.s"
 	@echo "... libft/ft_strdup.o"
 	@echo "... libft/ft_strdup.i"
 	@echo "... libft/ft_strdup.s"
@@ -2139,6 +2253,12 @@ help:
 	@echo "... src/info_init.o"
 	@echo "... src/info_init.i"
 	@echo "... src/info_init.s"
+	@echo "... src/info_init_misc.o"
+	@echo "... src/info_init_misc.i"
+	@echo "... src/info_init_misc.s"
+	@echo "... src/lem_cleanup.o"
+	@echo "... src/lem_cleanup.i"
+	@echo "... src/lem_cleanup.s"
 	@echo "... src/lem_strt.o"
 	@echo "... src/lem_strt.i"
 	@echo "... src/lem_strt.s"

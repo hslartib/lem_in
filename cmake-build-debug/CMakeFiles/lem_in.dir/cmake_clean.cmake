@@ -64,8 +64,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/lem_in.dir/libft/ft_toupper.c.o"
   "CMakeFiles/lem_in.dir/libft/get_next_line.c.o"
   "CMakeFiles/lem_in.dir/libft/ft_strclen.c.o"
+  "CMakeFiles/lem_in.dir/libft/ft_strdel_2d.c.o"
+  "CMakeFiles/lem_in.dir/libft/ft_pseudo_realloc.c.o"
   "CMakeFiles/lem_in.dir/src/lem_strt.c.o"
   "CMakeFiles/lem_in.dir/src/info_init.c.o"
+  "CMakeFiles/lem_in.dir/src/info_init_misc.c.o"
+  "CMakeFiles/lem_in.dir/src/lem_cleanup.c.o"
   "lem_in.pdb"
   "lem_in"
 )

@@ -66,5 +66,6 @@ int main()
 		return (0);
 	info_init(info);
 //	workroom(info);
+	cleanup_info(info);
 	return (0);
 }
