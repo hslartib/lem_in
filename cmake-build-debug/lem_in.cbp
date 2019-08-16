@@ -297,7 +297,13 @@
 		<Unit filename="/Users/dbrady/School21/lem_in/src/info_init_misc.c">
 			<Option target="lem_in"/>
 		</Unit>
+		<Unit filename="/Users/dbrady/School21/lem_in/src/info_validation.c">
+			<Option target="lem_in"/>
+		</Unit>
 		<Unit filename="/Users/dbrady/School21/lem_in/src/lem_cleanup.c">
+			<Option target="lem_in"/>
+		</Unit>
+		<Unit filename="/Users/dbrady/School21/lem_in/src/lem_finish.c">
 			<Option target="lem_in"/>
 		</Unit>
 		<Unit filename="/Users/dbrady/School21/lem_in/src/lem_strt.c">

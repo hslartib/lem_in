@@ -6,7 +6,7 @@ FLAGS = -Wall -Werror -Wextra -c -g
 
 LIB = -L./libft -lft
 
-OBJ = src/lem_strt.o src/info_init.o src/info_init_misc.o src/lem_cleanup.o
+OBJ = src/lem_strt.o src/info_init.o src/info_init_misc.o src/lem_cleanup.o src/lem_finish.o src/info_validation.o
 
 all: $(LM)
 

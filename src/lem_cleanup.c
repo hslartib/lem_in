@@ -29,5 +29,6 @@ void	cleanup_info(t_info *info)
 	while (++r < info->count_room)
 		cleanup_room(info->rooms[r]);
 	free(info->rooms);
+	ft_strdel_2d(&info->input);
 	free(info);
 }

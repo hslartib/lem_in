@@ -70,6 +70,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/lem_in.dir/src/info_init.c.o"
   "CMakeFiles/lem_in.dir/src/info_init_misc.c.o"
   "CMakeFiles/lem_in.dir/src/lem_cleanup.c.o"
+  "CMakeFiles/lem_in.dir/src/info_validation.c.o"
+  "CMakeFiles/lem_in.dir/src/lem_finish.c.o"
   "lem_in.pdb"
   "lem_in"
 )

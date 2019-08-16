@@ -77,4 +77,4 @@ add_executable(lem_in
 		libft/ft_pseudo_realloc.c
 		src/lem_strt.c
 		inc/lem_strt.h
-		src/info_init.c src/info_init_misc.c src/lem_cleanup.c)
+		src/info_init.c src/info_init_misc.c src/lem_cleanup.c src/info_validation.c src/lem_finish.c)

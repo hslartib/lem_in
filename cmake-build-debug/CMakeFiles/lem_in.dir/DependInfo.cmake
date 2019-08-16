@@ -73,7 +73,9 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/dbrady/School21/lem_in/libft/get_next_line.c" "/Users/dbrady/School21/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/libft/get_next_line.c.o"
   "/Users/dbrady/School21/lem_in/src/info_init.c" "/Users/dbrady/School21/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/src/info_init.c.o"
   "/Users/dbrady/School21/lem_in/src/info_init_misc.c" "/Users/dbrady/School21/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/src/info_init_misc.c.o"
+  "/Users/dbrady/School21/lem_in/src/info_validation.c" "/Users/dbrady/School21/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/src/info_validation.c.o"
   "/Users/dbrady/School21/lem_in/src/lem_cleanup.c" "/Users/dbrady/School21/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/src/lem_cleanup.c.o"
+  "/Users/dbrady/School21/lem_in/src/lem_finish.c" "/Users/dbrady/School21/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/src/lem_finish.c.o"
   "/Users/dbrady/School21/lem_in/src/lem_strt.c" "/Users/dbrady/School21/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/src/lem_strt.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
