@@ -35,9 +35,14 @@ int 	info_valid(t_info *info)
 		lem_errmsg(info, NO_ANTS);
 		error = 1;
 	}
-	if(info->start < 0 || info->end < 0)
+	if (info->start < 0 || info->end < 0)
 	{
 		lem_errmsg(info, NO_STARTEND);
+		error = 1;
+	}
+	if (info->count_ants < 0 )
+	{
+		lem_errmsg(info, NEGATIVE_ANTS);
 		error = 1;
 	}
 	return (error ? ERROR : ALLRIGHT);

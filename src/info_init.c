@@ -59,9 +59,9 @@ int		append_link(char *link, t_room **rooms)
 
 	names = ft_strsplit(link, '-');
 	if ((f = rooms_find_name(rooms, names[0])) < 0)
-		return (-1);
+		return (LINK_TO_GHOST);
 	if ((s = rooms_find_name(rooms, names[1])) < 0)
-		return (-1);
+		return (LINK_TO_GHOST);
 	rooms[f]->links_len += 1;
 	rooms[f]->links[rooms[f]->links_len - 1] = s;
 	rooms[s]->links_len += 1;
@@ -112,18 +112,21 @@ int		info_init(t_info *info)
 	info->end = -1;
 	info->count_ants = -1;
 	info->input = read_split();
-	init_rooms(info, info->input);
+	if (!init_rooms(info, info->input))
+		return(lem_errmsg(info, NO_ROOMS));
 	t = 0;
-	if ((t = next_value(info, info->input, t)) < 0)
+	if ((t = next_value(info, info->input, t)) == -3)
 		return (MULTIPLE_STARTEND);
 	info->count_ants = ft_atoi(info->input[t]);
 	while ((t = next_value(info, info->input, t)) >= 0)
 	{
 		if (ft_strstr(info->input[t], " "))
 			append_room(info->input[t], info->rooms, info);
-		else
-			append_link(info->input[t], info->rooms);
+		else if (append_link(info->input[t], info->rooms))
+			return (lem_errmsg(info, LINK_TO_GHOST));
 	}
+	if (t == -3)
+		return (MULTIPLE_STARTEND);
 	return (info_valid(info));
 //	int i;
 //	t = -1;

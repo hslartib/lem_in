@@ -111,8 +111,10 @@ int main()
 
 	if (!(info = (t_info *)malloc(sizeof(t_info))))
 		return (0);
-	if (info_init(info) != ALLRIGHT)
+	if (info_init(info) != ALLRIGHT) {
+		printf("test says: \"Error!\"\n");
 		return (0);
+	}
 //	workroom(info);
 //	cleanup_info(info);
 //	workroom(info);

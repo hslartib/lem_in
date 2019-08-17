@@ -23,7 +23,10 @@ enum 				e_errcode
 	NO_ANTS,
 	NO_STARTEND,
 	MULTIPLE_STARTEND,
-	NO_SOLUTION
+	NO_SOLUTION,
+	LINK_TO_GHOST,
+	NEGATIVE_ANTS,
+	WRONG_MAP_FORMAT
 };
 
 typedef struct		s_room

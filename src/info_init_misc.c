@@ -35,7 +35,7 @@ int		init_rooms(t_info *info, char **text)
 			len += 1;
 		runner += 1;
 	}
-	info->rooms = (t_room **)malloc(sizeof(t_room *) * len);
-	ft_bzero(info->rooms, sizeof(t_room *) * len);
+	info->rooms = (t_room **)malloc(sizeof(t_room *) * (len + 1));
+	ft_bzero(info->rooms, sizeof(t_room *) * (len + 1));
 	return (len);
 }
