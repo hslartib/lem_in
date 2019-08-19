@@ -26,7 +26,7 @@ enum 				e_errcode
 	NO_SOLUTION,
 	LINK_TO_GHOST,
 	NEGATIVE_ANTS,
-	WRONG_MAP_FORMAT
+	MAP_WRONG_ORDER
 };
 
 typedef struct		s_room
@@ -59,6 +59,7 @@ int					rooms_find_name(t_room **rooms, char *name);
 int					next_value(t_info *info, char **text, int i);
 int					init_rooms(t_info *info, char **text);
 int					info_valid(t_info *info);
+int					info_checkorder(t_info *info);
 
 /*
 ** finish related functions

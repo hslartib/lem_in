@@ -12,13 +12,86 @@
 
 #include "./inc/lem_strt.h"
 
-//int 	info_valid_text(t_info *info)
-//{
-//	int		i;
-//
-//	i = 0;
-//	while (info->input[i])
-//}
+int 	info_islink(char *line)
+{
+	char	**tmp;
+	int 	i;
+
+	i = 0;
+	tmp = ft_strsplit(line, '-');
+	while (tmp[i])
+		i++;
+	if (i != 2)
+	{
+		ft_strdel_2d(&tmp);
+		return (0);
+	}
+	ft_strdel_2d(&tmp);
+	return (1);
+}
+
+int 	info_isroom(char *line)
+{
+	char	**tmp;
+	int 	i;
+
+	i = 0;
+	tmp = ft_strsplit(line, ' ');
+	while (tmp[i])
+		i++;
+	if (i != 3 || !ft_isdigit(tmp[1][0]) || !ft_isdigit(tmp[2][0]))
+	{
+		ft_strdel_2d(&tmp);
+		return (0);
+	}
+	ft_strdel_2d(&tmp);
+	return (1);
+}
+
+int		info_isant(char *line)
+{
+	char	**tmp;
+	int 	i;
+
+	i = 0;
+	if (info_islink(line) || info_islink(line))
+		return (0);
+	tmp = ft_strsplit(line, ' ');
+	while (tmp[i])
+		i++;
+	if (i > 1 || !ft_isdigit(tmp[0][0]))
+	{
+		ft_strdel_2d(&tmp);
+		return (0);
+	}
+	ft_strdel_2d(&tmp);
+	return (1);
+}
+
+int 	info_checkorder(t_info *info)
+{
+	int jarl[5];
+
+	ft_bzero(jarl, 5);
+	while (info->input[jarl[0]])
+	{
+		if (info->input[jarl[0]][0] == '#')
+			jarl[0] += 1;
+		else if (info_isant(info->input[jarl[0]]) && (jarl[0] += 1)) {
+			printf("ant: ja->%d | jr->%d | jl->%d | jr->%d\n");
+			jarl[1] ? (jarl[4] == -1) : (jarl[1] += 1);
+		}
+		else if (info_isroom(info->input[jarl[0]]) && (jarl[0] += 1)) {
+			printf("room: ja->%d | jr->%d | jl->%d | jr->%d\n");
+			jarl[3] ? (jarl[4] == -1) : (jarl[2] += 1);
+		}
+		else if (info_islink(info->input[jarl[0]]) && (jarl[0] += 1)) {
+			printf("link: ja->%d | jr->%d | jl->%d | jr->%d\n");
+			!jarl[2] ? (jarl[4] == -1) : (jarl[3] += 1);
+		}
+	}
+	return (!jarl[4] ? 1 : 0);
+}
 
 int 	info_valid(t_info *info)
 {

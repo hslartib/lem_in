@@ -115,6 +115,8 @@ int main()
 		printf("test says: \"Error!\"\n");
 		return (0);
 	}
+	else
+		printf("test says: \"Allright!\"\n");
 //	workroom(info);
 //	cleanup_info(info);
 //	workroom(info);

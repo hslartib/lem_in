@@ -112,6 +112,8 @@ int		info_init(t_info *info)
 	info->end = -1;
 	info->count_ants = -1;
 	info->input = read_split();
+	if (!info_checkorder(info))
+		return(lem_errmsg(info, MAP_WRONG_ORDER));
 	if (!init_rooms(info, info->input))
 		return(lem_errmsg(info, NO_ROOMS));
 	t = 0;
