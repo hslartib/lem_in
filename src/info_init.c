@@ -118,7 +118,7 @@ int		info_init(t_info *info)
 		return(lem_errmsg(info, NO_ROOMS));
 	t = 0;
 	if ((t = next_value(info, info->input, t)) == -3)
-		return (MULTIPLE_STARTEND);
+		return (lem_errmsg(info, MULTIPLE_STARTEND));
 	info->count_ants = ft_atoi(info->input[t]);
 	while ((t = next_value(info, info->input, t)) >= 0)
 	{
@@ -128,8 +128,7 @@ int		info_init(t_info *info)
 			return (lem_errmsg(info, LINK_TO_GHOST));
 	}
 	if (t == -3)
-		return (MULTIPLE_STARTEND);
-	return (info_valid(info));
+		return (lem_errmsg(info, MULTIPLE_STARTEND));
 //	int i;
 //	t = -1;
 //	printf("rooms: %d | ants: %d\n", info->count_room, info->count_ants);
@@ -141,4 +140,5 @@ int		info_init(t_info *info)
 //		while (++i < info->rooms[t]->links_len)
 //			printf("   len: %d | link: %d\n", info->rooms[t]->links_len, info->rooms[t]->links[i]);
 //	}
+	return (info_valid(info));
 }

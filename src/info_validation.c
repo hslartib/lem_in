@@ -72,23 +72,18 @@ int 	info_checkorder(t_info *info)
 {
 	int jarl[5];
 
-	ft_bzero(jarl, 5);
+	ft_bzero(jarl, sizeof(int) * 5);
+//	printf("start: jcount0->%d | ja1->%d | jt2->%d | jl3->%d | jret4->%d\n", jarl[0], jarl[1], jarl[2], jarl[3], jarl[4]);
 	while (info->input[jarl[0]])
 	{
 		if (info->input[jarl[0]][0] == '#')
 			jarl[0] += 1;
-		else if (info_isant(info->input[jarl[0]]) && (jarl[0] += 1)) {
-			printf("ant: ja->%d | jr->%d | jl->%d | jr->%d\n");
-			jarl[1] ? (jarl[4] == -1) : (jarl[1] += 1);
-		}
-		else if (info_isroom(info->input[jarl[0]]) && (jarl[0] += 1)) {
-			printf("room: ja->%d | jr->%d | jl->%d | jr->%d\n");
-			jarl[3] ? (jarl[4] == -1) : (jarl[2] += 1);
-		}
-		else if (info_islink(info->input[jarl[0]]) && (jarl[0] += 1)) {
-			printf("link: ja->%d | jr->%d | jl->%d | jr->%d\n");
-			!jarl[2] ? (jarl[4] == -1) : (jarl[3] += 1);
-		}
+		else if (info_isant(info->input[jarl[0]]) && (jarl[0] += 1))
+			(jarl[1] || jarl[2] || jarl[3]) ? (jarl[4] = -1) : (jarl[1] += 1);
+		else if (info_isroom(info->input[jarl[0]]) && (jarl[0] += 1))
+			(jarl[3] || !jarl[1]) ? (jarl[4] = -1) : (jarl[2] += 1);
+		else if (info_islink(info->input[jarl[0]]) && (jarl[0] += 1))
+			(!jarl[1] || !jarl[2]) ? (jarl[4] = -1) : (jarl[3] += 1);
 	}
 	return (!jarl[4] ? 1 : 0);
 }
