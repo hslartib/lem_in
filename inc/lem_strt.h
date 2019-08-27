@@ -13,7 +13,12 @@
 #ifndef LEM_IN_H
 # define LEM_IN_H
 
-#include "./libft/libft.h"
+#include "../libft/libft.h"
+#include "math.h"
+#include "/Users/dbrady/Library/Frameworks/SDL2.framework/Versions/A/Headers/SDL.h"
+#include "/Users/dbrady/Library/Frameworks/SDL2_image.framework/Versions/A/Headers/SDL_image.h"
+#include "/Users/dbrady/Library/Frameworks/SDL2_ttf.framework/Versions/A/Headers/SDL_ttf.h"
+#include "/Users/dbrady/Library/Frameworks/SDL2_mixer.framework/Versions/A/Headers/SDL_mixer.h"
 
 enum 				e_errcode
 {
@@ -50,6 +55,29 @@ typedef struct		s_info
 	char			**input;
 }					t_info;
 
+typedef	struct 		s_sdl
+{
+	SDL_Window		*window;
+	SDL_Renderer	*renderer;
+	SDL_Texture		*ant;
+	SDL_Rect		w_rect;
+	SDL_Event		event;
+	t_info			*info;
+	int 			w_width;
+	int 			w_height;
+	int 			quit;
+	int 			key;
+
+}					t_sdl;
+
+
+/*
+**	visuals related functions
+*/
+void	lem_sdl_control(t_info *info);
+int		lem_sdl_init_main(t_sdl **lm, t_info *info);
+int 	lem_sdl_init_loadmap(t_sdl *lm);
+int 	lem_sdl_close(t_sdl *lm, int ret);
 
 /*
 ** info_init related functions

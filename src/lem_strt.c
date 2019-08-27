@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./inc/lem_strt.h"
+#include "lem_strt.h"
 
 //void	end_vertc(t_info *info, char *str)
 //{
@@ -117,6 +117,8 @@ int main()
 	}
 	else
 		printf("test says: \"Allright!\"\n");
+	printf("rooms: %d\n", info->count_room);
+	lem_sdl_control(info);
 //	workroom(info);
 //	cleanup_info(info);
 //	workroom(info);

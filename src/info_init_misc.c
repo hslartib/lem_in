@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./inc/lem_strt.h"
+#include "lem_strt.h"
 
 int		rooms_find_name(t_room **rooms, char *name)
 {

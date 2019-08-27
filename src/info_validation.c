@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./inc/lem_strt.h"
+#include "lem_strt.h"
 
 int 	info_islink(char *line)
 {

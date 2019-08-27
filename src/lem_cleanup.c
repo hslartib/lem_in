@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./inc/lem_strt.h"
+#include "lem_strt.h"
 
 void	cleanup_room(t_room *room)
 {
