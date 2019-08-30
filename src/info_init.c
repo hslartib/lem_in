@@ -12,23 +12,6 @@
 
 #include "lem_strt.h"
 
-char	**read_split()
-{
-	char	**tmp;
-	int		t;
-
-	t = -1;
-	tmp = (char **)malloc(sizeof(char *) * 100000);
-	while (++t < 100000)
-		tmp[t] = NULL;
-	t = 0;
-	while (get_next_line(0, tmp + t) > 0)
-		t++;
-	free(tmp[t]);
-	tmp[t] = NULL;
-	return (tmp);
-}
-
 void	append_room(char *str, t_room **rooms, t_info *info)
 {
 	int		t;
@@ -38,6 +21,7 @@ void	append_room(char *str, t_room **rooms, t_info *info)
 	params = ft_strsplit(str, ' ');
 	t = 0;
 	tmp = (t_room *)malloc(sizeof(t_room));
+	ft_bzero(tmp, sizeof(t_room));
 	tmp->links = (int *)malloc(sizeof(int) * 100);
 	tmp->links_len = 0;
 	tmp->name = ft_strnew(ft_strlen(params[0]));
@@ -62,6 +46,11 @@ int		append_link(char *link, t_room **rooms)
 		return (LINK_TO_GHOST);
 	if ((s = rooms_find_name(rooms, names[1])) < 0)
 		return (LINK_TO_GHOST);
+	if (f == s)
+	{
+		ft_strdel_2d(&names);
+		return (0);
+	}
 	rooms[f]->links_len += 1;
 	rooms[f]->links[rooms[f]->links_len - 1] = s;
 	rooms[s]->links_len += 1;
@@ -112,8 +101,8 @@ int		info_init(t_info *info)
 	info->end = -1;
 	info->count_ants = -1;
 	info->input = read_split();
-	if (!info_checkorder(info))
-		return(lem_errmsg(info, MAP_WRONG_ORDER));
+	if (info_checkorder(info))
+		return(MAP_WRONG_ORDER);
 	if (!init_rooms(info, info->input))
 		return(lem_errmsg(info, NO_ROOMS));
 	t = 0;
@@ -127,7 +116,7 @@ int		info_init(t_info *info)
 		else if (append_link(info->input[t], info->rooms))
 			return (lem_errmsg(info, LINK_TO_GHOST));
 	}
-	if (t == -3)
+	if (t == MULTIPLE_STARTEND)
 		return (lem_errmsg(info, MULTIPLE_STARTEND));
 //	int i;
 //	t = -1;

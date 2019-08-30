@@ -39,3 +39,20 @@ int		init_rooms(t_info *info, char **text)
 	ft_bzero(info->rooms, sizeof(t_room *) * (len + 1));
 	return (len);
 }
+
+char	**read_split()
+{
+	char	**tmp;
+	int		t;
+
+	t = -1;
+	tmp = (char **)malloc(sizeof(char *) * 100000);
+	while (++t < 100000)
+		tmp[t] = NULL;
+	t = 0;
+	while (get_next_line(0, tmp + t) > 0)
+		t++;
+	free(tmp[t]);
+	tmp[t] = NULL;
+	return (tmp);
+}

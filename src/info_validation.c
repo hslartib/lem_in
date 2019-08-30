@@ -54,7 +54,7 @@ int		info_isant(char *line)
 	int 	i;
 
 	i = 0;
-	if (info_islink(line) || info_islink(line))
+	if (info_islink(line))
 		return (0);
 	tmp = ft_strsplit(line, ' ');
 	while (tmp[i])
@@ -78,6 +78,10 @@ int 	info_checkorder(t_info *info)
 	{
 		if (info->input[jarl[0]][0] == '#')
 			jarl[0] += 1;
+		else if (ft_strstr(info->input[jarl[0]], " ")
+			&& (strstr(info->input[jarl[0]], "-")
+			|| strstr(info->input[jarl[0]], "L")))
+				return (lem_errmsg(info, MAP_INVALID_NAME));
 		else if (info_isant(info->input[jarl[0]]) && (jarl[0] += 1))
 			(jarl[1] || jarl[2] || jarl[3]) ? (jarl[4] = -1) : (jarl[1] += 1);
 		else if (info_isroom(info->input[jarl[0]]) && (jarl[0] += 1))
@@ -85,7 +89,7 @@ int 	info_checkorder(t_info *info)
 		else if (info_islink(info->input[jarl[0]]) && (jarl[0] += 1))
 			(!jarl[1] || !jarl[2]) ? (jarl[4] = -1) : (jarl[3] += 1);
 	}
-	return (!jarl[4] ? 1 : 0);
+	return (!jarl[4] ? ALLRIGHT : lem_errmsg(info, MAP_WRONG_ORDER));
 }
 
 int 	info_valid(t_info *info)
@@ -93,25 +97,13 @@ int 	info_valid(t_info *info)
 	int error;
 
 	error = 0;
-	if (!info->count_room)
-	{
+	if (!info->count_room && ++error)
 		lem_errmsg(info, NO_ROOMS);
-		error = 1;
-	}
-	if (!info->count_ants)
-	{
+	if (!info->count_ants && ++error)
 		lem_errmsg(info, NO_ANTS);
-		error = 1;
-	}
-	if (info->start < 0 || info->end < 0)
-	{
+	if ((info->start < 0 || info->end < 0) && ++error)
 		lem_errmsg(info, NO_STARTEND);
-		error = 1;
-	}
-	if (info->count_ants < 0 )
-	{
+	if (info->count_ants < 0 && ++error)
 		lem_errmsg(info, NEGATIVE_ANTS);
-		error = 1;
-	}
 	return (error ? ERROR : ALLRIGHT);
 }

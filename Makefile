@@ -20,7 +20,7 @@ FLAGS2 =	-F ~/Library/Frameworks/ -framework SDL2 -framework SDL2_image \
 LIB = -L./libft -lft
 
 OBJ = src/lem_strt.o src/info_init.o src/info_init_misc.o src/lem_cleanup.o src/lem_finish.o src/info_validation.o \
-src/lem_sdl_main.o src/lem_sdl_close.o src/lem_sdl_init.o
+src/lem_sdl_main.o src/lem_sdl_close.o src/lem_sdl_init.o src/lem_sdl_loadmap.o src/lem_sdl_animation.o
 
 all: $(FRAMEDIR) $(FRAME) $(LM)
 

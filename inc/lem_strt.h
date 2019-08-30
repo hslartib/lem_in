@@ -19,6 +19,13 @@
 #include "/Users/dbrady/Library/Frameworks/SDL2_image.framework/Versions/A/Headers/SDL_image.h"
 #include "/Users/dbrady/Library/Frameworks/SDL2_ttf.framework/Versions/A/Headers/SDL_ttf.h"
 #include "/Users/dbrady/Library/Frameworks/SDL2_mixer.framework/Versions/A/Headers/SDL_mixer.h"
+#include "../Frameworks/SDL2_gfx/SDL2_framerate.h"
+#include "../Frameworks/SDL2_gfx/SDL2_gfxPrimitives.h"
+#include "../Frameworks/SDL2_gfx/SDL2_imageFilter.h"
+#include "../Frameworks/SDL2_gfx/SDL2_rotozoom.h"
+
+# define NUMBER_OF_FRAMES	8
+# define F_FRATE			10
 
 enum 				e_errcode
 {
@@ -31,7 +38,8 @@ enum 				e_errcode
 	NO_SOLUTION,
 	LINK_TO_GHOST,
 	NEGATIVE_ANTS,
-	MAP_WRONG_ORDER
+	MAP_WRONG_ORDER,
+	MAP_INVALID_NAME
 };
 
 typedef struct		s_room
@@ -55,13 +63,33 @@ typedef struct		s_info
 	char			**input;
 }					t_info;
 
+typedef struct		s_ant
+{
+	SDL_Rect		start;
+	SDL_Rect		finish;
+	int 			field;
+	int 			f_cur;
+}					t_ant;
+
+typedef struct 		s_anim
+{
+	SDL_Texture		*anim[NUMBER_OF_FRAMES];
+	t_ant			**ants;
+	int 			f_cur;
+	int 			parts;
+	int 			step;
+	int 			ant_all;
+	int 			ant_map;
+}					t_ants;
+
 typedef	struct 		s_sdl
 {
 	SDL_Window		*window;
 	SDL_Renderer	*renderer;
-	SDL_Texture		*ant;
 	SDL_Rect		w_rect;
 	SDL_Event		event;
+	SDL_Color		c_path;
+	SDL_Color		c_room;
 	t_info			*info;
 	int 			w_width;
 	int 			w_height;
@@ -76,8 +104,9 @@ typedef	struct 		s_sdl
 */
 void	lem_sdl_control(t_info *info);
 int		lem_sdl_init_main(t_sdl **lm, t_info *info);
-int 	lem_sdl_init_loadmap(t_sdl *lm);
+int 	lem_sdl_loadmap(t_sdl *lm);
 int 	lem_sdl_close(t_sdl *lm, int ret);
+void	lem_sdl_addcolour(SDL_Color *c, int r, int g, int b, int a);
 
 /*
 ** info_init related functions
@@ -88,6 +117,7 @@ int					next_value(t_info *info, char **text, int i);
 int					init_rooms(t_info *info, char **text);
 int					info_valid(t_info *info);
 int					info_checkorder(t_info *info);
+char				**read_split();
 
 /*
 ** finish related functions

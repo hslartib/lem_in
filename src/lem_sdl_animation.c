@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lem_sdl_close.c                                    :+:      :+:    :+:   */
+/*   lem_sdl_animation.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbrady <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/27 16:19:08 by dbrady            #+#    #+#             */
-/*   Updated: 2019/08/27 16:19:09 by dbrady           ###   ########.fr       */
+/*   Created: 2019/08/30 14:12:49 by dbrady            #+#    #+#             */
+/*   Updated: 2019/08/30 14:12:50 by dbrady           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_strt.h"
 
-int 	lem_sdl_close(t_sdl *lm, int ret)
+//async animation
+
+void 	lem_sdl_anim_drawframe(t_sdl *lm, int x, int y, int frame)
 {
-//	int i;
-//
-//	i = 0;
-//	while (i < NUMBER_OF_FRAMES)
-//		if (lm->anim[i])
-//			SDL_DestroyTexture(lm->anim[i]);
-	SDL_DestroyRenderer(lm->renderer);
-	SDL_DestroyWindow(lm->window);
-	SDL_Quit();
-	if (lm)
-		free(lm);
-	return (ret);
+	SDL_Rect rect;
+
+	rect.w = lm->frame_pos.w;
+	rect.h = lm->frame_pos.h;
+	rect.x = x;
+	rect.y = y;
+	SDL_RenderCopy(lm->renderer, lm->anim[frame], NULL, &rect);
 }
+

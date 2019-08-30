@@ -12,6 +12,36 @@
 
 #include "lem_strt.h"
 
+void	lem_sdl_addcolour(SDL_Color *c, int r, int g, int b, int a)
+{
+	if ((c->r == 250 && r > 0)|| (c->r == 50 && r < 0))
+		return ;
+	c->r += r;
+	c->g += g;
+	c->b += b;
+	c->a += a;
+}
+
+void	lem_sdl_handle_events(SDL_Event e, t_sdl *lm)
+{
+	if(e.type == SDL_QUIT)
+		lm->quit = 1;
+	else if (e.type == SDL_KEYDOWN)
+	{
+		printf("key: %d\n", e.key.keysym.sym);
+		if (e.key.keysym.scancode == SDL_SCANCODE_ESCAPE)
+			lm->quit = 1;
+		else if (e.key.keysym.sym == SDLK_LEFTBRACKET)
+			lem_sdl_addcolour(&lm->c_path, -10, -10, -10, -10);
+		else if (e.key.keysym.sym == SDLK_RIGHTBRACKET)
+			lem_sdl_addcolour(&lm->c_path, 10, 10, 10, 10);
+		else if (e.key.keysym.sym == SDLK_QUOTE)
+			lem_sdl_addcolour(&lm->c_room, -10, -10, -10, -10);
+		else if (e.key.keysym.sym == SDLK_BACKSLASH)
+			lem_sdl_addcolour(&lm->c_room, 10, 10, 10, 10);
+	}
+}
+
 void	lem_sdl_control(t_info *info)
 {
 	t_sdl *lm;
@@ -20,15 +50,11 @@ void	lem_sdl_control(t_info *info)
 	while (!lm->quit)
 	{
 		while (SDL_PollEvent(&lm->event))
-		{
-			if(lm->event.type == SDL_QUIT || (lm->event.type == SDL_KEYDOWN && lm->event.key.keysym.scancode == SDL_SCANCODE_ESCAPE))
-				lm->quit = 1;
-		}
-		SDL_SetRenderDrawColor(lm->renderer, 0xFF, 0xFF, 0xFF, 0xFF);
+			lem_sdl_handle_events(lm->event, lm);
+		SDL_SetRenderDrawColor(lm->renderer, 0x00, 0x00, 0x00, 0x00);
 		SDL_RenderClear(lm->renderer);
-		lem_sdl_init_loadmap(lm);
+		lem_sdl_loadmap(lm);
 		SDL_RenderPresent(lm->renderer);
 	}
-
 	lem_sdl_close(lm, 0);
 }

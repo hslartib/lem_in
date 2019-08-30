@@ -12,424 +12,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82d04e97-26c3-4a71-b06e-a2c708bf0c9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Headers" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/SDL2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_assert.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_atomic.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_audio.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_bits.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_blendmode.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_clipboard.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_config.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_config_macosx.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_copying.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_cpuinfo.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_endian.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_error.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_events.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_filesystem.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_gamecontroller.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_gesture.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_haptic.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_hints.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_joystick.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_keyboard.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_keycode.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_loadso.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_log.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_main.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_messagebox.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_mouse.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_mutex.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_name.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_opengl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_opengl_glext.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_opengles.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_opengles2.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_opengles2_gl2.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_opengles2_gl2ext.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_opengles2_gl2platform.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_opengles2_khrplatform.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_pixels.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_platform.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_power.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_quit.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_rect.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_render.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_revision.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_rwops.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_scancode.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_sensor.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_shape.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_stdinc.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_surface.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_system.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_syswm.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_thread.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_timer.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_touch.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_types.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_version.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_video.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/SDL_vulkan.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/begin_code.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Headers/close_code.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/Resources/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/A/SDL2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2.framework/Versions/Current" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/Headers/webp/decode.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/Headers/webp/demux.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/Headers/webp/encode.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/Headers/webp/mux_types.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/Headers/webp/types.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/Resources/English.lproj/InfoPlist.strings" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/Resources/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/Resources/LICENSE.webp.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/Versions/A/Headers/webp/decode.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/Versions/A/Headers/webp/demux.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/Versions/A/Headers/webp/encode.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/Versions/A/Headers/webp/mux_types.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/Versions/A/Headers/webp/types.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/Versions/A/Resources/English.lproj/InfoPlist.strings" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/Versions/A/Resources/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/Versions/A/Resources/LICENSE.webp.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/Versions/A/_CodeSignature/CodeResources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/Versions/A/webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/Versions/Current/Headers/webp/decode.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/Versions/Current/Headers/webp/demux.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/Versions/Current/Headers/webp/encode.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/Versions/Current/Headers/webp/mux_types.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/Versions/Current/Headers/webp/types.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/Versions/Current/Resources/English.lproj/InfoPlist.strings" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/Versions/Current/Resources/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/Versions/Current/Resources/LICENSE.webp.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/Versions/Current/_CodeSignature/CodeResources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/Versions/Current/webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Frameworks/webp.framework/webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Headers/SDL_image.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Resources/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/SDL2_image" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/Headers/webp/decode.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/Headers/webp/demux.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/Headers/webp/encode.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/Headers/webp/mux_types.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/Headers/webp/types.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/Resources/English.lproj/InfoPlist.strings" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/Resources/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/Resources/LICENSE.webp.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/Versions/A/Headers/webp/decode.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/Versions/A/Headers/webp/demux.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/Versions/A/Headers/webp/encode.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/Versions/A/Headers/webp/mux_types.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/Versions/A/Headers/webp/types.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/Versions/A/Resources/English.lproj/InfoPlist.strings" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/Versions/A/Resources/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/Versions/A/Resources/LICENSE.webp.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/Versions/A/_CodeSignature/CodeResources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/Versions/A/webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/Versions/Current/Headers/webp/decode.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/Versions/Current/Headers/webp/demux.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/Versions/Current/Headers/webp/encode.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/Versions/Current/Headers/webp/mux_types.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/Versions/Current/Headers/webp/types.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/Versions/Current/Resources/English.lproj/InfoPlist.strings" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/Versions/Current/Resources/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/Versions/Current/Resources/LICENSE.webp.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/Versions/Current/_CodeSignature/CodeResources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/Versions/Current/webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Frameworks/webp.framework/webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Headers/SDL_image.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/Resources/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/SDL2_image" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/A/_CodeSignature/CodeResources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/Headers/webp/decode.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/Headers/webp/demux.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/Headers/webp/encode.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/Headers/webp/mux_types.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/Headers/webp/types.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/Resources/English.lproj/InfoPlist.strings" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/Resources/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/Resources/LICENSE.webp.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/Versions/A/Headers/webp/decode.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/Versions/A/Headers/webp/demux.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/Versions/A/Headers/webp/encode.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/Versions/A/Headers/webp/mux_types.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/Versions/A/Headers/webp/types.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/Versions/A/Resources/English.lproj/InfoPlist.strings" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/Versions/A/Resources/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/Versions/A/Resources/LICENSE.webp.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/Versions/A/_CodeSignature/CodeResources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/Versions/A/webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/Versions/Current/Headers/webp/decode.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/Versions/Current/Headers/webp/demux.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/Versions/Current/Headers/webp/encode.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/Versions/Current/Headers/webp/mux_types.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/Versions/Current/Headers/webp/types.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/Versions/Current/Resources/English.lproj/InfoPlist.strings" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/Versions/Current/Resources/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/Versions/Current/Resources/LICENSE.webp.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/Versions/Current/_CodeSignature/CodeResources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/Versions/Current/webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Frameworks/webp.framework/webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Headers/SDL_image.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/Resources/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/SDL2_image" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_image.framework/Versions/Current/_CodeSignature/CodeResources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Frameworks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Headers" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/SDL2_mixer" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/FLAC.framework/FLAC" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/FLAC.framework/Headers" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/FLAC.framework/Resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/FLAC.framework/Versions/A/FLAC" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/FLAC.framework/Versions/A/Headers/FLAC/all.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/FLAC.framework/Versions/A/Headers/FLAC/assert.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/FLAC.framework/Versions/A/Headers/FLAC/callback.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/FLAC.framework/Versions/A/Headers/FLAC/export.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/FLAC.framework/Versions/A/Headers/FLAC/format.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/FLAC.framework/Versions/A/Headers/FLAC/metadata.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/FLAC.framework/Versions/A/Headers/FLAC/ordinals.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/FLAC.framework/Versions/A/Headers/FLAC/stream_decoder.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/FLAC.framework/Versions/A/Headers/FLAC/stream_encoder.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/FLAC.framework/Versions/A/Resources/English.lproj/InfoPlist.strings" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/FLAC.framework/Versions/A/Resources/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/FLAC.framework/Versions/A/Resources/LICENSE.FLAC.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/FLAC.framework/Versions/Current" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Ogg.framework/Headers" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Ogg.framework/Ogg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Ogg.framework/Resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Ogg.framework/Versions/A/Headers/ogg.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Ogg.framework/Versions/A/Headers/os_types.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Ogg.framework/Versions/A/Ogg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Ogg.framework/Versions/A/Resources/English.lproj/InfoPlist.strings" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Ogg.framework/Versions/A/Resources/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Ogg.framework/Versions/A/Resources/LICENSE.ogg-vorbis.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Ogg.framework/Versions/Current" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Opus.framework/Headers" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Opus.framework/Opus" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Opus.framework/Resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Opus.framework/Versions/A/Headers/opus.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Opus.framework/Versions/A/Headers/opus_defines.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Opus.framework/Versions/A/Headers/opus_multistream.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Opus.framework/Versions/A/Headers/opus_types.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Opus.framework/Versions/A/Opus" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Opus.framework/Versions/A/Resources/English.lproj/InfoPlist.strings" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Opus.framework/Versions/A/Resources/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Opus.framework/Versions/A/Resources/LICENSE.opus.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Opus.framework/Versions/Current" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/OpusFile.framework/Headers" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/OpusFile.framework/OpusFile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/OpusFile.framework/Resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/OpusFile.framework/Versions/A/Headers/opusfile.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/OpusFile.framework/Versions/A/OpusFile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/OpusFile.framework/Versions/A/Resources/English.lproj/InfoPlist.strings" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/OpusFile.framework/Versions/A/Resources/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/OpusFile.framework/Versions/A/Resources/LICENSE.opusfile.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/OpusFile.framework/Versions/Current" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Vorbis.framework/Headers" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Vorbis.framework/Resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Vorbis.framework/Versions/A/Headers/codec.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Vorbis.framework/Versions/A/Headers/vorbisenc.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Vorbis.framework/Versions/A/Headers/vorbisfile.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Vorbis.framework/Versions/A/Resources/English.lproj/InfoPlist.strings" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Vorbis.framework/Versions/A/Resources/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Vorbis.framework/Versions/A/Resources/LICENSE.ogg-vorbis.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Vorbis.framework/Versions/A/Vorbis" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Vorbis.framework/Versions/Current" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/Vorbis.framework/Vorbis" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/modplug.framework/Headers" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/modplug.framework/Resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/modplug.framework/Versions/A/Headers/modplug.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/modplug.framework/Versions/A/Resources/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/modplug.framework/Versions/A/Resources/LICENSE.modplug.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/modplug.framework/Versions/A/modplug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/modplug.framework/Versions/Current" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/modplug.framework/modplug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/mpg123.framework/Headers" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/mpg123.framework/Resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/mpg123.framework/Versions/A/Headers/fmt123.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/mpg123.framework/Versions/A/Headers/mpg123.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/mpg123.framework/Versions/A/Resources/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/mpg123.framework/Versions/A/Resources/LICENSE.mpg123.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/mpg123.framework/Versions/A/mpg123" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/mpg123.framework/Versions/Current" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Frameworks/mpg123.framework/mpg123" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Headers/SDL_mixer.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/Resources/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/A/SDL2_mixer" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_mixer.framework/Versions/Current" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Frameworks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Headers" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/SDL2_ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/FreeType" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Headers" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/FreeType" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/config/ftconfig.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/config/ftheader.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/config/ftmodule.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/config/ftoption.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/config/ftstdlib.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/freetype.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftadvanc.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftbbox.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftbdf.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftbitmap.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftbzip2.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftcache.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftchapters.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftcid.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftdriver.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/fterrdef.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/fterrors.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftfntfmt.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftgasp.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftglyph.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftgxval.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftgzip.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftimage.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftincrem.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftlcdfil.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftlist.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftlzw.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftmac.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftmm.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftmodapi.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftmoderr.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftotval.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftoutln.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftparams.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftpfr.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftrender.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftsizes.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftsnames.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftstroke.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftsynth.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftsystem.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/fttrigon.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/fttypes.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ftwinfnt.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/t1tables.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/ttnameid.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/tttables.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/freetype/tttags.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Headers/ft2build.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Resources/English.lproj/InfoPlist.strings" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Resources/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/A/Resources/LICENSE.freetype.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework/Versions/Current" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Headers/SDL_ttf.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/Resources/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/A/SDL2_ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frameworks/SDL2_ttf.framework/Versions/Current" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lem_in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_atoi.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_bzero.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_isalnum.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_isalpha.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_isascii.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_isdigit.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_isgraph.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_islower.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_isprint.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_isspace.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_isupper.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_isxdigit.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_itoa.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_lstadd.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_lstdel.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_lstdelone.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_lstiter.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_lstmap.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_lstnew.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_memalloc.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_memccpy.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_memchr.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_memcmp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_memcpy.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_memdel.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_memmove.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_memset.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_pseudo_realloc.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_putchar.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_putchar_fd.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_putendl.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_putendl_fd.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_putnbr.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_putnbr_fd.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_putstr.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_putstr_fd.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_strcat.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_strchr.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_strclen.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_strclr.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_strcmp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_strcpy.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_strdel.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_strdel_2d.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_strdup.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_strequ.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_striter.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_striteri.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_strjoin.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_strlcat.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_strlen.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_strmap.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_strmapi.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_strncat.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_strncmp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_strncpy.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_strnequ.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_strnew.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_strnstr.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_strrchr.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_strsplit.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_strstr.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_strsub.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_strtrim.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_tolower.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/ft_toupper.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/get_next_line.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libft/libft.a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/little_test_map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/antonio.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/info_init.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/info_init_misc.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/info_validation.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lem_cleanup.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lem_finish.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lem_sdl_close.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lem_sdl_close.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lem_sdl_init.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lem_sdl_init.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lem_sdl_main.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lem_sdl_main.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lem_strt.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lem_sdl_animation.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lem_sdl_loadmap.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_in.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_in.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_in.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_in.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_in.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_in.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_in.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_in.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_in.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_in.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_in.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_in.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lem_in.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lem_in.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inc/lem_strt.h" beforeDir="false" afterPath="$PROJECT_DIR$/inc/lem_strt.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/little_test_map" beforeDir="false" afterPath="$PROJECT_DIR$/little_test_map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/info_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/info_init.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/info_init_misc.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/info_init_misc.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/info_validation.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/info_validation.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lem_cleanup.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/lem_cleanup.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lem_finish.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/lem_finish.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lem_strt.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/lem_strt.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lem_sdl_close.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/lem_sdl_close.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lem_sdl_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/lem_sdl_init.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lem_sdl_main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/lem_sdl_main.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -445,10 +43,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Makefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/inc/lem_strt.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1185">
-              <caret line="79" column="42" selection-start-line="79" selection-start-column="42" selection-end-line="79" selection-end-column="42" />
+            <state relative-caret-position="1143">
+              <caret line="77" column="20" selection-start-line="77" selection-start-column="20" selection-end-line="77" selection-end-column="20" />
               <folding>
                 <element signature="e#928#955#0" expanded="true" />
               </folding>
@@ -457,19 +64,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Makefile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/lem_strt.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+            <state relative-caret-position="1502">
+              <caret line="121" column="19" selection-start-line="121" selection-start-column="19" selection-end-line="121" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -477,8 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lem_sdl_main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+            <state relative-caret-position="825">
+              <caret line="55" column="28" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -486,8 +84,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lem_sdl_init.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+            <state relative-caret-position="900">
+              <caret line="60" column="33" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lem_sdl_loadmap.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1095">
+              <caret line="73" column="19" selection-start-line="73" selection-start-column="19" selection-end-line="73" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lem_sdl_animation.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -495,8 +111,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lem_sdl_close.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+            <state relative-caret-position="105">
+              <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -526,29 +142,33 @@
         <option value="$PROJECT_DIR$/libft/ft_strdel_2d.c" />
         <option value="$PROJECT_DIR$/libft/get_next_line.c" />
         <option value="$PROJECT_DIR$/src/info_finish.c" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/work_len_finish.c" />
-        <option value="$PROJECT_DIR$/src/info_init_misc.c" />
-        <option value="$PROJECT_DIR$/src/lem_cleanup.c" />
-        <option value="$PROJECT_DIR$/src/info_validation.c" />
-        <option value="$PROJECT_DIR$/src/lem_finish.c" />
-        <option value="$PROJECT_DIR$/src/info_init.c" />
         <option value="$PROJECT_DIR$/src/lem_vis_init.c" />
-        <option value="$PROJECT_DIR$/src/lem_sdl_close.c" />
-        <option value="$PROJECT_DIR$/Makefile" />
-        <option value="$PROJECT_DIR$/inc/lem_strt.h" />
+        <option value="$PROJECT_DIR$/src/lem_finish.c" />
+        <option value="$PROJECT_DIR$/src/info_validation.c" />
+        <option value="$PROJECT_DIR$/src/info_init_misc.c" />
+        <option value="$PROJECT_DIR$/little_test_map" />
         <option value="$PROJECT_DIR$/src/lem_strt.c" />
+        <option value="$PROJECT_DIR$/src/info_init.c" />
+        <option value="$PROJECT_DIR$/src/lem_cleanup.c" />
+        <option value="$PROJECT_DIR$/src/lem_sdl_drawline.c" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/Makefile" />
+        <option value="$PROJECT_DIR$/src/lem_sdl_close.c" />
+        <option value="$PROJECT_DIR$/src/lem_sdl_loadmap.c" />
         <option value="$PROJECT_DIR$/src/lem_sdl_main.c" />
+        <option value="$PROJECT_DIR$/src/lem_sdl_animation.c" />
         <option value="$PROJECT_DIR$/src/lem_sdl_init.c" />
+        <option value="$PROJECT_DIR$/inc/lem_strt.h" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="3200" />
-    <option name="height" value="1800" />
+    <option name="width" value="2560" />
+    <option name="height" value="1440" />
   </component>
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
@@ -562,6 +182,16 @@
             <path>
               <item name="lem_in" type="b2602c69:ProjectViewProjectNode" />
               <item name="lem_in" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lem_in" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lem_in" type="462c0819:PsiDirectoryNode" />
+              <item name="inc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lem_in" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lem_in" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lem_in" type="b2602c69:ProjectViewProjectNode" />
@@ -586,6 +216,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Frameworks/SDL2_gfx" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/inc" />
       <recent name="$PROJECT_DIR$/libft" />
@@ -634,23 +265,34 @@
       <workItem from="1566300761072" duration="1595000" />
       <workItem from="1566322613868" duration="561000" />
       <workItem from="1566909440264" duration="20000" />
-      <workItem from="1566909546289" duration="8147000" />
+      <workItem from="1566909546289" duration="8504000" />
+      <workItem from="1566983159974" duration="7985000" />
+      <workItem from="1567001302817" duration="15050000" />
+      <workItem from="1567044411577" duration="318000" />
+      <workItem from="1567052909598" duration="380000" />
+      <workItem from="1567064076546" duration="376000" />
+      <workItem from="1567071246604" duration="83000" />
+      <workItem from="1567084341422" duration="162000" />
+      <workItem from="1567154132407" duration="2196000" />
+      <workItem from="1567160040332" duration="1149000" />
+      <workItem from="1567162301532" duration="7337000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55752000" />
+    <option name="totallyTimeSpent" value="91145000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="3200" height="1800" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2178594" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08233059" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="CMake" order="3" weight="0.329927" />
+      <window_info anchor="bottom" id="CMake" order="3" weight="0.2601156" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32890174" />
       <window_info anchor="bottom" id="Run" order="6" weight="0.329927" />
@@ -658,36 +300,36 @@
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.329927" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32947975" />
       <window_info anchor="right" id="Database" order="0" />
       <window_info anchor="right" id="make" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" sideWeight="0.49927008" weight="0.24980143" />
-      <window_info active="true" anchor="right" id="Terminal" order="5" sideWeight="0.5007299" side_tool="true" visible="true" weight="0.24952501" />
+      <window_info active="true" anchor="right" id="Terminal" order="5" sideWeight="0.5007299" visible="true" weight="0.18366055" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2065131" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10325655" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.329927" />
-      <window_info anchor="bottom" id="Database Changes" order="1" />
-      <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="CMake" order="4" weight="0.329927" />
-      <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.329296" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.329927" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="0" />
+      <window_info anchor="bottom" id="Version Control" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="CMake" order="3" visible="true" weight="0.26058394" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.32890174" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.329927" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32947975" />
       <window_info anchor="right" id="Database" order="0" />
       <window_info anchor="right" id="make" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" sideWeight="0.49927008" weight="0.24980143" />
-      <window_info active="true" anchor="right" id="Terminal" order="5" sideWeight="0.5007299" side_tool="true" visible="true" weight="0.24980143" />
+      <window_info anchor="right" id="Terminal" order="5" sideWeight="0.5007299" visible="true" weight="0.23034154" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -701,9 +343,6 @@
           <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libft/ft_strstr.c">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/libft/ft_strcmp.c">
       <provider selected="true" editor-type-id="text-editor">
@@ -813,13 +452,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="79" column="28" selection-start-line="79" selection-start-column="28" selection-end-line="79" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/work_len_finish.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -834,41 +466,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/info_init_misc.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/info_validation.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lem_cleanup.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lem_finish.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/info_init.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="65" column="49" selection-start-line="65" selection-start-column="49" selection-end-line="65" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libft/libft.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -879,48 +476,128 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/libft/ft_strstr.c">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lem_finish.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/info_validation.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1365">
+          <caret line="91" column="51" selection-start-line="91" selection-start-column="51" selection-end-line="91" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/little_test_map">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/info_init_misc.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="59" selection-start-column="59" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lem_sdl_drawline.c" />
+    <entry file="file://$PROJECT_DIR$/src/info_init.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1412">
+          <caret line="120" column="10" selection-start-line="120" selection-start-column="10" selection-end-line="130" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Frameworks/SDL2.framework/Versions/A/Headers/SDL_keycode.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1995">
+          <caret line="230" column="4" selection-start-line="230" selection-start-column="4" selection-end-line="230" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/0.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="84" column="110" selection-start-line="84" selection-start-column="110" selection-end-line="84" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+        <state relative-caret-position="285">
+          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inc/lem_strt.h">
+    <entry file="file://$PROJECT_DIR$/src/lem_cleanup.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="79" column="42" selection-start-line="79" selection-start-column="42" selection-end-line="79" selection-end-column="42" />
-          <folding>
-            <element signature="e#928#955#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="80" selection-start-column="80" selection-end-column="80" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lem_sdl_close.c">
+    <entry file="file://$PROJECT_DIR$/res/VhdL.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lem_sdl_main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        <state relative-caret-position="825">
+          <caret line="55" column="28" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lem_sdl_loadmap.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="73" column="19" selection-start-line="73" selection-start-column="19" selection-end-line="73" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lem_sdl_init.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lem_sdl_main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+        <state relative-caret-position="900">
+          <caret line="60" column="33" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lem_strt.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+        <state relative-caret-position="1502">
+          <caret line="121" column="19" selection-start-line="121" selection-start-column="19" selection-end-line="121" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lem_sdl_close.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lem_sdl_animation.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/lem_strt.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1143">
+          <caret line="77" column="20" selection-start-line="77" selection-start-column="20" selection-end-line="77" selection-end-column="20" />
+          <folding>
+            <element signature="e#928#955#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -25,6 +25,8 @@ int 	lem_moreerrmsg(int errcode)
 		write(1, "Error : No start and/or end rooms\n", 34);
 	else if (errcode == MAP_WRONG_ORDER && ++ret)
 		write(1, "Error : Map is not well formatted\n", 34);
+	else if (errcode == MAP_INVALID_NAME && ++ret)
+		write(1, "Error : Map contains invalid characters\n", 40);
 	return (ret);
 }
 
