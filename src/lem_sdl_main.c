@@ -22,13 +22,21 @@ void	lem_sdl_addcolour(SDL_Color *c, int r, int g, int b, int a)
 	c->a += a;
 }
 
+void	lem_sdl_handle_more_events(SDL_Event e, t_sdl *lm)
+{
+	if (e.key.keysym.sym == SDLK_s)
+		lm->soviet = 1;
+	if (e.key.keysym.sym == SDLK_g)
+		lm->soviet = 0;
+}
+
 void	lem_sdl_handle_events(SDL_Event e, t_sdl *lm)
 {
 	if(e.type == SDL_QUIT)
 		lm->quit = 1;
 	else if (e.type == SDL_KEYDOWN)
 	{
-		printf("key: %d\n", e.key.keysym.sym);
+//		printf("key: %d\n", e.key.keysym.sym);
 		if (e.key.keysym.scancode == SDL_SCANCODE_ESCAPE)
 			lm->quit = 1;
 		else if (e.key.keysym.sym == SDLK_LEFTBRACKET)
@@ -39,6 +47,14 @@ void	lem_sdl_handle_events(SDL_Event e, t_sdl *lm)
 			lem_sdl_addcolour(&lm->c_room, -10, -10, -10, -10);
 		else if (e.key.keysym.sym == SDLK_BACKSLASH)
 			lem_sdl_addcolour(&lm->c_room, 10, 10, 10, 10);
+		else if (e.key.keysym.sym == SDLK_EQUALS)
+			lm->anim.parts += 50;
+		else if (e.key.keysym.sym == SDLK_MINUS)
+			lm->anim.parts >= 100 ? lm->anim.parts -= 50 : 0;
+		else
+			lem_sdl_handle_more_events(e, lm);
+		if (lm->anim.step >= lm->anim.parts)
+			lm->anim.step = lm->anim.parts - 1;
 	}
 }
 
@@ -54,6 +70,7 @@ void	lem_sdl_control(t_info *info)
 		SDL_SetRenderDrawColor(lm->renderer, 0x00, 0x00, 0x00, 0x00);
 		SDL_RenderClear(lm->renderer);
 		lem_sdl_loadmap(lm);
+		lem_sdl_anim_control(lm);
 		SDL_RenderPresent(lm->renderer);
 	}
 	lem_sdl_close(lm, 0);

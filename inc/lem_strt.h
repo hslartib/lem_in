@@ -27,6 +27,9 @@
 # define NUMBER_OF_FRAMES	8
 # define F_FRATE			10
 
+# define ABS_MINUS(a, b)	((a >= b) ? (a - b) : (b - a))
+# define ABS(x)				((x >= 0) ? x : -x)
+
 enum 				e_errcode
 {
 	ALLRIGHT,
@@ -50,6 +53,7 @@ typedef struct		s_room
 	int 			coord_y;
 	int				links_len;
 	char			*all_path;
+	SDL_Rect		pos;
 }					t_room;
 
 typedef struct		s_info
@@ -66,21 +70,22 @@ typedef struct		s_info
 typedef struct		s_ant
 {
 	SDL_Rect		start;
-	SDL_Rect		finish;
-	int 			field;
-	int 			f_cur;
+	SDL_Rect		end;
+	int 			visible;
+	int 			frame;
 }					t_ant;
 
 typedef struct 		s_anim
 {
-	SDL_Texture		*anim[NUMBER_OF_FRAMES];
-	t_ant			**ants;
-	int 			f_cur;
+	SDL_Texture		*f_arr[NUMBER_OF_FRAMES];
+	t_ant			*ants;
+	int 			a_width;
+	int 			a_height;
 	int 			parts;
 	int 			step;
 	int 			ant_all;
 	int 			ant_map;
-}					t_ants;
+}					t_anim;
 
 typedef	struct 		s_sdl
 {
@@ -90,7 +95,9 @@ typedef	struct 		s_sdl
 	SDL_Event		event;
 	SDL_Color		c_path;
 	SDL_Color		c_room;
+	t_anim			anim;
 	t_info			*info;
+	int 			soviet;
 	int 			w_width;
 	int 			w_height;
 	int 			quit;
@@ -107,6 +114,8 @@ int		lem_sdl_init_main(t_sdl **lm, t_info *info);
 int 	lem_sdl_loadmap(t_sdl *lm);
 int 	lem_sdl_close(t_sdl *lm, int ret);
 void	lem_sdl_addcolour(SDL_Color *c, int r, int g, int b, int a);
+void	lem_sdl_anim_control(t_sdl *lm);
+void	lem_sdl_setroompos(t_sdl *lm);
 
 /*
 ** info_init related functions

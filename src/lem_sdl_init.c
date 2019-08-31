@@ -32,22 +32,56 @@ SDL_Texture *lem_sdl_init_loadt(t_sdl *tmp, char *path)
 
 int 	lem_sdl_init_loadanim(t_sdl *tmp)
 {
-	if (!(tmp->anim[0] = lem_sdl_init_loadt(tmp, "./res/0.png")))
+	if (!(tmp->anim.f_arr[0] = lem_sdl_init_loadt(tmp, "./res/0.png")))
 		return (1);
-	if (!(tmp->anim[1] = lem_sdl_init_loadt(tmp, "./res/1.png")))
+	if (!(tmp->anim.f_arr[1] = lem_sdl_init_loadt(tmp, "./res/1.png")))
 		return (1);
-	if (!(tmp->anim[2] = lem_sdl_init_loadt(tmp, "./res/2.png")))
+	if (!(tmp->anim.f_arr[2] = lem_sdl_init_loadt(tmp, "./res/2.png")))
 		return (1);
-	if (!(tmp->anim[3] = lem_sdl_init_loadt(tmp, "./res/3.png")))
+	if (!(tmp->anim.f_arr[3] = lem_sdl_init_loadt(tmp, "./res/3.png")))
 		return (1);
-	if (!(tmp->anim[4] = lem_sdl_init_loadt(tmp, "./res/4.png")))
+	if (!(tmp->anim.f_arr[4] = lem_sdl_init_loadt(tmp, "./res/4.png")))
 		return (1);
-	if (!(tmp->anim[5] = lem_sdl_init_loadt(tmp, "./res/5.png")))
+	if (!(tmp->anim.f_arr[5] = lem_sdl_init_loadt(tmp, "./res/5.png")))
 		return (1);
-	if (!(tmp->anim[6] = lem_sdl_init_loadt(tmp, "./res/6.png")))
+	if (!(tmp->anim.f_arr[6] = lem_sdl_init_loadt(tmp, "./res/6.png")))
 		return (1);
-	if (!(tmp->anim[7] = lem_sdl_init_loadt(tmp, "./res/7.png")))
+	if (!(tmp->anim.f_arr[7] = lem_sdl_init_loadt(tmp, "./res/7.png")))
 		return (1);
+	return (0);
+}
+
+int 	lem_sdl_init_anim(t_sdl *tmp)
+{
+	int			i;
+	SDL_Rect	start;
+	SDL_Rect	end;
+
+	tmp->anim.a_width = (sqrt((tmp->w_height * tmp->w_width) / tmp->info->count_room) + 1) / 2 * 78 / 90;
+	tmp->anim.a_height = (sqrt((tmp->w_height * tmp->w_width) / tmp->info->count_room) + 1) / 2 * 90 / 78;
+	tmp->anim.a_width > 90 ? (tmp->anim.a_width = 90) : 0;
+	tmp->anim.a_height > 78 ? (tmp->anim.a_height = 78) : 0;
+	start.x = 0;
+	start.y = 0;
+	start.w = tmp->anim.a_width;
+	start.h = tmp->anim.a_height;
+	end.x = tmp->w_width;
+	end.y = tmp->w_height;
+	end.w = tmp->anim.a_width;
+	end.h = tmp->anim.a_height;
+	tmp->anim.parts = 700;
+	tmp->anim.step = 1;
+	tmp->anim.ant_all = tmp->info->count_ants;
+	tmp->anim.ants = (t_ant *)malloc(sizeof(t_ant) * tmp->anim.ant_all);
+	i = 0;
+	while (i < tmp->info->count_ants)
+	{
+		ft_bzero(&tmp->anim.ants[i], sizeof(t_ant));
+		tmp->anim.ants[i].frame = rand() % 80;
+		tmp->anim.ants[i].start = start;
+		tmp->anim.ants[i].end = end;
+		i += 1;
+	}
 	return (0);
 }
 
@@ -73,28 +107,47 @@ int 	lem_sdl_init_setrender(t_sdl *tmp)
 	return (0);
 }
 
+void	print_links(t_sdl *lm)
+{
+	int r = 0;
+	int l = 0;
+
+	while (lm->info->rooms[r])
+	{
+		printf("r: %d\n", r);
+		while (l < lm->info->rooms[r]->links_len)
+		{
+			printf("         l: %d | link: %d\n", l, lm->info->rooms[r]->links[l]);
+			l += 1;
+		}
+		l = 0;
+		r += 1;
+	}
+	printf ("------------------------------------\n");
+}
+
 int		lem_sdl_init_main(t_sdl **lm, t_info *info)
 {
 	t_sdl	*tmp;
 
 	tmp = (t_sdl *)malloc(sizeof(t_sdl));
-	tmp->f_pos = (SDL_Rect *)malloc(sizeof(SDL_Rect) * (*lm)->info->count_ants);
 	ft_bzero(tmp, sizeof(t_sdl));
-	ft_bzero(tmp->f_pos, sizeof(sizeof(SDL_Rect) * (*lm)->info->count_ants));
 	lem_sdl_addcolour(&tmp->c_room, 100, 100, 100, 100);
 	lem_sdl_addcolour(&tmp->c_path, 100, 100, 100, 100);
+	tmp->info = info;
 	if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
 		return (lem_sdl_close(tmp, 1));
 	else
 	{
-		if (!(tmp->window = SDL_CreateWindow("Run, ants, run!", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, tmp->w_width, tmp->w_height, SDL_WINDOW_FULLSCREEN_DESKTOP)))
+		if (!(tmp->window = SDL_CreateWindow("Run, ants, run!", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 0, 0, SDL_WINDOW_FULLSCREEN_DESKTOP)))
 			return(lem_sdl_close(tmp, 2));
 		else
 			if (lem_sdl_init_setrender(tmp))
 				return (3);
 	}
+	lem_sdl_init_anim(tmp);
 	SDL_SetRenderDrawBlendMode(tmp->renderer, SDL_BLENDMODE_ADD);
-	tmp->info = info;
+	lem_sdl_setroompos(tmp);
 	*lm = tmp;
 	return (0);
 }

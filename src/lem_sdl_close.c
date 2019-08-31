@@ -14,12 +14,12 @@
 
 int 	lem_sdl_close(t_sdl *lm, int ret)
 {
-//	int i;
-//
-//	i = 0;
-//	while (i < NUMBER_OF_FRAMES)
-//		if (lm->anim[i])
-//			SDL_DestroyTexture(lm->anim[i]);
+	int i;
+
+	i = -1;
+	while (++i < NUMBER_OF_FRAMES)
+		if (lm->anim.f_arr[i])
+			SDL_DestroyTexture(lm->anim.f_arr[i]);
 	SDL_DestroyRenderer(lm->renderer);
 	SDL_DestroyWindow(lm->window);
 	SDL_Quit();

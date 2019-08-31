@@ -120,7 +120,7 @@ int main()
 	printf("rooms: %d\n", info->count_room);
 	lem_sdl_control(info);
 //	workroom(info);
-//	cleanup_info(info);
+	cleanup_info(info);
 //	workroom(info);
 //	work_len_finish(info);
 	return (0);

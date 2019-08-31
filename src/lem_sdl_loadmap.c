@@ -39,6 +39,18 @@ SDL_Rect	lem_sdl_getcoord(t_sdl *lm, int i)
 	return (rect);
 }
 
+void		lem_sdl_setroompos(t_sdl *lm)
+{
+	int r;
+
+	r = 0;
+	while (lm->info->rooms[r])
+	{
+		lm->info->rooms[r]->pos = lem_sdl_getcoord(lm, r);
+		r += 1;
+	}
+}
+
 void		lem_sdl_loadrooms(t_sdl *lm)
 {
 	SDL_Rect	rect;
@@ -47,7 +59,7 @@ void		lem_sdl_loadrooms(t_sdl *lm)
 	r = 0;
 	while (lm->info->rooms[r])
 	{
-		rect = lem_sdl_getcoord(lm, r);
+		rect = lm->info->rooms[r]->pos;
 		SDL_SetRenderDrawColor(lm->renderer, lm->c_room.r, lm->c_room.g, lm->c_room.b, lm->c_room.a);
 		SDL_RenderFillRect(lm->renderer, &rect);
 		r += 1;
@@ -64,11 +76,11 @@ void		lem_sdl_loadpath(t_sdl *lm)
 	r = 0;
 	while (lm->info->rooms[r])
 	{
-		rect = lem_sdl_getcoord(lm, r);
+		rect = lm->info->rooms[r]->pos;
 		l = 0;
 		while (l < lm->info->rooms[r]->links_len)
 		{
-			l_rect = lem_sdl_getcoord(lm, lm->info->rooms[r]->links[l]);
+			l_rect = lm->info->rooms[lm->info->rooms[r]->links[l]]->pos;
 			SDL_SetRenderDrawColor(lm->renderer, lm->c_path.r, lm->c_path.g, lm->c_path.b, lm->c_path.a);
 			SDL_RenderDrawLine(lm->renderer, (rect.x + rect.w / 2), (rect.y + rect.h / 2), (l_rect.x + l_rect.w / 2), (l_rect.y + l_rect.h / 2));
 			l += 1;
