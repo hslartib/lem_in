@@ -147,7 +147,7 @@ int		lem_sdl_init_main(t_sdl **lm, t_info *info)
 	}
 	lem_sdl_init_anim(tmp);
 	SDL_SetRenderDrawBlendMode(tmp->renderer, SDL_BLENDMODE_ADD);
-	lem_sdl_init_font(lm);
+	lem_sdl_init_font(tmp);
 	lem_sdl_setroompos(tmp);
 	*lm = tmp;
 	return (0);

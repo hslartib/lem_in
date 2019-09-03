@@ -119,6 +119,7 @@ void	lem_sdl_addcolour(SDL_Color *c, int r, int g, int b, int a);
 void	lem_sdl_anim_control(t_sdl *lm);
 void	lem_sdl_setroompos(t_sdl *lm);
 int		lem_sdl_init_font(t_sdl *lm);
+void	lem_sdl_renderttext(t_sdl *lm);
 
 /*
 ** info_init related functions

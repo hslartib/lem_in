@@ -71,6 +71,7 @@ void	lem_sdl_control(t_info *info)
 		SDL_RenderClear(lm->renderer);
 		lem_sdl_loadmap(lm);
 		lem_sdl_anim_control(lm);
+		lem_sdl_renderttext(lm);
 		SDL_RenderPresent(lm->renderer);
 	}
 	lem_sdl_close(lm, 0);

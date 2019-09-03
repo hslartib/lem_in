@@ -82,4 +82,4 @@ add_executable(lem_in
         src/lem_cleanup.c
         src/lem_finish.c
         src/lem_strt.c
-        src/work_len_finish.c src/lem_sdl_main.c src/lem_sdl_init.c src/lem_sdl_close.c src/lem_sdl_loadmap.c src/lem_sdl_animation.c src/lem_sdl_text.c)
+        src/work_len_finish.c src/lem_sdl_main.c src/lem_sdl_init.c src/lem_sdl_close.c src/lem_sdl_loadmap.c src/lem_sdl_animation.c src/lem_sdl_text.c src/lem_sdl_text.c)
