@@ -12,7 +12,7 @@
 
 #include "lem_strt.h"
 
-SDL_Texture *lem_sdl_init_loadt(t_sdl *tmp, char *path)
+SDL_Texture		*lem_sdl_init_loadt(t_sdl *tmp, char *path)
 {
 	SDL_Texture *texture;
 	SDL_Surface *surface;
@@ -30,7 +30,7 @@ SDL_Texture *lem_sdl_init_loadt(t_sdl *tmp, char *path)
 	return (texture);
 }
 
-int 	lem_sdl_init_loadanim(t_sdl *tmp)
+int				lem_sdl_init_loadanim(t_sdl *tmp)
 {
 	if (!(tmp->anim.f_arr[0] = lem_sdl_init_loadt(tmp, "./res/0.png")))
 		return (1);
@@ -51,14 +51,16 @@ int 	lem_sdl_init_loadanim(t_sdl *tmp)
 	return (0);
 }
 
-int 	lem_sdl_init_anim(t_sdl *tmp)
+int				lem_sdl_init_anim(t_sdl *tmp)
 {
 	int			i;
 	SDL_Rect	start;
 	SDL_Rect	end;
 
-	tmp->anim.a_width = (sqrt((tmp->w_height * tmp->w_width) / tmp->info->count_room) + 1) / 2 * 78 / 90;
-	tmp->anim.a_height = (sqrt((tmp->w_height * tmp->w_width) / tmp->info->count_room) + 1) / 2 * 90 / 78;
+	tmp->anim.a_width = (sqrt((tmp->w_height * tmp->w_width)
+			/ tmp->info->count_room) + 1) / 2 * 78 / 90;
+	tmp->anim.a_height = (sqrt((tmp->w_height * tmp->w_width)
+			/ tmp->info->count_room) + 1) / 2 * 90 / 78;
 	tmp->anim.a_width > 90 ? (tmp->anim.a_width = 90) : 0;
 	tmp->anim.a_height > 78 ? (tmp->anim.a_height = 78) : 0;
 	start.x = 0;
@@ -85,16 +87,17 @@ int 	lem_sdl_init_anim(t_sdl *tmp)
 	return (0);
 }
 
-int 	lem_sdl_init_setrender(t_sdl *tmp)
+int				lem_sdl_init_setrender(t_sdl *tmp)
 {
-	int 	f_img;
+	int		f_img;
 
 	SDL_GetWindowSize(tmp->window, &tmp->w_width, &tmp->w_height);
 	tmp->w_rect.x = 0;
 	tmp->w_rect.y = 0;
 	tmp->w_rect.w = tmp->w_width;
 	tmp->w_rect.h = tmp->w_height;
-	if (!(tmp->renderer = SDL_CreateRenderer(tmp->window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC)))
+	if (!(tmp->renderer = SDL_CreateRenderer(
+tmp->window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC)))
 		return (lem_sdl_close(tmp, 3));
 	else
 	{
@@ -107,43 +110,25 @@ int 	lem_sdl_init_setrender(t_sdl *tmp)
 	return (0);
 }
 
-//void	print_links(t_sdl *lm)
-//{
-//	int r = 0;
-//	int l = 0;
-//
-//	while (lm->info->rooms[r])
-//	{
-//		printf("r: %d\n", r);
-//		while (l < lm->info->rooms[r]->links_len)
-//		{
-//			printf("         l: %d | link: %d\n", l, lm->info->rooms[r]->links[l]);
-//			l += 1;
-//		}
-//		l = 0;
-//		r += 1;
-//	}
-//	printf ("------------------------------------\n");
-//}
-
-int		lem_sdl_init_main(t_sdl **lm, t_info *info)
+int				lem_sdl_init_main(t_sdl **lm, t_info *info)
 {
 	t_sdl	*tmp;
 
 	tmp = (t_sdl *)malloc(sizeof(t_sdl));
 	ft_bzero(tmp, sizeof(t_sdl));
-	lem_sdl_addcolour(&tmp->c_room, 100, 100, 100, 100);
-	lem_sdl_addcolour(&tmp->c_path, 100, 100, 100, 100);
+	tmp->c_room = (SDL_Color){100, 100, 100, 100};
+	tmp->c_path = tmp->c_room;
 	tmp->info = info;
 	if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
 		return (lem_sdl_close(tmp, 1));
 	else
 	{
-		if (!(tmp->window = SDL_CreateWindow("Run, ants, run!", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 0, 0, SDL_WINDOW_FULLSCREEN_DESKTOP)))
-			return(lem_sdl_close(tmp, 2));
-		else
-			if (lem_sdl_init_setrender(tmp))
-				return (3);
+		if (!(tmp->window = SDL_CreateWindow(
+				"Run, ants, run!", SDL_WINDOWPOS_UNDEFINED,
+				SDL_WINDOWPOS_UNDEFINED, 0, 0, SDL_WINDOW_FULLSCREEN_DESKTOP)))
+			return (lem_sdl_close(tmp, 2));
+		else if (lem_sdl_init_setrender(tmp))
+			return (3);
 	}
 	lem_sdl_init_anim(tmp);
 	SDL_SetRenderDrawBlendMode(tmp->renderer, SDL_BLENDMODE_ADD);

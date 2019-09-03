@@ -28,8 +28,8 @@ void	cleanup_info(t_info *info)
 	int r;
 
 	r = -1;
-//	if (info->len_path)
-//		free(info->len_path);
+	if (info->len_path)
+		free(info->len_path);
 	if (info->rooms)
 	{
 		while (++r < info->count_room)

@@ -12,10 +12,10 @@
 
 #include "lem_strt.h"
 
-int 	info_islink(char *line)
+int		info_islink(char *line)
 {
 	char	**tmp;
-	int 	i;
+	int		i;
 
 	i = 0;
 	tmp = ft_strsplit(line, '-');
@@ -30,10 +30,10 @@ int 	info_islink(char *line)
 	return (1);
 }
 
-int 	info_isroom(char *line)
+int		info_isroom(char *line)
 {
 	char	**tmp;
-	int 	i;
+	int		i;
 
 	i = 0;
 	tmp = ft_strsplit(line, ' ');
@@ -51,7 +51,7 @@ int 	info_isroom(char *line)
 int		info_isant(char *line)
 {
 	char	**tmp;
-	int 	i;
+	int		i;
 
 	i = 0;
 	if (info_islink(line))
@@ -68,12 +68,11 @@ int		info_isant(char *line)
 	return (1);
 }
 
-int 	info_checkorder(t_info *info)
+int		info_checkorder(t_info *info)
 {
 	int jarl[5];
 
 	ft_bzero(jarl, sizeof(int) * 5);
-//	printf("start: jcount0->%d | ja1->%d | jt2->%d | jl3->%d | jret4->%d\n", jarl[0], jarl[1], jarl[2], jarl[3], jarl[4]);
 	while (info->input[jarl[0]])
 	{
 		if (info->input[jarl[0]][0] == '#')
@@ -81,7 +80,7 @@ int 	info_checkorder(t_info *info)
 		else if (ft_strstr(info->input[jarl[0]], " ")
 			&& (strstr(info->input[jarl[0]], "-")
 			|| strstr(info->input[jarl[0]], "L")))
-				return (lem_errmsg(info, MAP_INVALID_NAME));
+			return (lem_errmsg(info, MAP_INVALID_NAME));
 		else if (info_isant(info->input[jarl[0]]) && (jarl[0] += 1))
 			(jarl[1] || jarl[2] || jarl[3]) ? (jarl[4] = -1) : (jarl[1] += 1);
 		else if (info_isroom(info->input[jarl[0]]) && (jarl[0] += 1))
@@ -92,7 +91,7 @@ int 	info_checkorder(t_info *info)
 	return (!jarl[4] ? ALLRIGHT : lem_errmsg(info, MAP_WRONG_ORDER));
 }
 
-int 	info_valid(t_info *info)
+int		info_valid(t_info *info)
 {
 	int error;
 

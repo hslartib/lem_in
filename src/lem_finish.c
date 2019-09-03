@@ -12,7 +12,7 @@
 
 #include "lem_strt.h"
 
-int 	lem_moreerrmsg(int errcode)
+int		lem_moreerrmsg(int errcode)
 {
 	int ret;
 

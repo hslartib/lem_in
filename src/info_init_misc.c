@@ -14,18 +14,18 @@
 
 int		rooms_find_name(t_room **rooms, char *name)
 {
-    int r;
+	int r;
 
-    r = 0;
-    while (rooms[r] && ft_strcmp(rooms[r]->name, name))
-        r++;
-    return (rooms[r] ? r : -1);
+	r = 0;
+	while (rooms[r] && ft_strcmp(rooms[r]->name, name))
+		r++;
+	return (rooms[r] ? r : -1);
 }
 
 int		init_rooms(t_info *info, char **text)
 {
 	int		runner;
-	int 	len;
+	int		len;
 
 	runner = next_value(info, text, 0) + 1;
 	len = 0;
@@ -40,7 +40,7 @@ int		init_rooms(t_info *info, char **text)
 	return (len);
 }
 
-char	**read_split()
+char	**read_split(void)
 {
 	char	**tmp;
 	int		t;

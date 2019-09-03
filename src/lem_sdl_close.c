@@ -12,11 +12,13 @@
 
 #include "lem_strt.h"
 
-int 	lem_sdl_close(t_sdl *lm, int ret)
+int		lem_sdl_close(t_sdl *lm, int ret)
 {
 	int i;
 
 	i = -1;
+	if (!lm)
+		return (ret);
 	while (++i < NUMBER_OF_FRAMES)
 	{
 		if (lm->anim.f_arr[i])

@@ -84,7 +84,8 @@ typedef struct 		s_anim
 	int 			parts;
 	int 			step;
 	int 			ant_all;
-	int 			ant_map;
+	int 			waiting;
+	int 			arrived;
 }					t_anim;
 
 typedef	struct 		s_sdl

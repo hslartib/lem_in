@@ -59,13 +59,13 @@ int		append_link(char *link, t_room **rooms)
 	return (0);
 }
 
-int 	next_value(t_info *info, char **text, int i)
+int		next_value(t_info *info, char **text, int i)
 {
 	int se[2];
 
 	ft_bzero(se, sizeof(int) * 2);
 	if (!i && info->count_ants == -1)
-		return(i);
+		return (i);
 	i += 1;
 	while (text[i] && text[i][0] == '#')
 	{
@@ -78,23 +78,19 @@ int 	next_value(t_info *info, char **text, int i)
 	if (!text[i])
 		return (-1);
 	if (se[0] == 1)
-	{
 		if (info->end != -1)
 			return (lem_errmsg(info, MULTIPLE_STARTEND));
-		info->start = info->count_room;
-	}
 	if (se[1] == 1)
-	{
 		if (info->end != -1)
 			return (lem_errmsg(info, MULTIPLE_STARTEND));
-		info->end = info->count_room;
-	}
+	info->start = info->count_room;
+	info->end = info->count_room;
 	return (i);
 }
 
 int		info_init(t_info *info)
 {
-	int 	t;
+	int		t;
 
 	ft_bzero(info, sizeof(t_info));
 	info->start = -1;
@@ -102,9 +98,9 @@ int		info_init(t_info *info)
 	info->count_ants = -1;
 	info->input = read_split();
 	if (info_checkorder(info))
-		return(MAP_WRONG_ORDER);
+		return (MAP_WRONG_ORDER);
 	if (!init_rooms(info, info->input))
-		return(lem_errmsg(info, NO_ROOMS));
+		return (lem_errmsg(info, NO_ROOMS));
 	t = 0;
 	if ((t = next_value(info, info->input, t)) == -3)
 		return (lem_errmsg(info, MULTIPLE_STARTEND));
@@ -118,16 +114,5 @@ int		info_init(t_info *info)
 	}
 	if (t == MULTIPLE_STARTEND)
 		return (lem_errmsg(info, MULTIPLE_STARTEND));
-//	int i;
-//	t = -1;
-//	printf("rooms: %d | ants: %d\n", info->count_room, info->count_ants);
-//	printf("start: %d | end: %d\n", info->start, info->end);
-//	while (++t < info->count_room)
-//	{
-//		i = -1;
-//		printf("index: %d | name: %s| x: %d | y: %d\n", t, info->rooms[t]->name, info->rooms[t]->coord_x, info->rooms[t]->coord_y);
-//		while (++i < info->rooms[t]->links_len)
-//			printf("   len: %d | link: %d\n", info->rooms[t]->links_len, info->rooms[t]->links[i]);
-//	}
 	return (info_valid(info));
 }

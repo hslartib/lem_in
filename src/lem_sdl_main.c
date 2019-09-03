@@ -12,31 +12,28 @@
 
 #include "lem_strt.h"
 
-void	lem_sdl_addcolour(SDL_Color *c, int r, int g, int b, int a)
-{
-	if ((c->r == 250 && r > 0)|| (c->r == 50 && r < 0))
-		return ;
-	c->r += r;
-	c->g += g;
-	c->b += b;
-	c->a += a;
-}
-
 void	lem_sdl_handle_more_events(SDL_Event e, t_sdl *lm)
 {
 	if (e.key.keysym.sym == SDLK_s)
 		lm->soviet = 1;
 	if (e.key.keysym.sym == SDLK_g)
 		lm->soviet = 0;
+	if (e.key.keysym.sym == SDLK_KP_9)
+		lm->anim.arrived += 1;
+	if (e.key.keysym.sym == SDLK_KP_6)
+		lm->anim.arrived > 0 ? lm->anim.arrived -= 1 : 0;
+	if (e.key.keysym.sym == SDLK_KP_8)
+		lm->anim.waiting += 1;
+	if (e.key.keysym.sym == SDLK_KP_5)
+		lm->anim.waiting > 0 ? lm->anim.waiting -= 1 : 0;
 }
 
 void	lem_sdl_handle_events(SDL_Event e, t_sdl *lm)
 {
-	if(e.type == SDL_QUIT)
+	if (e.type == SDL_QUIT)
 		lm->quit = 1;
 	else if (e.type == SDL_KEYDOWN)
 	{
-//		printf("key: %d\n", e.key.keysym.sym);
 		if (e.key.keysym.scancode == SDL_SCANCODE_ESCAPE)
 			lm->quit = 1;
 		else if (e.key.keysym.sym == SDLK_LEFTBRACKET)

@@ -12,15 +12,13 @@
 
 #include "lem_strt.h"
 
-//async animation
-
 void		lem_sdl_anim_drawframe(t_sdl *lm, SDL_Rect pos, int frame)
 {
-
 	SDL_RenderCopy(lm->renderer, lm->anim.f_arr[frame], NULL, &pos);
 }
 
-SDL_Rect	lem_sdl_anim_getrect(SDL_Rect start, SDL_Rect end, int parts, int step)
+SDL_Rect	lem_sdl_anim_getrect(SDL_Rect start,
+		SDL_Rect end, int parts, int step)
 {
 	SDL_Rect	pos;
 	float		x;
@@ -30,18 +28,19 @@ SDL_Rect	lem_sdl_anim_getrect(SDL_Rect start, SDL_Rect end, int parts, int step)
 	pos.h = start.h;
 	if (!step)
 		return (start);
-	x = (float)start.x + ((float)ABS_MINUS(end.x, start.x) / (float)parts * (float)step);
-	y = (float)start.y + ((float)ABS_MINUS(end.y, start.y) / (float)parts * (float)step);
+	x = (float)start.x + ((float)ABS_MINUS(end.x, start.x)
+			/ (float)parts * (float)step);
+	y = (float)start.y + ((float)ABS_MINUS(end.y, start.y)
+			/ (float)parts * (float)step);
 	pos.x = (int)x;
 	pos.y = (int)y;
-//	printf("x: %f | y: %f |sx: %d | sy: %d | ex: %d | ey: %d | px: %d| py: %d | parts: %d | step: %d\n", x, y, start.x, start.y, end.x, end.y, pos.x, pos.y, parts, step);
 	return (pos);
 }
 
 void		lem_sdl_anim_control(t_sdl *lm)
 {
 	int			i;
-	int 		frame;
+	int			frame;
 	SDL_Rect	pos;
 
 	i = 0;
