@@ -18,10 +18,17 @@ int 	lem_sdl_close(t_sdl *lm, int ret)
 
 	i = -1;
 	while (++i < NUMBER_OF_FRAMES)
+	{
 		if (lm->anim.f_arr[i])
 			SDL_DestroyTexture(lm->anim.f_arr[i]);
+		if (i < 4)
+			SDL_DestroyTexture(lm->text[i]);
+	}
+	TTF_CloseFont(lm->font);
 	SDL_DestroyRenderer(lm->renderer);
 	SDL_DestroyWindow(lm->window);
+	TTF_Quit();
+	IMG_Quit();
 	SDL_Quit();
 	if (lm)
 		free(lm);

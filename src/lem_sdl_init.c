@@ -107,24 +107,24 @@ int 	lem_sdl_init_setrender(t_sdl *tmp)
 	return (0);
 }
 
-void	print_links(t_sdl *lm)
-{
-	int r = 0;
-	int l = 0;
-
-	while (lm->info->rooms[r])
-	{
-		printf("r: %d\n", r);
-		while (l < lm->info->rooms[r]->links_len)
-		{
-			printf("         l: %d | link: %d\n", l, lm->info->rooms[r]->links[l]);
-			l += 1;
-		}
-		l = 0;
-		r += 1;
-	}
-	printf ("------------------------------------\n");
-}
+//void	print_links(t_sdl *lm)
+//{
+//	int r = 0;
+//	int l = 0;
+//
+//	while (lm->info->rooms[r])
+//	{
+//		printf("r: %d\n", r);
+//		while (l < lm->info->rooms[r]->links_len)
+//		{
+//			printf("         l: %d | link: %d\n", l, lm->info->rooms[r]->links[l]);
+//			l += 1;
+//		}
+//		l = 0;
+//		r += 1;
+//	}
+//	printf ("------------------------------------\n");
+//}
 
 int		lem_sdl_init_main(t_sdl **lm, t_info *info)
 {
@@ -147,6 +147,7 @@ int		lem_sdl_init_main(t_sdl **lm, t_info *info)
 	}
 	lem_sdl_init_anim(tmp);
 	SDL_SetRenderDrawBlendMode(tmp->renderer, SDL_BLENDMODE_ADD);
+	lem_sdl_init_font(lm);
 	lem_sdl_setroompos(tmp);
 	*lm = tmp;
 	return (0);

@@ -95,6 +95,8 @@ typedef	struct 		s_sdl
 	SDL_Event		event;
 	SDL_Color		c_path;
 	SDL_Color		c_room;
+	TTF_Font		*font;
+	SDL_Texture		*text[4];
 	t_anim			anim;
 	t_info			*info;
 	int 			soviet;
@@ -116,6 +118,7 @@ int 	lem_sdl_close(t_sdl *lm, int ret);
 void	lem_sdl_addcolour(SDL_Color *c, int r, int g, int b, int a);
 void	lem_sdl_anim_control(t_sdl *lm);
 void	lem_sdl_setroompos(t_sdl *lm);
+int		lem_sdl_init_font(t_sdl *lm);
 
 /*
 ** info_init related functions
