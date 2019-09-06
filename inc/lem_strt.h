@@ -45,13 +45,38 @@ enum 				e_errcode
 	MAP_INVALID_NAME
 };
 
+
+typedef struct	s_opredel
+{
+	int			i;
+	int			k;
+	int			last;
+	int			end;
+	int			z;
+}				t_opredel;
+
+typedef struct		s_path
+{
+	int				**root;
+	int 			*len_root;
+	int 			*count_ant;
+	int				count_root;
+	int 			itog;
+	int             check;
+	int             score;
+
+}					t_path;
+
 typedef struct		s_room
 {
 	char			*name;
+	int             index;
+	int 			rebuild;
 	int				*links;
 	int 			coord_x;
 	int 			coord_y;
 	int				links_len;
+	int 			true_index;
 	char			*all_path;
 	SDL_Rect		pos;
 }					t_room;
@@ -64,6 +89,15 @@ typedef struct		s_info
 	t_room			**rooms;
 	int				count_room;
 	int				*len_path;
+	t_room			**time;
+	int				count_time;
+	char 			*path;
+	t_path			*marshroot;
+	int 			count_string;
+	t_room			**dop_rooms;
+	int 			cou_d;
+	int 			*denied_link_start;
+	int				count_den_link;
 	char			**input;
 }					t_info;
 
@@ -108,7 +142,6 @@ typedef	struct 		s_sdl
 
 }					t_sdl;
 
-
 /*
 **	visuals related functions
 */
@@ -138,5 +171,31 @@ char				**read_split();
 */
 void				cleanup_info(t_info *info);
 int					lem_errmsg(t_info *info, int errcode);
+
+
+/*
+**	algo functions
+*/
+void				end_vertc(t_info *info, char *str);
+void				len_vrtc(t_info *info, int index);
+void				path(t_info *info, char *str, int index);
+void				workroom(t_info *info);
+int					double_all_path(t_room *rooms, char *str);
+int			double_end_path(t_room *rooms, char *str);
+int			double_vrtc(t_info *info, int index);
+int check_end(char *str, int index);
+int check_len(t_info *info, int nbr);
+int check_link(t_info *info, int index, int m);
+void copy_path(t_path *path);
+void len_vrtc_den(t_info *info, int index, char *str);
+void weight(t_info *info);
+void delite(t_info *info, t_path *path);
+void clean_del(t_info *info);
+int next_number(t_path *path, int index);
+int check_denied(t_info *info, int index);
+void	double_path(t_path *path, int index, int r);
+void copy_prepath(t_path **path, int index);
+void free_pathes(t_info *info, t_path **path, int count);
+
 
 #endif

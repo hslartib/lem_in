@@ -28,16 +28,16 @@ void	cleanup_info(t_info *info)
 	int r;
 
 	r = -1;
-	if (info->len_path)
-		free(info->len_path);
-	if (info->rooms)
+	if (info)
 	{
-		while (++r < info->count_room)
-			if (info->rooms[r])
-				cleanup_room(info->rooms[r]);
-		free(info->rooms);
+		if (info->rooms) {
+			while (++r < info->count_room)
+				if (info->rooms[r])
+					cleanup_room(info->rooms[r]);
+			free(info->rooms);
+		}
+		if (info->input)
+			ft_strdel_2d(&info->input);
+		free(info);
 	}
-	if (info->input)
-		ft_strdel_2d(&info->input);
-	free(info);
 }

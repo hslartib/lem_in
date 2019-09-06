@@ -78,13 +78,13 @@ int		next_value(t_info *info, char **text, int i)
 	if (!text[i])
 		return (-1);
 	if (se[0] == 1)
-		if (info->end != -1)
+		if (info->start != -1)
 			return (lem_errmsg(info, MULTIPLE_STARTEND));
 	if (se[1] == 1)
 		if (info->end != -1)
 			return (lem_errmsg(info, MULTIPLE_STARTEND));
-	info->start = info->count_room;
-	info->end = info->count_room;
+	info->start = se[0] ? info->count_room : info->start;
+	info->end = se[1] ? info->count_room : info->end;
 	return (i);
 }
 
@@ -93,10 +93,10 @@ int		info_init(t_info *info)
 	int		t;
 
 	ft_bzero(info, sizeof(t_info));
-	info->start = -1;
-	info->end = -1;
 	info->count_ants = -1;
 	info->input = read_split();
+	info->start = -1;
+	info->end = -1;
 	if (info_checkorder(info))
 		return (MAP_WRONG_ORDER);
 	if (!init_rooms(info, info->input))
