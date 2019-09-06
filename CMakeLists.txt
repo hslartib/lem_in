@@ -6,7 +6,7 @@ set(CMAKE_C_STANDARD 11)
 include_directories(inc)
 include_directories(libft)
 
-add_executable(
+add_executable(lem_in
         inc/lem_strt.h
         libft/ft_atoi.c
         libft/ft_bzero.c
@@ -76,10 +76,30 @@ add_executable(
         libft/ft_toupper.c
         libft/get_next_line.c
         libft/libft.h
+        src/build_path.c
+        src/delite.c
+        src/do_count.c
+        src/do_path.c
+        src/double_check.c
+        src/double_path.c
+        src/help_delite_1.c
+        src/help_delite_2.c
+        src/help_do_path.c
+        src/help_double_path.c
+        src/help_len_vrtc_den.c
+        src/help_output.c
         src/info_init.c
         src/info_init_misc.c
         src/info_validation.c
         src/lem_cleanup.c
         src/lem_finish.c
+        src/lem_sdl_animation.c
+        src/lem_sdl_close.c
+        src/lem_sdl_init.c
+        src/lem_sdl_loadmap.c
+        src/lem_sdl_main.c
+        src/lem_sdl_text.c
         src/lem_strt.c
-        src/work_len_finish.c src/lem_sdl_main.c src/lem_sdl_init.c src/lem_sdl_close.c src/lem_sdl_loadmap.c src/lem_sdl_animation.c src/lem_sdl_text.c src/lem_sdl_text.c src/double_check.c)
+        src/len_vrtc_and_weight.c
+        src/len_vrtc_den_and_weight_den.c
+        src/output.c)

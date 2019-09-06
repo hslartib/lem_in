@@ -45,6 +45,11 @@ enum 				e_errcode
 	MAP_INVALID_NAME
 };
 
+typedef struct		s_pos
+{
+	int pos1[2];
+	int pos2[2];
+}					t_pos;
 
 typedef struct	s_opredel
 {
@@ -83,6 +88,7 @@ typedef struct		s_room
 
 typedef struct		s_info
 {
+	int				visual;
 	int				count_ants;
 	int				start;
 	int				end;
@@ -99,6 +105,7 @@ typedef struct		s_info
 	int 			*denied_link_start;
 	int				count_den_link;
 	char			**input;
+	t_path			*sdl_path;
 }					t_info;
 
 typedef struct		s_ant
@@ -176,26 +183,65 @@ int					lem_errmsg(t_info *info, int errcode);
 /*
 **	algo functions
 */
-void				end_vertc(t_info *info, char *str);
-void				len_vrtc(t_info *info, int index);
-void				path(t_info *info, char *str, int index);
-void				workroom(t_info *info);
-int					double_all_path(t_room *rooms, char *str);
-int			double_end_path(t_room *rooms, char *str);
-int			double_vrtc(t_info *info, int index);
-int check_end(char *str, int index);
-int check_len(t_info *info, int nbr);
-int check_link(t_info *info, int index, int m);
-void copy_path(t_path *path);
-void len_vrtc_den(t_info *info, int index, char *str);
-void weight(t_info *info);
-void delite(t_info *info, t_path *path);
-void clean_del(t_info *info);
-int next_number(t_path *path, int index);
-int check_denied(t_info *info, int index);
-void	double_path(t_path *path, int index, int r);
-void copy_prepath(t_path **path, int index);
-void free_pathes(t_info *info, t_path **path, int count);
+int					help_build(t_path *path, t_info *info, char **mas);
+void				build_path_den(char *str, t_path *path, t_info *info);
+void				rebuild_path(t_path **path, int index);
+void				build_path(t_info *info, t_path *path, int index, int lamp);
+void				vrtc_den_1(t_info *info, int index, char *str, int k);
+void				vrtc_den_2(t_info *info, int index, char *str, int k);
+void				vrtc_den_3(t_info *info, int index, char *str, int k);
+void				vrtc_den_4(t_info *info, int index, char *str, int k);
+char				*obsilut_str(char *str, int index);
+char				*help_str_vrtc(char *str, int index, t_info *info);
+void				len_vrtc_den(t_info *info, int index, char *str);
+void				weight_den(t_info *info);
+int					find_max(t_path *path);
+int					find_len(t_path *path, t_info *info, int max);
+int					find_mod(t_path *path, t_info *info, int max, int len);
+void				bit(t_path *path, int mod);
+void				do_count(t_info *info, t_path *path);
+void				init_path0(t_path **path);
+void				init_path0_continue(t_info *info, t_path **path);
+void				vibor_krotchaishego(t_info *info, t_path *path);
+void				init_path_i(t_path **path, int i);
+int					do_path_part_1(t_info *info, t_path **path);
+void				do_path_part_2(t_info *info, t_path **path, int i);
+void				do_path_part_3(t_info *info, t_path **path, int i);
+void				free_path0(t_path **path, t_info *info);
+int					do_path(t_info *info);
+void				len_vrtc(t_info *info, int nbr);
+void				weight(t_info *info);
+int					opredel_end(t_path *path, int *puti, int *z, int k);
+void				vivod(t_path *path, int *puti, int *komnat, int i);
+void				null_n(int *i1, int *i2, int *i3, int *i4);
+void				opredel_path(t_info *info, t_path *path, int *puti, int *komnat);
+void				finish_algo(t_info *info, t_path *path, int *puti, int *komnat);
+void				output(t_info *info, t_path *path);
+int					check_end_start_link(t_info *info);
+void				output_start_end(t_info *info);
+
+
+void				copy_first(int *src, int *dep, int count);
+void				copy_last(int *src, int *dep, int last_s, int last_d);
+void				do_pos(t_path *path, int index, int r, t_pos *pos);
+void				init_pos(t_pos *pos);
+void				double_path_do_prt1(t_path *path, int index, int *mas1);
+void				double_path_do1(t_path *path, int index, int r, t_pos *pos);
+void				double_path(t_path *path, int index, int r);
+int					check_len(t_info *info, int nbr);
+void				copy_prepath(t_path **path, int index);
+void				perdoz(t_info *info, int src, int out, int in);
+void				perdoz_2(t_info *info, int src, int out, int in);
+int					check_start_time(int dep, t_path *path);
+void				room_in_time_copy(t_room *room, t_info *info, int index);
+void				fill_rest(t_info *info);
+void				init_time(t_info *info, t_path *path);
+void				init_v(t_info *info, int v, int kl);
+void				init_start(t_info *info, t_path *path);
+int					delite_prt1(t_info *info, t_path *path, int coo, int v);
+void				delite(t_info *info, t_path *path);
+void				clean_del(t_info *info);
+void				free_pathes(t_info *info, t_path **path, int count);
 
 
 #endif
