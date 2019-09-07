@@ -28,14 +28,13 @@ void	lem_sdl_handle_more_events(SDL_Event e, t_sdl *lm)
 		lm->soviet = 1;
 	if (e.key.keysym.sym == SDLK_g)
 		lm->soviet = 0;
-	if (e.key.keysym.sym == SDLK_KP_9)
-		lm->anim.arrived += 1;
-	if (e.key.keysym.sym == SDLK_KP_6)
-		lm->anim.arrived > 0 ? lm->anim.arrived -= 1 : 0;
-	if (e.key.keysym.sym == SDLK_KP_8)
-		lm->anim.waiting += 1;
-	if (e.key.keysym.sym == SDLK_KP_5)
-		lm->anim.waiting > 0 ? lm->anim.waiting -= 1 : 0;
+	if (e.key.keysym.sym == SDLK_f)
+	{
+		(lm->free) ? (lm->free = 0) : (lm->free = 1);
+		!lm->free ? lm->move = 1 : 0;
+	}
+	if (e.key.keysym.sym == SDLK_m)
+		lm->move = 1;
 }
 
 void	lem_sdl_handle_events(SDL_Event e, t_sdl *lm)
@@ -55,9 +54,9 @@ void	lem_sdl_handle_events(SDL_Event e, t_sdl *lm)
 		else if (e.key.keysym.sym == SDLK_BACKSLASH)
 			lem_sdl_addcolour(&lm->c_room, 10, 10, 10, 10);
 		else if (e.key.keysym.sym == SDLK_EQUALS)
-			lm->anim.parts += 50;
+			lm->anim.parts += 10;
 		else if (e.key.keysym.sym == SDLK_MINUS)
-			lm->anim.parts >= 100 ? lm->anim.parts -= 50 : 0;
+			lm->anim.parts >= 100 ? lm->anim.parts -= 10 : 0;
 		else
 			lem_sdl_handle_more_events(e, lm);
 		if (lm->anim.step >= lm->anim.parts)

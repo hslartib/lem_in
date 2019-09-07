@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/FdF" vcs="" />
+    <mapping directory="$PROJECT_DIR$/lem-in_generator" vcs="Git" />
   </component>
 </project>

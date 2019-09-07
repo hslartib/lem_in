@@ -17,24 +17,34 @@ void		lem_sdl_anim_drawframe(t_sdl *lm, SDL_Rect pos, int frame)
 	SDL_RenderCopy(lm->renderer, lm->anim.f_arr[frame], NULL, &pos);
 }
 
-SDL_Rect	lem_sdl_anim_getrect(SDL_Rect start,
-		SDL_Rect end, int parts, int step)
+SDL_Rect	lem_sdl_anim_getrect(t_sdl *lm, int i)
 {
-	SDL_Rect	pos;
-	float		x;
-	float		y;
+	t_ant		*ant;
+	SDL_Rect	ret;
+	SDL_Rect	start;
+	SDL_Rect	end;
 
-	pos.w = start.w;
-	pos.h = start.h;
-	if (!step)
-		return (start);
-	x = (float)start.x + ((float)ABS_MINUS(end.x, start.x)
-			/ (float)parts * (float)step);
-	y = (float)start.y + ((float)ABS_MINUS(end.y, start.y)
-			/ (float)parts * (float)step);
-	pos.x = (int)x;
-	pos.y = (int)y;
-	return (pos);
+	ant  = &lm->anim.ants[i];
+	start = lm->info->rooms[ant->path[ant->step]]->pos;
+	end = lm->info->rooms[ant->path[ant->step + 1]]->pos;
+	if (!lm->free && !lm->move)
+		return ((SDL_Rect){start.x + lm->anim.a_width / 2, start.y - lm->anim.a_height / 2, lm->anim.a_width, lm->anim.a_height});
+	if (!ant->visible || ant->visible == -1)
+	{
+		if (ant->visible != -1 && (!lm->anim.step &&
+			(i == 0 || (lm->anim.ants[i - 1].path[0] == ant->path[0] && lm->anim.ants[i - 1].step > 0)
+			|| (lm->anim.ants[i - 1].path[1] != ant->path[1]))))
+			ant->visible = 1;
+		else
+			return ((SDL_Rect){0, 0, 0, 0});
+	}
+	if (ant->step == (ant->p_len - 1) && (ant->visible = -1))
+		return ((SDL_Rect){0, 0, 0, 0});
+	ret.w = lm->anim.a_width;
+	ret.h = lm->anim.a_height;
+	ret.x = (int)((float)start.x + ((float)(end.x - start.x) * (float)lm->anim.step / (float)lm->anim.parts)) + ret.w / 2;
+	ret.y = (int)((float)start.y + ((float)(end.y - start.y) * (float)lm->anim.step / (float)lm->anim.parts)) - ret.h / 2;
+	return (ret);
 }
 
 void		lem_sdl_anim_control(t_sdl *lm)
@@ -47,13 +57,18 @@ void		lem_sdl_anim_control(t_sdl *lm)
 	while (i < lm->anim.ant_all)
 	{
 		frame = lm->anim.ants[i].frame;
-		pos = lem_sdl_anim_getrect(lm->anim.ants[i].start,
-				lm->anim.ants[i].end, lm->anim.parts, lm->anim.step);
-		lem_sdl_anim_drawframe(lm, pos,
-				lm->anim.ants[i].frame / F_FRATE);
-		lm->anim.ants[i].frame = (frame >= NUMBER_OF_FRAMES * F_FRATE - 1)
-				? 0 : (frame + 1);
+		pos = lem_sdl_anim_getrect(lm, i);
+		if (pos.w)
+		{
+			lem_sdl_anim_drawframe(lm, pos,
+								   lm->anim.ants[i].frame / F_FRATE);
+			lm->anim.ants[i].frame = (frame >= NUMBER_OF_FRAMES * F_FRATE - 1)
+									 ? 0 : (frame + 1);
+			if (lm->anim.step == lm->anim.parts && (lm->free || lm->move))
+				lm->anim.ants[i].step += 1;
+		}
 		i += 1;
 	}
 	lm->anim.step = (lm->anim.step == lm->anim.parts) ? 0 : (lm->anim.step + 1);
+	!lm->anim.step ? lm->move = 0 : 0;
 }

@@ -51,39 +51,43 @@ int				lem_sdl_init_loadanim(t_sdl *tmp)
 	return (0);
 }
 
+int 			lem_sdl_init_anim_ants(t_anim *anim, t_path *path)
+{
+	int			r;
+	int 		a;
+
+	r = 0;
+	a = 0;
+	while (r < path->count_root)
+	{
+		while (path->count_ant[r] > 0)
+		{
+			anim->ants[a].path = path->root[r];
+			anim->ants[a].p_len = path->len_root[r];
+			anim->ants[a].step = 0;
+			anim->ants[a].visible = 0;
+			anim->ants[a].frame = rand() % (NUMBER_OF_FRAMES * F_FRATE);
+			path->count_ant[r] -= 1;
+			a += 1;
+		}
+		r += 1;
+	}
+	return (0);
+}
+
 int				lem_sdl_init_anim(t_sdl *tmp)
 {
-	int			i;
-	SDL_Rect	start;
-	SDL_Rect	end;
-
 	tmp->anim.a_width = (sqrt((tmp->w_height * tmp->w_width)
 			/ tmp->info->count_room) + 1) / 2 * 78 / 90;
 	tmp->anim.a_height = (sqrt((tmp->w_height * tmp->w_width)
 			/ tmp->info->count_room) + 1) / 2 * 90 / 78;
 	tmp->anim.a_width > 90 ? (tmp->anim.a_width = 90) : 0;
 	tmp->anim.a_height > 78 ? (tmp->anim.a_height = 78) : 0;
-	start.x = 0;
-	start.y = 0;
-	start.w = tmp->anim.a_width;
-	start.h = tmp->anim.a_height;
-	end.x = tmp->w_width;
-	end.y = tmp->w_height;
-	end.w = tmp->anim.a_width;
-	end.h = tmp->anim.a_height;
-	tmp->anim.parts = 700;
-	tmp->anim.step = 1;
+	tmp->anim.parts = 100;
+	tmp->anim.step = 0;
 	tmp->anim.ant_all = tmp->info->count_ants;
 	tmp->anim.ants = (t_ant *)malloc(sizeof(t_ant) * tmp->anim.ant_all);
-	i = 0;
-	while (i < tmp->info->count_ants)
-	{
-		ft_bzero(&tmp->anim.ants[i], sizeof(t_ant));
-		tmp->anim.ants[i].frame = rand() % 80;
-		tmp->anim.ants[i].start = start;
-		tmp->anim.ants[i].end = end;
-		i += 1;
-	}
+	lem_sdl_init_anim_ants(&tmp->anim, tmp->info->sdl_path);
 	return (0);
 }
 

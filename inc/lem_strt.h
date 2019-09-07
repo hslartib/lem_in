@@ -110,8 +110,9 @@ typedef struct		s_info
 
 typedef struct		s_ant
 {
-	SDL_Rect		start;
-	SDL_Rect		end;
+	int 			*path;
+	int 			step;
+	int 			p_len;
 	int 			visible;
 	int 			frame;
 }					t_ant;
@@ -141,6 +142,8 @@ typedef	struct 		s_sdl
 	SDL_Texture		*text[4];
 	t_anim			anim;
 	t_info			*info;
+	int 			free;
+	int 			move;
 	int 			soviet;
 	int 			w_width;
 	int 			w_height;
