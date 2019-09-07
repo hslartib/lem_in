@@ -58,6 +58,7 @@ void			lem_sdl_renderttext(t_sdl *lm)
 	int			h;
 	SDL_Color	color;
 
+	lem_sdl_text_countants(lm);
 	i = !lm->soviet ? 0 : 2;
 	color = !lm->soviet ? (SDL_Color){1, 255, 255, 255}
 	: (SDL_Color){255, 1, 1, 255};
@@ -73,4 +74,21 @@ void			lem_sdl_renderttext(t_sdl *lm)
 	{lm->w_width - w - 12, 21, w, h});
 	SDL_RenderFillRect(lm->renderer, &(SDL_Rect)
 	{lm->w_width - 72, 42 + h, 42, 210 * lm->anim.arrived / lm->anim.ant_all});
+}
+
+void			lem_sdl_text_countants(t_sdl *lm)
+{
+	int			i;
+
+	i = 0;
+	lm->anim.waiting = lm->anim.ant_all;
+	lm->anim.arrived = 0;
+	while (i < lm->anim.ant_all)
+	{
+		if (lm->anim.ants[i].step != 0)
+			lm->anim.waiting -= 1;
+		if (lm->anim.ants[i].step == lm->anim.ants[i].p_len - 1)
+			lm->anim.arrived += 1;
+		i += 1;
+	}
 }

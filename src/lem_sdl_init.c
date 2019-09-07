@@ -86,6 +86,7 @@ int				lem_sdl_init_anim(t_sdl *tmp)
 	tmp->anim.parts = 100;
 	tmp->anim.step = 0;
 	tmp->anim.ant_all = tmp->info->count_ants;
+	tmp->anim.waiting = tmp->anim.ant_all;
 	tmp->anim.ants = (t_ant *)malloc(sizeof(t_ant) * tmp->anim.ant_all);
 	lem_sdl_init_anim_ants(&tmp->anim, tmp->info->sdl_path);
 	return (0);

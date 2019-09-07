@@ -142,7 +142,7 @@ typedef	struct 		s_sdl
 	SDL_Texture		*text[4];
 	t_anim			anim;
 	t_info			*info;
-	int 			free;
+	int 			flow;
 	int 			move;
 	int 			soviet;
 	int 			w_width;
@@ -155,15 +155,17 @@ typedef	struct 		s_sdl
 /*
 **	visuals related functions
 */
-void	lem_sdl_control(t_info *info);
-int		lem_sdl_init_main(t_sdl **lm, t_info *info);
-int 	lem_sdl_loadmap(t_sdl *lm);
-int 	lem_sdl_close(t_sdl *lm, int ret);
-void	lem_sdl_addcolour(SDL_Color *c, int r, int g, int b, int a);
-void	lem_sdl_anim_control(t_sdl *lm);
-void	lem_sdl_setroompos(t_sdl *lm);
-int		lem_sdl_init_font(t_sdl *lm);
-void	lem_sdl_renderttext(t_sdl *lm);
+void				lem_sdl_text_countants(t_sdl *lm);
+void			 	lem_sdl_anim_static(t_sdl *lm);
+void				lem_sdl_control(t_info *info);
+int					lem_sdl_init_main(t_sdl **lm, t_info *info);
+int 				lem_sdl_loadmap(t_sdl *lm);
+int 				lem_sdl_close(t_sdl *lm, int ret);
+void				lem_sdl_addcolour(SDL_Color *c, int r, int g, int b, int a);
+void				lem_sdl_anim_control(t_sdl *lm);
+void				lem_sdl_setroompos(t_sdl *lm);
+int					lem_sdl_init_font(t_sdl *lm);
+void				lem_sdl_renderttext(t_sdl *lm);
 
 /*
 ** info_init related functions

@@ -12,7 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82d04e97-26c3-4a71-b06e-a2c708bf0c9a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inc/lem_strt.h" beforeDir="false" afterPath="$PROJECT_DIR$/inc/lem_strt.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lem-in" beforeDir="false" afterPath="$PROJECT_DIR$/lem-in" afterDir="false" />
@@ -20,11 +19,10 @@
       <change beforePath="$PROJECT_DIR$/src/lem_sdl_animation.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/lem_sdl_animation.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lem_sdl_animation.o" beforeDir="false" afterPath="$PROJECT_DIR$/src/lem_sdl_animation.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lem_sdl_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/lem_sdl_init.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lem_sdl_init.o" beforeDir="false" afterPath="$PROJECT_DIR$/src/lem_sdl_init.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lem_sdl_loadmap.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/lem_sdl_loadmap.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lem_sdl_loadmap.o" beforeDir="false" afterPath="$PROJECT_DIR$/src/lem_sdl_loadmap.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lem_sdl_main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/lem_sdl_main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lem_sdl_main.o" beforeDir="false" afterPath="$PROJECT_DIR$/src/lem_sdl_main.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lem_sdl_text.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/lem_sdl_text.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lem_sdl_text.o" beforeDir="false" afterPath="$PROJECT_DIR$/src/lem_sdl_text.o" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,11 +37,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/inc/lem_strt.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="117" column="26" selection-start-line="117" selection-start-column="26" selection-end-line="117" selection-end-column="26" />
+            <state relative-caret-position="1333">
+              <caret line="167" column="4" selection-start-line="167" selection-start-column="4" selection-end-line="167" selection-end-column="4" />
               <folding>
                 <element signature="e#928#955#0" expanded="true" />
               </folding>
@@ -54,8 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lem_sdl_main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1110">
-              <caret line="74" column="47" selection-start-line="74" selection-start-column="47" selection-end-line="74" selection-end-column="47" />
+            <state relative-caret-position="1245">
+              <caret line="83" column="48" selection-start-line="83" selection-start-column="48" selection-end-line="83" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -64,16 +62,16 @@
         <entry file="file://$PROJECT_DIR$/src/lem_sdl_loadmap.c">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="53" lean-forward="true" selection-start-column="53" selection-end-column="53" />
+              <caret column="70" selection-start-column="70" selection-end-column="70" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lem_sdl_init.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1005">
-              <caret line="83" column="24" lean-forward="true" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
+            <state relative-caret-position="272">
+              <caret line="55" column="18" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -81,8 +79,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lem_sdl_animation.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="42" column="29" lean-forward="true" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+            <state relative-caret-position="735">
+              <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="68" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -90,8 +88,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lem_sdl_text.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="72" column="33" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
+            <state relative-caret-position="1155">
+              <caret line="77" selection-start-line="77" selection-end-line="77" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -135,20 +133,20 @@
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/src/double_check.c" />
-        <option value="$PROJECT_DIR$/src/lem_sdl_text.c" />
-        <option value="$PROJECT_DIR$/src/lem_sdl_loadmap.c" />
         <option value="$PROJECT_DIR$/src/output.c" />
-        <option value="$PROJECT_DIR$/src/lem_sdl_init.c" />
         <option value="$PROJECT_DIR$/src/help_output.c" />
         <option value="$PROJECT_DIR$/src/lem_strt.c" />
-        <option value="$PROJECT_DIR$/inc/lem_strt.h" />
-        <option value="$PROJECT_DIR$/src/lem_sdl_main.c" />
+        <option value="$PROJECT_DIR$/src/lem_sdl_loadmap.c" />
         <option value="$PROJECT_DIR$/src/lem_sdl_animation.c" />
+        <option value="$PROJECT_DIR$/src/lem_sdl_init.c" />
+        <option value="$PROJECT_DIR$/src/lem_sdl_main.c" />
+        <option value="$PROJECT_DIR$/src/lem_sdl_text.c" />
+        <option value="$PROJECT_DIR$/inc/lem_strt.h" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="false" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="3200" />
     <option name="height" value="1800" />
   </component>
@@ -268,18 +266,20 @@
       <workItem from="1567809034812" duration="3036000" />
       <workItem from="1567818593816" duration="1882000" />
       <workItem from="1567828101330" duration="3744000" />
-      <workItem from="1567835418292" duration="5163000" />
+      <workItem from="1567835418292" duration="5425000" />
+      <workItem from="1567843445341" duration="75000" />
+      <workItem from="1567843527731" duration="511000" />
+      <workItem from="1567854777987" duration="3380000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136782000" />
+    <option name="totallyTimeSpent" value="141010000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="3200" height="1800" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.08644712" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08739708" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
@@ -299,7 +299,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" sideWeight="0.49927008" weight="0.24980143" />
-      <window_info anchor="right" id="Terminal" order="5" sideWeight="0.5007299" visible="true" weight="0.40436986" />
+      <window_info active="true" anchor="right" id="Terminal" order="5" sideWeight="0.5007299" visible="true" weight="0.40436986" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.08423053" />
@@ -555,48 +555,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inc/lem_strt.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="117" column="26" selection-start-line="117" selection-start-column="26" selection-end-line="117" selection-end-column="26" />
-          <folding>
-            <element signature="e#928#955#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lem_sdl_text.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="72" column="33" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lem_sdl_main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="74" column="47" selection-start-line="74" selection-start-column="47" selection-end-line="74" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lem_sdl_animation.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="29" lean-forward="true" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lem_sdl_loadmap.c">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="53" lean-forward="true" selection-start-column="53" selection-end-column="53" />
+          <caret column="70" selection-start-column="70" selection-end-column="70" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lem_sdl_init.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
-          <caret line="83" column="24" lean-forward="true" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
+        <state relative-caret-position="272">
+          <caret line="55" column="18" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lem_sdl_main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1245">
+          <caret line="83" column="48" selection-start-line="83" selection-start-column="48" selection-end-line="83" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lem_sdl_animation.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="68" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lem_sdl_text.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="77" selection-start-line="77" selection-end-line="77" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/lem_strt.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1333">
+          <caret line="167" column="4" selection-start-line="167" selection-start-column="4" selection-end-line="167" selection-end-column="4" />
+          <folding>
+            <element signature="e#928#955#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

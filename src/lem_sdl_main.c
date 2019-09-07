@@ -12,6 +12,11 @@
 
 #include "lem_strt.h"
 
+/*
+ * enclose in cicle
+ * animate by group
+ */
+
 void 	lem_sdl_addcolour(SDL_Color *color, int r, int g, int b, int a)
 {
 	if (color->r + r < 50 || color->r + r > 240)
@@ -29,10 +34,7 @@ void	lem_sdl_handle_more_events(SDL_Event e, t_sdl *lm)
 	if (e.key.keysym.sym == SDLK_g)
 		lm->soviet = 0;
 	if (e.key.keysym.sym == SDLK_f)
-	{
-		(lm->free) ? (lm->free = 0) : (lm->free = 1);
-		!lm->free ? lm->move = 1 : 0;
-	}
+		lm->flow = lm->flow ? 0 : 1;
 	if (e.key.keysym.sym == SDLK_m)
 		lm->move = 1;
 }
@@ -73,12 +75,25 @@ void	lem_sdl_control(t_info *info)
 	{
 		while (SDL_PollEvent(&lm->event))
 			lem_sdl_handle_events(lm->event, lm);
-		SDL_SetRenderDrawColor(lm->renderer, 0x00, 0x00, 0x00, 0x00);
-		SDL_RenderClear(lm->renderer);
-		lem_sdl_loadmap(lm);
-		lem_sdl_anim_control(lm);
-		lem_sdl_renderttext(lm);
-		SDL_RenderPresent(lm->renderer);
+		if (lm->flow || lm->move)
+		{
+			while (!NULL)
+			{
+				while (SDL_PollEvent(&lm->event))
+					lem_sdl_handle_events(lm->event, lm);
+				SDL_SetRenderDrawColor(lm->renderer, 0x00, 0x00, 0x00, 0x00);
+				SDL_RenderClear(lm->renderer);
+				lem_sdl_loadmap(lm);
+				lem_sdl_anim_control(lm);
+				lem_sdl_renderttext(lm);
+				SDL_RenderPresent(lm->renderer);
+				if (!lm->anim.step)
+					break ;
+			}
+			lm->move = 0;
+		}
+		if (lm->anim.arrived != lm->anim.ant_all)
+			lem_sdl_anim_static(lm);
 	}
 	lem_sdl_close(lm, 0);
 }

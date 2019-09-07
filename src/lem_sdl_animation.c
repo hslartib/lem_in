@@ -25,10 +25,6 @@ SDL_Rect	lem_sdl_anim_getrect(t_sdl *lm, int i)
 	SDL_Rect	end;
 
 	ant  = &lm->anim.ants[i];
-	start = lm->info->rooms[ant->path[ant->step]]->pos;
-	end = lm->info->rooms[ant->path[ant->step + 1]]->pos;
-	if (!lm->free && !lm->move)
-		return ((SDL_Rect){start.x + lm->anim.a_width / 2, start.y - lm->anim.a_height / 2, lm->anim.a_width, lm->anim.a_height});
 	if (!ant->visible || ant->visible == -1)
 	{
 		if (ant->visible != -1 && (!lm->anim.step &&
@@ -40,6 +36,8 @@ SDL_Rect	lem_sdl_anim_getrect(t_sdl *lm, int i)
 	}
 	if (ant->step == (ant->p_len - 1) && (ant->visible = -1))
 		return ((SDL_Rect){0, 0, 0, 0});
+	start = lm->info->rooms[ant->path[ant->step]]->pos;
+	end = lm->info->rooms[ant->path[ant->step + 1]]->pos;
 	ret.w = lm->anim.a_width;
 	ret.h = lm->anim.a_height;
 	ret.x = (int)((float)start.x + ((float)(end.x - start.x) * (float)lm->anim.step / (float)lm->anim.parts)) + ret.w / 2;
@@ -64,11 +62,41 @@ void		lem_sdl_anim_control(t_sdl *lm)
 								   lm->anim.ants[i].frame / F_FRATE);
 			lm->anim.ants[i].frame = (frame >= NUMBER_OF_FRAMES * F_FRATE - 1)
 									 ? 0 : (frame + 1);
-			if (lm->anim.step == lm->anim.parts && (lm->free || lm->move))
+			if (lm->anim.step == lm->anim.parts)
 				lm->anim.ants[i].step += 1;
 		}
 		i += 1;
 	}
 	lm->anim.step = (lm->anim.step == lm->anim.parts) ? 0 : (lm->anim.step + 1);
-	!lm->anim.step ? lm->move = 0 : 0;
+}
+
+void		lem_sdl_anim_static(t_sdl *lm)
+{
+	int			i;
+	int			frame;
+	SDL_Rect	pos;
+
+	i = 0;
+	SDL_SetRenderDrawColor(lm->renderer, 0x00, 0x00, 0x00, 0x00);
+	SDL_RenderClear(lm->renderer);
+	lem_sdl_loadmap(lm);
+	lem_sdl_renderttext(lm);
+	while (i < lm->anim.ant_all)
+	{
+		if (lm->anim.ants[i].step)
+		{
+			frame = lm->anim.ants[i].frame;
+			pos = lm->info->rooms[lm->anim.ants[i].path[lm->anim.ants[i].step]]->pos;
+			pos.x += lm->anim.a_width / 2;
+			pos.y -= lm->anim.a_height / 2;
+			pos.w = lm->anim.a_width;
+			pos.h = lm->anim.a_height;
+			lem_sdl_anim_drawframe(lm, pos,
+			   lm->anim.ants[i].frame / F_FRATE);
+			lm->anim.ants[i].frame = (frame >= NUMBER_OF_FRAMES * F_FRATE - 1)
+				? 0 : (frame + 1);
+		}
+		i += 1;
+	}
+	SDL_RenderPresent(lm->renderer);
 }
