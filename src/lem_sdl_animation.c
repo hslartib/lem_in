@@ -12,9 +12,20 @@
 
 #include "lem_strt.h"
 
+void		lem_sdl_music(t_sdl *lm)
+{
+	if (lm->soviet)
+		system("afplay ./src/s_anthem.mp3 &");
+	else
+		system("pkill afplay");
+}
+
 void		lem_sdl_anim_drawframe(t_sdl *lm, SDL_Rect pos, int frame)
 {
-	SDL_RenderCopy(lm->renderer, lm->anim.f_arr[frame], NULL, &pos);
+	int i;
+
+	i = lm->soviet ? NUMBER_OF_FRAMES : 0;
+	SDL_RenderCopy(lm->renderer, lm->anim.f_arr[frame + i], NULL, &pos);
 }
 
 SDL_Rect	lem_sdl_anim_getrect(t_sdl *lm, int i)
@@ -28,7 +39,8 @@ SDL_Rect	lem_sdl_anim_getrect(t_sdl *lm, int i)
 	if (!ant->visible || ant->visible == -1)
 	{
 		if (ant->visible != -1 && (!lm->anim.step &&
-			(i == 0 || (lm->anim.ants[i - 1].path[0] == ant->path[0] && lm->anim.ants[i - 1].step > 0)
+			(i == 0 || (lm->anim.ants[i - 1].path[0] ==
+			ant->path[0] && lm->anim.ants[i - 1].step > 0)
 			|| (lm->anim.ants[i - 1].path[1] != ant->path[1]))))
 			ant->visible = 1;
 		else
@@ -40,8 +52,10 @@ SDL_Rect	lem_sdl_anim_getrect(t_sdl *lm, int i)
 	end = lm->info->rooms[ant->path[ant->step + 1]]->pos;
 	ret.w = lm->anim.a_width;
 	ret.h = lm->anim.a_height;
-	ret.x = (int)((float)start.x + ((float)(end.x - start.x) * (float)lm->anim.step / (float)lm->anim.parts)) + ret.w / 2;
-	ret.y = (int)((float)start.y + ((float)(end.y - start.y) * (float)lm->anim.step / (float)lm->anim.parts)) - ret.h / 2;
+	ret.x = (int)((float)start.x + ((float)(end.x - start.x) *
+			(float)lm->anim.step / (float)lm->anim.parts)) + ret.w / 2;
+	ret.y = (int)((float)start.y + ((float)(end.y - start.y) *
+			(float)lm->anim.step / (float)lm->anim.parts)) - ret.h / 2;
 	return (ret);
 }
 
@@ -77,13 +91,10 @@ void		lem_sdl_anim_static(t_sdl *lm)
 	SDL_Rect	pos;
 
 	i = 0;
-	SDL_SetRenderDrawColor(lm->renderer, 0x00, 0x00, 0x00, 0x00);
-	SDL_RenderClear(lm->renderer);
-	lem_sdl_loadmap(lm);
-	lem_sdl_renderttext(lm);
+	lem_sdl_draw_background(lm);
 	while (i < lm->anim.ant_all)
 	{
-		if (lm->anim.ants[i].step)
+		if (lm->anim.ants[i].step && (lm->anim.ants[i].step < lm->anim.ants[i].p_len - 1))
 		{
 			frame = lm->anim.ants[i].frame;
 			pos = lm->info->rooms[lm->anim.ants[i].path[lm->anim.ants[i].step]]->pos;

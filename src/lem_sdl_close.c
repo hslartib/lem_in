@@ -19,7 +19,7 @@ int		lem_sdl_close(t_sdl *lm, int ret)
 	i = -1;
 	if (!lm)
 		return (ret);
-	while (++i < NUMBER_OF_FRAMES)
+	while (++i < NUMBER_OF_FRAMES * 2)
 	{
 		if (lm->anim.f_arr[i])
 			SDL_DestroyTexture(lm->anim.f_arr[i]);
@@ -34,5 +34,6 @@ int		lem_sdl_close(t_sdl *lm, int ret)
 	SDL_Quit();
 	if (lm)
 		free(lm);
+	system("pkill afplay");
 	return (ret);
 }

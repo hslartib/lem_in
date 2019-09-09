@@ -13,8 +13,8 @@
 #include "lem_strt.h"
 
 /*
- * enclose in cicle
  * animate by group
+ * ucrain flag
  */
 
 void 	lem_sdl_addcolour(SDL_Color *color, int r, int g, int b, int a)
@@ -30,9 +30,10 @@ void 	lem_sdl_addcolour(SDL_Color *color, int r, int g, int b, int a)
 void	lem_sdl_handle_more_events(SDL_Event e, t_sdl *lm)
 {
 	if (e.key.keysym.sym == SDLK_s)
-		lm->soviet = 1;
-	if (e.key.keysym.sym == SDLK_g)
-		lm->soviet = 0;
+	{
+		lm->soviet = lm->soviet ? 0 : 1;
+		lem_sdl_music(lm);
+	}
 	if (e.key.keysym.sym == SDLK_f)
 		lm->flow = lm->flow ? 0 : 1;
 	if (e.key.keysym.sym == SDLK_m)
@@ -66,6 +67,19 @@ void	lem_sdl_handle_events(SDL_Event e, t_sdl *lm)
 	}
 }
 
+void	lem_sdl_draw_background(t_sdl *lm)
+{
+	SDL_SetRenderDrawColor(lm->renderer, 0x00, 0x00, 0x00, 0x00);
+	SDL_RenderClear(lm->renderer);
+	if (lm->soviet)
+	{
+		SDL_RenderCopy(lm->renderer, lm->s_flag, NULL, NULL);
+	}
+	lem_sdl_loadpath(lm);
+	lem_sdl_loadrooms(lm);
+	lem_sdl_renderttext(lm);
+}
+
 void	lem_sdl_control(t_info *info)
 {
 	t_sdl *lm;
@@ -81,11 +95,8 @@ void	lem_sdl_control(t_info *info)
 			{
 				while (SDL_PollEvent(&lm->event))
 					lem_sdl_handle_events(lm->event, lm);
-				SDL_SetRenderDrawColor(lm->renderer, 0x00, 0x00, 0x00, 0x00);
-				SDL_RenderClear(lm->renderer);
-				lem_sdl_loadmap(lm);
+				lem_sdl_draw_background(lm);
 				lem_sdl_anim_control(lm);
-				lem_sdl_renderttext(lm);
 				SDL_RenderPresent(lm->renderer);
 				if (!lm->anim.step)
 					break ;

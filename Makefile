@@ -46,6 +46,7 @@ OBJ = src/build_path.o \
       src/len_vrtc_and_weight.o \
       src/len_vrtc_den_and_weight_den.o \
       src/output.o \
+      src/lem_sdl_loadres.o
 
 
 all: $(FRAMEDIR) $(FRAME) $(LM)

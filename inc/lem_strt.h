@@ -119,7 +119,7 @@ typedef struct		s_ant
 
 typedef struct 		s_anim
 {
-	SDL_Texture		*f_arr[NUMBER_OF_FRAMES];
+	SDL_Texture		*f_arr[NUMBER_OF_FRAMES * 2];
 	t_ant			*ants;
 	int 			a_width;
 	int 			a_height;
@@ -140,6 +140,7 @@ typedef	struct 		s_sdl
 	SDL_Color		c_room;
 	TTF_Font		*font;
 	SDL_Texture		*text[4];
+	SDL_Texture		*s_flag;
 	t_anim			anim;
 	t_info			*info;
 	int 			flow;
@@ -159,13 +160,17 @@ void				lem_sdl_text_countants(t_sdl *lm);
 void			 	lem_sdl_anim_static(t_sdl *lm);
 void				lem_sdl_control(t_info *info);
 int					lem_sdl_init_main(t_sdl **lm, t_info *info);
-int 				lem_sdl_loadmap(t_sdl *lm);
 int 				lem_sdl_close(t_sdl *lm, int ret);
 void				lem_sdl_addcolour(SDL_Color *c, int r, int g, int b, int a);
 void				lem_sdl_anim_control(t_sdl *lm);
 void				lem_sdl_setroompos(t_sdl *lm);
 int					lem_sdl_init_font(t_sdl *lm);
 void				lem_sdl_renderttext(t_sdl *lm);
+void				lem_sdl_draw_background(t_sdl *lm);
+int					lem_sdl_init_loadanim(t_sdl *tmp);
+void				lem_sdl_loadpath(t_sdl *lm);
+void				lem_sdl_loadrooms(t_sdl *lm);
+void				lem_sdl_music(t_sdl *lm);
 
 /*
 ** info_init related functions

@@ -89,10 +89,3 @@ void		lem_sdl_loadpath(t_sdl *lm)
 		r += 1;
 	}
 }
-
-int			lem_sdl_loadmap(t_sdl *lm)
-{
-	lem_sdl_loadpath(lm);
-	lem_sdl_loadrooms(lm);
-	return (0);
-}

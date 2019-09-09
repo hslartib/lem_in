@@ -102,4 +102,4 @@ add_executable(lem_in
         src/lem_strt.c
         src/len_vrtc_and_weight.c
         src/len_vrtc_den_and_weight_den.c
-        src/output.c)
+        src/output.c src/lem_sdl_loadres.c)

@@ -12,45 +12,6 @@
 
 #include "lem_strt.h"
 
-SDL_Texture		*lem_sdl_init_loadt(t_sdl *tmp, char *path)
-{
-	SDL_Texture *texture;
-	SDL_Surface *surface;
-
-	surface = IMG_Load(path);
-	if (!surface)
-		return (NULL);
-	else
-	{
-		texture = SDL_CreateTextureFromSurface(tmp->renderer, surface);
-		if (!texture)
-			return (NULL);
-		SDL_FreeSurface(surface);
-	}
-	return (texture);
-}
-
-int				lem_sdl_init_loadanim(t_sdl *tmp)
-{
-	if (!(tmp->anim.f_arr[0] = lem_sdl_init_loadt(tmp, "./res/0.png")))
-		return (1);
-	if (!(tmp->anim.f_arr[1] = lem_sdl_init_loadt(tmp, "./res/1.png")))
-		return (1);
-	if (!(tmp->anim.f_arr[2] = lem_sdl_init_loadt(tmp, "./res/2.png")))
-		return (1);
-	if (!(tmp->anim.f_arr[3] = lem_sdl_init_loadt(tmp, "./res/3.png")))
-		return (1);
-	if (!(tmp->anim.f_arr[4] = lem_sdl_init_loadt(tmp, "./res/4.png")))
-		return (1);
-	if (!(tmp->anim.f_arr[5] = lem_sdl_init_loadt(tmp, "./res/5.png")))
-		return (1);
-	if (!(tmp->anim.f_arr[6] = lem_sdl_init_loadt(tmp, "./res/6.png")))
-		return (1);
-	if (!(tmp->anim.f_arr[7] = lem_sdl_init_loadt(tmp, "./res/7.png")))
-		return (1);
-	return (0);
-}
-
 int 			lem_sdl_init_anim_ants(t_anim *anim, t_path *path)
 {
 	int			r;
