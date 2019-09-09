@@ -15,7 +15,7 @@
 void		lem_sdl_music(t_sdl *lm)
 {
 	if (lm->soviet)
-		system("afplay ./src/s_anthem.mp3 &");
+		system("afplay ./res/s_anthem.mp3 &");
 	else
 		system("pkill afplay");
 }
