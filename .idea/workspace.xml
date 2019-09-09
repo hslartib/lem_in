@@ -11,18 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82d04e97-26c3-4a71-b06e-a2c708bf0c9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/lem_sdl_loadres.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/lem_strt.h" beforeDir="false" afterPath="$PROJECT_DIR$/inc/lem_strt.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lem_sdl_animation.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/lem_sdl_animation.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lem_sdl_close.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/lem_sdl_close.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lem_sdl_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/lem_sdl_init.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lem_sdl_loadmap.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/lem_sdl_loadmap.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lem_sdl_main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/lem_sdl_main.c" afterDir="false" />
-    </list>
+    <list default="true" id="82d04e97-26c3-4a71-b06e-a2c708bf0c9a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/lem_sdl_main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+            <state relative-caret-position="200">
+              <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -61,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/src/lem_sdl_close.c">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="80" lean-forward="true" selection-start-column="80" selection-end-column="80" />
+              <caret column="80" selection-start-column="80" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -93,7 +82,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lem_sdl_animation.c">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1380">
@@ -156,10 +145,10 @@
         <option value="$PROJECT_DIR$/src/lem_sdl_loadmap.c" />
         <option value="$PROJECT_DIR$/src/lem_sdl_init.c" />
         <option value="$PROJECT_DIR$/inc/lem_strt.h" />
-        <option value="$PROJECT_DIR$/src/lem_sdl_main.c" />
         <option value="$PROJECT_DIR$/src/lem_sdl_close.c" />
         <option value="$PROJECT_DIR$/src/lem_sdl_loadres.c" />
         <option value="$PROJECT_DIR$/src/lem_sdl_animation.c" />
+        <option value="$PROJECT_DIR$/src/lem_sdl_main.c" />
       </list>
     </option>
   </component>
@@ -293,12 +282,12 @@
       <workItem from="1567843445341" duration="75000" />
       <workItem from="1567843527731" duration="511000" />
       <workItem from="1567854777987" duration="3707000" />
-      <workItem from="1568019795172" duration="8865000" />
+      <workItem from="1568019795172" duration="9129000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150202000" />
+    <option name="totallyTimeSpent" value="150466000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="3200" height="1800" extended-state="0" />
@@ -585,17 +574,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lem_sdl_main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lem_sdl_close.c">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="80" lean-forward="true" selection-start-column="80" selection-end-column="80" />
+          <caret column="80" selection-start-column="80" selection-end-column="80" />
         </state>
       </provider>
     </entry>
@@ -617,6 +599,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1380">
           <caret line="96" column="38" selection-start-line="96" selection-start-column="38" selection-end-line="96" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lem_sdl_main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
         </state>
       </provider>
     </entry>
