@@ -1,6 +1,6 @@
 LM = lem-in
 
-FRAMEDIR = /Users/dbrady/Library/Frameworks
+FRAMEDIR = /Users/$(USER)/Library/Frameworks
 
 INC =	-I ./inc -I ./libft -I ./ \
 		-I $(FRAMEDIR)/SDL2.framework/Versions/A/Headers \
@@ -11,10 +11,10 @@ INC =	-I ./inc -I ./libft -I ./ \
 FRAME =	$(FRAMEDIR)/SDL2.framework $(FRAMEDIR)/SDL2_image.framework \
 		$(FRAMEDIR)/SDL2_mixer.framework $(FRAMEDIR)/SDL2_ttf.framework
 
-FLAGS = -Ofast -Wall -Werror -Wextra -c
+FLAGS = -Ofast -Wall -Werror -Wextra -c -g
 
 FLAGS2 =	-F ~/Library/Frameworks/ -framework SDL2 -framework SDL2_image \
-			-framework SDL2_ttf -framework SDL2_mixer
+			-framework SDL2_ttf -framework SDL2_mixer -g
 
 
 LIB = -L./libft -lft

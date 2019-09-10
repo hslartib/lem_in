@@ -15,14 +15,10 @@
 
 #include "../libft/libft.h"
 #include "math.h"
-#include "/Users/dbrady/Library/Frameworks/SDL2.framework/Versions/A/Headers/SDL.h"
-#include "/Users/dbrady/Library/Frameworks/SDL2_image.framework/Versions/A/Headers/SDL_image.h"
-#include "/Users/dbrady/Library/Frameworks/SDL2_ttf.framework/Versions/A/Headers/SDL_ttf.h"
-#include "/Users/dbrady/Library/Frameworks/SDL2_mixer.framework/Versions/A/Headers/SDL_mixer.h"
-#include "../Frameworks/SDL2_gfx/SDL2_framerate.h"
-#include "../Frameworks/SDL2_gfx/SDL2_gfxPrimitives.h"
-#include "../Frameworks/SDL2_gfx/SDL2_imageFilter.h"
-#include "../Frameworks/SDL2_gfx/SDL2_rotozoom.h"
+#include "SDL.h"
+#include "SDL_image.h"
+#include "SDL_ttf.h"
+#include "SDL_mixer.h"
 
 # define NUMBER_OF_FRAMES	8
 # define F_FRATE			10

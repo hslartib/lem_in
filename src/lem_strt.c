@@ -41,9 +41,7 @@ int					main(int argc, char **argv)
 	if (check_end_start_link(info))
 		output_start_end(info);
 	else if (do_path(info) == -1)
-	{
-		printf("hana");
-	}
+		return (lem_errmsg(info, NO_SOLUTION));
 	else
 		output(info, info->marshroot);
 	cleanup_info(info);

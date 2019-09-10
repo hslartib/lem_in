@@ -27,6 +27,8 @@ int		lem_moreerrmsg(int errcode)
 		write(1, "Error : Map is not well formatted\n", 34);
 	else if (errcode == MAP_INVALID_NAME && ++ret)
 		write(1, "Error : Map contains invalid characters\n", 40);
+	else if (errcode == NO_SOLUTION && ++ret)
+		write(1, "Error : No solution\n", 20);
 	return (ret);
 }
 
