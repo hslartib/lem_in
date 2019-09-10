@@ -68,7 +68,10 @@ int					do_path(t_info *info)
 	{
 		do_path_part_2(info, path, i);
 		if (info->len_path[info->end] == 1000000)
+		{
 			rex = 0;
+			i--;
+		}
 		else
 		{
 			do_path_part_3(info, path, i);
