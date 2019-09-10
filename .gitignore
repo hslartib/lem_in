@@ -1,0 +1,19 @@
+# swap files
+*.swo
+*.swp
+*.swq
+
+# bin
+*.out
+*.bin
+
+# libs
+*.a
+
+
+# obj
+*.o
+
+# cmake
+cmake-build-debug/
+.idea/

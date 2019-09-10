@@ -30,7 +30,8 @@ int					main(int argc, char **argv)
 
 	if (!(info = (t_info *)malloc(sizeof(t_info))))
 		return (0);
-	info_init(info);
+	if (info_init(info) != ALLRIGHT)
+		return (0);
 	set_flags(info, argc, argv);
 	i = 0;
 	while (i < info->count_room)

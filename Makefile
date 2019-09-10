@@ -66,6 +66,7 @@ $(FRAME): $(FRAMEDIR)/%: Frameworks/%
 		cp -R $< $(FRAMEDIR)
 
 clean:
+	rm -rf $(FRAMEDIR)/*
 	Make -C libft clean
 	rm -f $(OBJ)
 

@@ -19,8 +19,8 @@ int		lem_moreerrmsg(int errcode)
 	ret = 0;
 	if (errcode == NO_ROOMS && ++ret)
 		write(1, "Error : No rooms\n", 17);
-	else if (errcode == NO_ANTS && ++ret)
-		write(1, "Error : No ants\n", 16);
+	else if (errcode == WRONG_ANTS && ++ret)
+		write(1, "Error : Invalid number of ants\n", 31);
 	else if (errcode == NO_STARTEND && ++ret)
 		write(1, "Error : No start and/or end rooms\n", 34);
 	else if (errcode == MAP_WRONG_ORDER && ++ret)

@@ -13,12 +13,17 @@
 #ifndef LEM_IN_H
 # define LEM_IN_H
 
+#include <limits.h>
 #include "../libft/libft.h"
-#include "math.h"
+#include <math.h>
 #include "SDL.h"
 #include "SDL_image.h"
 #include "SDL_ttf.h"
 #include "SDL_mixer.h"
+#include "/Users/dbrady/Library/Frameworks/SDL2.framework/Versions/A/Headers/SDL.h"
+#include "/Users/dbrady/Library/Frameworks/SDL2_image.framework/Versions/A/Headers/SDL_image.h"
+#include "/Users/dbrady/Library/Frameworks/SDL2_ttf.framework/Versions/A/Headers/SDL_ttf.h"
+#include "/Users/dbrady/Library/Frameworks/SDL2_mixer.framework/Versions/A/Headers/SDL_mixer.h"
 
 # define NUMBER_OF_FRAMES	8
 # define F_FRATE			10
@@ -31,7 +36,7 @@ enum 				e_errcode
 	ALLRIGHT,
 	ERROR,
 	NO_ROOMS,
-	NO_ANTS,
+	WRONG_ANTS,
 	NO_STARTEND,
 	MULTIPLE_STARTEND,
 	NO_SOLUTION,
@@ -85,7 +90,7 @@ typedef struct		s_room
 typedef struct		s_info
 {
 	int				visual;
-	int				count_ants;
+	long int		count_ants;
 	int				start;
 	int				end;
 	t_room			**rooms;
