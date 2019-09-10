@@ -2,9 +2,9 @@
 for (( i=1; i <= 10; i++ ))
 do
     rm -rf big$i
-    echo "$(./generator --big-superposition)" > big
+    echo "$(./generator --big)" > big
     number1=$(cat big | grep -m 1 "#H" | cut -d' ' -f8)
-    text=$(./lem_in < big)
+    text=$(./lem-in < big)
     number3=$(echo "$text" | grep L | wc -l)
 
     echo задание: $number1 - наш: $number3
