@@ -2,7 +2,7 @@
 for (( i=1; i <= 10; i++ ))
 do
     rm -rf big$i
-    echo "$(./generator --big)" > big
+    echo "$(./generator --big-superposition)" > big
     number1=$(cat big | grep -m 1 "#H" | cut -d' ' -f8)
     text=$(./lem-in < big)
     number3=$(echo "$text" | grep L | wc -l)

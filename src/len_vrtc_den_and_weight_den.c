@@ -59,19 +59,19 @@ void				len_vrtc_den(t_info *info, int index, char *str)
 	while (k < info->time[index]->links_len && index != info->end)
 	{
 		if (info->time[index]->rebuild == -1 &&
-			info->len_path[info->time[index]->links[k]] > info->len_path[index] - 1)
+		info->len_path[info->time[index]->links[k]] > info->len_path[index] - 1)
 			vrtc_den_1(info, index, str, k);
 		else if ((info->time[index]->rebuild == 1 ||
 			!info->time[index]->rebuild) &&
-			info->len_path[info->time[index]->links[k]] > info->len_path[index] + 1)
+		info->len_path[info->time[index]->links[k]] > info->len_path[index] + 1)
 			vrtc_den_2(info, index, str, k);
 		else if (info->time[index]->rebuild == 10)
 		{
 			if (info->time[info->time[index]->links[k]]->rebuild == -1 &&
-				info->len_path[info->time[index]->links[k]] > info->len_path[index])
+			info->len_path[info->time[index]->links[k]] > info->len_path[index])
 				vrtc_den_3(info, index, str, k);
 			else if (info->time[info->time[index]->links[k]]->rebuild != -1 &&
-				info->len_path[info->time[index]->links[k]] > info->len_path[index] + 1)
+		info->len_path[info->time[index]->links[k]] > info->len_path[index] + 1)
 				vrtc_den_4(info, index, str, k);
 		}
 		k++;

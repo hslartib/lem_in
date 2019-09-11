@@ -114,6 +114,5 @@ int		info_init(t_info *info)
 	}
 	if (t == MULTIPLE_STARTEND)
 		return (lem_errmsg(info, MULTIPLE_STARTEND));
-	printf("ants: %ld\n", info->count_ants);
 	return (info_valid(info));
 }

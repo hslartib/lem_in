@@ -36,7 +36,7 @@ void				copy_prepath(t_path **path, int index)
 	{
 		k = 0;
 		path[index]->root[i] = (int *)malloc(sizeof(int)
-												 * path[index - 1]->len_root[i]);
+			* path[index - 1]->len_root[i]);
 		path[index]->len_root[i] = path[index - 1]->len_root[i];
 		while (k < path[index - 1]->len_root[i])
 		{
@@ -56,7 +56,7 @@ void				perdoz(t_info *info, int src, int out, int in)
 		info->time[src] = (t_room *)malloc(sizeof(t_room));
 		info->time[src]->links_len = info->rooms[src]->links_len;
 		info->time[src]->links = (int *)malloc(sizeof(int)
-												   * info->time[src]->links_len);
+			* info->time[src]->links_len);
 		info->time[src]->index = src;
 		info->time[src]->rebuild = 1;
 	}

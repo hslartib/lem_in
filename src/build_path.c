@@ -96,7 +96,7 @@ void				build_path(t_info *info, t_path *path, int index, int lamp)
 	while (k < info->rooms[index]->links_len && index != info->start)
 	{
 		if (info->len_path[index] - 1 ==
-			info->len_path[info->rooms[index]->links[k]] && lamp && !path->check)
+		info->len_path[info->rooms[index]->links[k]] && lamp && !path->check)
 		{
 			l = path->score;
 			build_path(info, path, info->rooms[index]->links[k], 1);

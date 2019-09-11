@@ -32,10 +32,10 @@ void				double_path_do1(t_path *path, int index, int r, t_pos *pos)
 	mas2 = (int *)malloc(sizeof(int) *
 		(pos->pos2[1] + 1 + path->len_root[index] - (pos->pos1[1] + 1)));
 	copy_last(path->root[r], mas1, path->len_root[r] - 1,
-			  pos->pos1[0] + 1 + path->len_root[r] - (pos->pos2[0] + 1) - 1);
+		pos->pos1[0] + 1 + path->len_root[r] - (pos->pos2[0] + 1) - 1);
 	copy_first(path->root[index], mas1, pos->pos1[0] + 1);
 	copy_last(path->root[index], mas2, path->len_root[index] - 1,
-			  pos->pos2[1] + 1 + path->len_root[index] - (pos->pos1[1] + 1) - 1);
+		pos->pos2[1] + 1 + path->len_root[index] - (pos->pos1[1] + 1) - 1);
 	copy_first(path->root[r], mas2, pos->pos2[1] + 1);
 	double_path_do_prt1(path, index, mas1);
 	double_path_do_prt1(path, r, mas2);

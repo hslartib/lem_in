@@ -13,6 +13,21 @@
 #include <sandbox.h>
 #include "../inc/lem_strt.h"
 
+void				umenshaem_do_path1(t_info *info, t_path ***path, int *rex,
+	int *i)
+{
+	*i = 1;
+	*rex = 1;
+	*path = (t_path **)malloc(sizeof(t_path *) *
+		info->rooms[info->start]->links_len);
+}
+
+void				umenshaem_do_path2(int *rex, int *i)
+{
+	*rex = 0;
+	*i = *i - 1;
+}
+
 void				set_flags(t_info *info, int argc, char **argv)
 {
 	int i;

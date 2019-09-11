@@ -17,7 +17,10 @@ int					do_path_part_1(t_info *info, t_path **path)
 	init_path0(path);
 	weight(info);
 	if (info->len_path[info->end] == 1000000)
+	{
+		free_path0(path, info);
 		return (-1);
+	}
 	init_path0_continue(info, path);
 	build_path(info, path[0], info->end, 1);
 	do_count(info, path[0]);
@@ -55,23 +58,14 @@ int					do_path(t_info *info)
 	int			i;
 	int			rex;
 
-	rex = 1;
-	path = (t_path **)malloc(sizeof(t_path *) *
-		info->rooms[info->start]->links_len);
+	umenshaem_do_path1(info, &path, &rex, &i);
 	if (do_path_part_1(info, path) == -1)
-	{
-		free_path0(path, info);
 		return (-1);
-	}
-	i = 1;
 	while (i < info->rooms[info->start]->links_len && rex)
 	{
 		do_path_part_2(info, path, i);
 		if (info->len_path[info->end] == 1000000)
-		{
-			rex = 0;
-			i--;
-		}
+			umenshaem_do_path2(&rex, &i);
 		else
 		{
 			do_path_part_3(info, path, i);

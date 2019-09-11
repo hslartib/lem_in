@@ -47,7 +47,8 @@ void				null_n(int *i1, int *i2, int *i3, int *i4)
 	*i4 = 0;
 }
 
-void				opredel_path(t_info *info, t_path *path, int *puti, int *komnat)
+void				opredel_path(t_info *info, t_path *path, int *puti,
+	int *komnat)
 {
 	t_opredel	n;
 
@@ -75,7 +76,8 @@ void				opredel_path(t_info *info, t_path *path, int *puti, int *komnat)
 	}
 }
 
-void				finish_algo(t_info *info, t_path *path, int *puti, int *komnat)
+void				finish_algo(t_info *info, t_path *path, int *puti,
+	int *komnat)
 {
 	int i;
 

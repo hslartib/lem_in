@@ -73,7 +73,7 @@ void				init_v(t_info *info, int v, int kl)
 	info->time[kl]->index = kl;
 	info->time[kl]->links_len = info->rooms[kl]->links_len - 1;
 	info->time[kl]->links = (int *)malloc(sizeof(int)
-											  * info->time[kl]->links_len);
+		* info->time[kl]->links_len);
 	info->time[kl]->rebuild = 10;
 }
 
