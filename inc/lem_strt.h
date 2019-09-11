@@ -6,7 +6,7 @@
 /*   By: hslartib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/13 12:58:29 by hslartib          #+#    #+#             */
-/*   Updated: 2019/08/13 12:58:31 by hslartib         ###   ########.fr       */
+/*   Updated: 2019/09/11 17:47:24 by hslartib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,6 @@
 #include "SDL_image.h"
 #include "SDL_ttf.h"
 #include "SDL_mixer.h"
-#include "/Users/dbrady/Library/Frameworks/SDL2.framework/Versions/A/Headers/SDL.h"
-#include "/Users/dbrady/Library/Frameworks/SDL2_image.framework/Versions/A/Headers/SDL_image.h"
-#include "/Users/dbrady/Library/Frameworks/SDL2_ttf.framework/Versions/A/Headers/SDL_ttf.h"
-#include "/Users/dbrady/Library/Frameworks/SDL2_mixer.framework/Versions/A/Headers/SDL_mixer.h"
 
 # define NUMBER_OF_FRAMES	8
 # define F_FRATE			10
@@ -245,6 +241,8 @@ void				output(t_info *info, t_path *path);
 int					check_end_start_link(t_info *info);
 void				output_start_end(t_info *info);
 
+void				umenshaem_do_path1(t_info *info, t_path ***path, int *rex, int *i);
+void				umenshaem_do_path2(int *rex, int *i);
 
 void				copy_first(int *src, int *dep, int count);
 void				copy_last(int *src, int *dep, int last_s, int last_d);

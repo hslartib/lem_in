@@ -31,8 +31,8 @@ int					delite_prt1(t_info *info, t_path *path, int coo, int v)
 			info->time[path->root[i][k]]->links[w++] =
 				info->rooms[path->root[i][k]]->links[z];
 			!info->time[info->rooms[path->root[i][k]]->links[z]] ? perdoz(info,
-																		  info->rooms[path->root[i][k]]->links[z], path->root[i][k], v) :
-				perdoz_2(info, info->rooms[path->root[i][k]]->links[z], path->root[i][k], v);
+info->rooms[path->root[i][k]]->links[z], path->root[i][k], v) :
+perdoz_2(info, info->rooms[path->root[i][k]]->links[z], path->root[i][k], v);
 		}
 		z++;
 	}
