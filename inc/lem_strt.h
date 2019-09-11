@@ -20,6 +20,10 @@
 #include "SDL_image.h"
 #include "SDL_ttf.h"
 #include "SDL_mixer.h"
+#include "../Frameworks/SDL2.framework/Versions/A/Headers/SDL.h"
+#include "../Frameworks/SDL2_ttf.framework/Versions/A/Headers/SDL_ttf.h"
+#include "../Frameworks/SDL2_mixer.framework/Versions/A/Headers/SDL_mixer.h"
+#include "../Frameworks/SDL2_image.framework/Versions/A/Headers/SDL_image.h"
 
 # define NUMBER_OF_FRAMES	8
 # define F_FRATE			10
