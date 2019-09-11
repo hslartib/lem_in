@@ -25,10 +25,16 @@ int		lem_moreerrmsg(int errcode)
 		write(1, "Error : No start and/or end rooms\n", 34);
 	else if (errcode == MAP_WRONG_ORDER && ++ret)
 		write(1, "Error : Map is not well formatted\n", 34);
-	else if (errcode == MAP_INVALID_NAME && ++ret)
-		write(1, "Error : Map contains invalid characters\n", 40);
+	else if (errcode == ROOM_INVALID_NAME && ++ret)
+		write(1, "Error : Room name contains invalid characters\n", 46);
 	else if (errcode == NO_SOLUTION && ++ret)
 		write(1, "Error : No solution\n", 20);
+	else if (errcode == START_IS_END && ++ret)
+		write(1, "Error : Same room marked as start/end\n", 38);
+	else if (errcode == NO_LINKS && ++ret)
+		write(1, "Error : No links\n", 17);
+	else if (errcode == EMPTY && ++ret)
+		write(1, "Error : Empty map\n", 18);
 	return (ret);
 }
 
@@ -45,8 +51,6 @@ int		lem_errmsg(t_info *info, int errcode)
 	}
 	else if (errcode == LINK_TO_GHOST)
 		write(1, "Error : linking to a ghost room\n", 32);
-	else if (errcode == NEGATIVE_ANTS)
-		write(1, "Error : negative number of ants\n", 32);
 	if (!cleanup)
 	{
 		cleanup_info(info);

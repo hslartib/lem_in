@@ -1,0 +1,4 @@
+
+room_coord_duplicated(?) -> Error : Room name contains invalid characters(!)
+room_duplicated(?)
+room_name_duplicated

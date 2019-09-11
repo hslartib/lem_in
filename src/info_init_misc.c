@@ -22,6 +22,26 @@ int		rooms_find_name(t_room **rooms, char *name)
 	return (rooms[r] ? r : -1);
 }
 
+static int		info_islink(char *line)
+{
+	char	**tmp;
+	int		i;
+	int 	ret;
+
+	i = 0;
+	if (ft_strstr(line, " "))
+		return (0);
+	tmp = ft_strsplit(line, '-');
+	while (tmp[i])
+		i++;
+	if (i != 2)
+		ret = 0;
+	else
+		ret = 1;
+	ft_strdel_2d(&tmp);
+	return (ret);
+}
+
 int		init_rooms(t_info *info, char **text)
 {
 	int		runner;
@@ -29,15 +49,23 @@ int		init_rooms(t_info *info, char **text)
 
 	runner = next_value(info, text, 0) + 1;
 	len = 0;
-	while (!ft_strstr(text[runner], "-"))
+	while (text[runner] && !info_islink(text[runner]))
 	{
+		if (ft_strstr(text[runner], "-")) {
+			printf("rInit -> line: %s\n", text[runner]);
+			return (lem_errmsg(info, ROOM_INVALID_NAME));
+		}
 		if (text[runner][0] != '#')
 			len += 1;
 		runner += 1;
 	}
+	if (!text[runner] && !len)
+			return (lem_errmsg(info, EMPTY));
+	if (!text[runner])
+		return (lem_errmsg(info, NO_LINKS));
 	info->rooms = (t_room **)malloc(sizeof(t_room *) * (len + 1));
 	ft_bzero(info->rooms, sizeof(t_room *) * (len + 1));
-	return (len);
+	return (len ? ALLRIGHT : lem_errmsg(info, NO_ROOMS));
 }
 
 char	**read_split(void)

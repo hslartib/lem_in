@@ -30,7 +30,8 @@ void	cleanup_info(t_info *info)
 	r = -1;
 	if (info)
 	{
-		if (info->rooms) {
+		if (info->rooms)
+		{
 			while (++r < info->count_room)
 				if (info->rooms[r])
 					cleanup_room(info->rooms[r]);

@@ -98,12 +98,12 @@ int		info_init(t_info *info)
 	info->start = -1;
 	info->end = -1;
 	if (info_checkorder(info))
-		return (MAP_WRONG_ORDER);
-	if (!init_rooms(info, info->input))
-		return (lem_errmsg(info, NO_ROOMS));
+		return (ERROR);
+	if (init_rooms(info, info->input))
+		return (ERROR);
 	t = 0;
 	if ((t = next_value(info, info->input, t)) == -3)
-		return (lem_errmsg(info, MULTIPLE_STARTEND));
+		return (ERROR);
 	info->count_ants = ft_atoi(info->input[t]);
 	while ((t = next_value(info, info->input, t)) >= 0)
 	{
@@ -114,6 +114,5 @@ int		info_init(t_info *info)
 	}
 	if (t == MULTIPLE_STARTEND)
 		return (lem_errmsg(info, MULTIPLE_STARTEND));
-	printf("ants: %ld\n", info->count_ants);
 	return (info_valid(info));
 }

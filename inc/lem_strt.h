@@ -41,10 +41,22 @@ enum 				e_errcode
 	MULTIPLE_STARTEND,
 	NO_SOLUTION,
 	LINK_TO_GHOST,
-	NEGATIVE_ANTS,
 	MAP_WRONG_ORDER,
-	MAP_INVALID_NAME
+	ROOM_INVALID_NAME,
+	START_IS_END,
+	NO_LINKS,
+	EMPTY
 };
+
+typedef struct		s_valid
+{
+	int 			ant;
+	int				room;
+	int				link;
+	int 			runner;
+	int				start;
+	int				end;
+}					t_valid;
 
 typedef struct		s_pos
 {
@@ -183,6 +195,8 @@ int					init_rooms(t_info *info, char **text);
 int					info_valid(t_info *info);
 int					info_checkorder(t_info *info);
 char				**read_split();
+int					check_print(char *line);
+int					check_number(char *line);
 
 /*
 ** finish related functions

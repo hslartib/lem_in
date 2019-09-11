@@ -59,7 +59,7 @@ void	lem_sdl_handle_events(SDL_Event e, t_sdl *lm)
 		else if (e.key.keysym.sym == SDLK_EQUALS)
 			lm->anim.parts += 10;
 		else if (e.key.keysym.sym == SDLK_MINUS)
-			lm->anim.parts >= 100 ? lm->anim.parts -= 10 : 0;
+			lm->anim.parts >= 50 ? lm->anim.parts -= 10 : 0;
 		else
 			lem_sdl_handle_more_events(e, lm);
 		if (lm->anim.step >= lm->anim.parts)
