@@ -35,7 +35,7 @@ SDL_Rect	lem_sdl_anim_getrect(t_sdl *lm, int i)
 	SDL_Rect	start;
 	SDL_Rect	end;
 
-	ant  = &lm->anim.ants[i];
+	ant = &lm->anim.ants[i];
 	if (!ant->visible || ant->visible == -1)
 	{
 		if (ant->visible != -1 && (!lm->anim.step &&
@@ -73,9 +73,9 @@ void		lem_sdl_anim_control(t_sdl *lm)
 		if (pos.w)
 		{
 			lem_sdl_anim_drawframe(lm, pos,
-								   lm->anim.ants[i].frame / F_FRATE);
+					lm->anim.ants[i].frame / F_FRATE);
 			lm->anim.ants[i].frame = (frame >= NUMBER_OF_FRAMES * F_FRATE - 1)
-									 ? 0 : (frame + 1);
+					? 0 : (frame + 1);
 			if (lm->anim.step == lm->anim.parts)
 				lm->anim.ants[i].step += 1;
 		}
@@ -94,20 +94,21 @@ void		lem_sdl_anim_static(t_sdl *lm)
 	lem_sdl_draw_background(lm);
 	while (i < lm->anim.ant_all)
 	{
-		if (lm->anim.ants[i].step && (lm->anim.ants[i].step < lm->anim.ants[i].p_len - 1))
+		if (lm->anim.ants[i].step
+	&& (lm->anim.ants[i].step < lm->anim.ants[i].p_len - 1))
 		{
 			frame = lm->anim.ants[i].frame;
-			pos = lm->info->rooms[lm->anim.ants[i].path[lm->anim.ants[i].step]]->pos;
+			pos =
+		lm->info->rooms[lm->anim.ants[i].path[lm->anim.ants[i].step]]->pos;
 			pos.x += lm->anim.a_width / 2;
 			pos.y -= lm->anim.a_height / 2;
 			pos.w = lm->anim.a_width;
 			pos.h = lm->anim.a_height;
 			lem_sdl_anim_drawframe(lm, pos,
-			   lm->anim.ants[i].frame / F_FRATE);
+		lm->anim.ants[i].frame / F_FRATE);
 			lm->anim.ants[i].frame = (frame >= NUMBER_OF_FRAMES * F_FRATE - 1)
 				? 0 : (frame + 1);
 		}
 		i += 1;
 	}
-	SDL_RenderPresent(lm->renderer);
 }

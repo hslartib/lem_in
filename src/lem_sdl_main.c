@@ -12,19 +12,14 @@
 
 #include "lem_strt.h"
 
-/*
- * animate by group
- * ucrain flag
- */
-
-void 	lem_sdl_addcolour(SDL_Color *color, int r, int g, int b, int a)
+void	lem_sdl_addcolour(SDL_Color *color, SDL_Color c)
 {
-	if (color->r + r < 50 || color->r + r > 240)
+	if (color->r + c.r < 50 || color->r + c.r > 240)
 		return ;
-	color->r += r;
-	color->g += g;
-	color->b += b;
-	color->a += a;
+	color->r += c.r;
+	color->g += c.g;
+	color->b += c.b;
+	color->a += c.a;
 }
 
 void	lem_sdl_handle_more_events(SDL_Event e, t_sdl *lm)
@@ -49,13 +44,13 @@ void	lem_sdl_handle_events(SDL_Event e, t_sdl *lm)
 		if (e.key.keysym.scancode == SDL_SCANCODE_ESCAPE)
 			lm->quit = 1;
 		else if (e.key.keysym.sym == SDLK_LEFTBRACKET)
-			lem_sdl_addcolour(&lm->c_path, -10, -10, -10, -10);
+			lem_sdl_addcolour(&lm->c_path, (SDL_Color){-10, -10, -10, -10});
 		else if (e.key.keysym.sym == SDLK_RIGHTBRACKET)
-			lem_sdl_addcolour(&lm->c_path, 10, 10, 10, 10);
+			lem_sdl_addcolour(&lm->c_path, (SDL_Color){10, 10, 10, 10});
 		else if (e.key.keysym.sym == SDLK_QUOTE)
-			lem_sdl_addcolour(&lm->c_room, -10, -10, -10, -10);
+			lem_sdl_addcolour(&lm->c_room, (SDL_Color){-10, -10, -10, -10});
 		else if (e.key.keysym.sym == SDLK_BACKSLASH)
-			lem_sdl_addcolour(&lm->c_room, 10, 10, 10, 10);
+			lem_sdl_addcolour(&lm->c_room, (SDL_Color){10, 10, 10, 10});
 		else if (e.key.keysym.sym == SDLK_EQUALS)
 			lm->anim.parts += 10;
 		else if (e.key.keysym.sym == SDLK_MINUS)
@@ -98,13 +93,12 @@ void	lem_sdl_control(t_info *info)
 				lem_sdl_draw_background(lm);
 				lem_sdl_anim_control(lm);
 				SDL_RenderPresent(lm->renderer);
-				if (!lm->anim.step)
+				if (!lm->anim.step && !(lm->move = 0))
 					break ;
 			}
-			lm->move = 0;
 		}
 		if (lm->anim.arrived != lm->anim.ant_all)
-			lem_sdl_anim_static(lm);
+			lem_sdl_anims_wrap(lm);
 	}
 	lem_sdl_close(lm, 0);
 }

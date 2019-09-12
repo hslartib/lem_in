@@ -26,7 +26,7 @@ SDL_Rect	lem_sdl_getcoord(t_sdl *lm, int i)
 		rect.h = 90;
 	parts_y = ((lm->w_height - 72) / rect.h) / 2 - 2;
 	rect.x = (i / parts_y) * rect.w * 32 / 19 - rect.w / 2 +
-			(lm->w_width - (lm->info->count_room * rect.w / parts_y * 32 / 19)) / 2;
+	(lm->w_width - (lm->info->count_room * rect.w / parts_y * 32 / 19)) / 2;
 	rect.y = (i % parts_y) * rect.h * 2 +
 			(lm->w_height - (rect.h * parts_y * 2)) / 2;
 	!((i / parts_y) % 2) ? rect.y += rect.h * 2 : 0;

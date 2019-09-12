@@ -37,3 +37,9 @@ int		lem_sdl_close(t_sdl *lm, int ret)
 	system("pkill afplay");
 	return (ret);
 }
+
+void	lem_sdl_anims_wrap(t_sdl *lm)
+{
+	lem_sdl_anim_static(lm);
+	SDL_RenderPresent(lm->renderer);
+}

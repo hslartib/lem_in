@@ -36,6 +36,8 @@ void				set_flags(t_info *info, int argc, char **argv)
 	while (++i < argc)
 		if (!ft_strcmp("-v", argv[i]))
 			info->visual = 1;
+		else if (!ft_strcmp("-s", argv[i]))
+			info->silent = 1;
 }
 
 int					main(int argc, char **argv)

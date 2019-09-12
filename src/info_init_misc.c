@@ -12,7 +12,7 @@
 
 #include "lem_strt.h"
 
-int		rooms_find_name(t_room **rooms, char *name)
+int				rooms_find_name(t_room **rooms, char *name)
 {
 	int r;
 
@@ -26,7 +26,7 @@ static int		info_islink(char *line)
 {
 	char	**tmp;
 	int		i;
-	int 	ret;
+	int		ret;
 
 	i = 0;
 	if (ft_strstr(line, " "))
@@ -42,7 +42,7 @@ static int		info_islink(char *line)
 	return (ret);
 }
 
-int		init_rooms(t_info *info, char **text)
+int				init_rooms(t_info *info, char **text)
 {
 	int		runner;
 	int		len;
@@ -51,16 +51,14 @@ int		init_rooms(t_info *info, char **text)
 	len = 0;
 	while (text[runner] && !info_islink(text[runner]))
 	{
-		if (ft_strstr(text[runner], "-")) {
-			printf("rInit -> line: %s\n", text[runner]);
+		if (ft_strstr(text[runner], "-"))
 			return (lem_errmsg(info, ROOM_INVALID_NAME));
-		}
 		if (text[runner][0] != '#')
 			len += 1;
 		runner += 1;
 	}
 	if (!text[runner] && !len)
-			return (lem_errmsg(info, EMPTY));
+		return (lem_errmsg(info, EMPTY));
 	if (!text[runner])
 		return (lem_errmsg(info, NO_LINKS));
 	info->rooms = (t_room **)malloc(sizeof(t_room *) * (len + 1));
@@ -68,7 +66,7 @@ int		init_rooms(t_info *info, char **text)
 	return (len ? ALLRIGHT : lem_errmsg(info, NO_ROOMS));
 }
 
-char	**read_split(void)
+char			**read_split(void)
 {
 	char	**tmp;
 	int		t;

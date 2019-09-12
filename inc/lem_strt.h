@@ -45,7 +45,8 @@ enum 				e_errcode
 	ROOM_INVALID_NAME,
 	START_IS_END,
 	NO_LINKS,
-	EMPTY
+	EMPTY,
+	DUP_ROOMS
 };
 
 typedef struct		s_valid
@@ -118,6 +119,7 @@ typedef struct		s_info
 	int 			*denied_link_start;
 	int				count_den_link;
 	char			**input;
+	int 			silent;
 	t_path			*sdl_path;
 }					t_info;
 
@@ -174,7 +176,7 @@ void			 	lem_sdl_anim_static(t_sdl *lm);
 void				lem_sdl_control(t_info *info);
 int					lem_sdl_init_main(t_sdl **lm, t_info *info);
 int 				lem_sdl_close(t_sdl *lm, int ret);
-void				lem_sdl_addcolour(SDL_Color *c, int r, int g, int b, int a);
+void				lem_sdl_addcolour(SDL_Color *colour, SDL_Color c);
 void				lem_sdl_anim_control(t_sdl *lm);
 void				lem_sdl_setroompos(t_sdl *lm);
 int					lem_sdl_init_font(t_sdl *lm);
@@ -184,6 +186,7 @@ int					lem_sdl_init_loadanim(t_sdl *tmp);
 void				lem_sdl_loadpath(t_sdl *lm);
 void				lem_sdl_loadrooms(t_sdl *lm);
 void				lem_sdl_music(t_sdl *lm);
+void				lem_sdl_anims_wrap(t_sdl *lm);
 
 /*
 ** info_init related functions

@@ -12,10 +12,10 @@
 
 #include "lem_strt.h"
 
-int 			lem_sdl_init_anim_ants(t_anim *anim, t_path *path)
+int				lem_sdl_init_anim_ants(t_anim *anim, t_path *path)
 {
 	int			r;
-	int 		a;
+	int			a;
 
 	r = 0;
 	a = 0;

@@ -12,21 +12,36 @@
 
 #include "lem_strt.h"
 
-int 	check_number(char *line)
+int		check_number(char *line)
 {
-	char *buff;
+	char	*buff;
+	int		minus;
+	int		plus;
+	int		digit;
 
 	buff = line;
+	minus = 0;
+	plus = 0;
+	digit = 0;
 	while (*line)
 	{
-		if (!ft_isdigit(*line) && *line != '-' && *line != '+')
+		if ((*line == '+' && plus) || (*line == '-' && minus))
 			return (0);
+		else if ((*line == '+' || *line == '-') && digit)
+			return (0);
+		else if (*line == '+' || *line == '-')
+			(*line == '+') ? (plus = 1) :
+			(minus = 1);
+		else if (!ft_isdigit(*line))
+			return (0);
+		else
+			digit = 1;
 		line += 1;
 	}
 	return (buff == line ? 0 : 1);
 }
 
-int 	check_print(char *line)
+int		check_print(char *line)
 {
 	char *buff;
 
@@ -40,6 +55,31 @@ int 	check_print(char *line)
 	return (buff == line ? 0 : 1);
 }
 
+int		check_duplicate(t_info *info)
+{
+	int			i;
+	int			j;
+	t_room		*buff;
+
+	i = 0;
+	j = 0;
+	while (i < info->count_room)
+	{
+		buff = info->rooms[i];
+		while (j < info->count_room)
+		{
+			if (i != j && (!ft_strcmp(buff->name, info->rooms[j]->name) ||
+				(buff->coord_x == info->rooms[j]->coord_x &&
+				buff->coord_y == info->rooms[j]->coord_y)))
+				return (1);
+			j += 1;
+		}
+		i += 1;
+		j = 0;
+	}
+	return (0);
+}
+
 int		info_valid(t_info *info)
 {
 	int error;
@@ -47,11 +87,13 @@ int		info_valid(t_info *info)
 	error = 0;
 	if (!info->count_room && ++error)
 		lem_errmsg(info, NO_ROOMS);
-	if ((info->count_ants <= 0 || info->count_ants > INT_MAX) && ++error)
+	else if ((info->count_ants <= 0 || info->count_ants > INT_MAX) && ++error)
 		lem_errmsg(info, WRONG_ANTS);
-	if ((info->start < 0 || info->end < 0) && ++error)
+	else if ((info->start < 0 || info->end < 0) && ++error)
 		lem_errmsg(info, NO_STARTEND);
-	if (info->start == info->end && ++error)
+	else if (info->start == info->end && ++error)
 		lem_errmsg(info, START_IS_END);
+	else if (check_duplicate(info) && ++error)
+		lem_errmsg(info, DUP_ROOMS);
 	return (error ? ERROR : ALLRIGHT);
 }

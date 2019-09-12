@@ -26,7 +26,7 @@ int		lem_moreerrmsg(int errcode)
 	else if (errcode == MAP_WRONG_ORDER && ++ret)
 		write(1, "Error : Map is not well formatted\n", 34);
 	else if (errcode == ROOM_INVALID_NAME && ++ret)
-		write(1, "Error : Room name contains invalid characters\n", 46);
+		write(1, "Error : Room's name contains invalid characters\n", 48);
 	else if (errcode == NO_SOLUTION && ++ret)
 		write(1, "Error : No solution\n", 20);
 	else if (errcode == START_IS_END && ++ret)
@@ -35,6 +35,8 @@ int		lem_moreerrmsg(int errcode)
 		write(1, "Error : No links\n", 17);
 	else if (errcode == EMPTY && ++ret)
 		write(1, "Error : Empty map\n", 18);
+	else if (errcode == DUP_ROOMS && ++ret)
+		write(1, "Error : Rooms have duplicate names and/or coordinates\n", 54);
 	return (ret);
 }
 
@@ -51,6 +53,8 @@ int		lem_errmsg(t_info *info, int errcode)
 	}
 	else if (errcode == LINK_TO_GHOST)
 		write(1, "Error : linking to a ghost room\n", 32);
+	if (errcode == NO_SOLUTION)
+		write(1, "Error : No solution\n", 20);
 	if (!cleanup)
 	{
 		cleanup_info(info);
