@@ -38,10 +38,9 @@ SDL_Rect	lem_sdl_anim_getrect(t_sdl *lm, int i)
 	ant = &lm->anim.ants[i];
 	if (!ant->visible || ant->visible == -1)
 	{
-		if (ant->visible != -1 && (!lm->anim.step &&
-			(i == 0 || (lm->anim.ants[i - 1].path[0] ==
-			ant->path[0] && lm->anim.ants[i - 1].step > 0)
-			|| (lm->anim.ants[i - 1].path[1] != ant->path[1]))))
+		if (ant->visible != -1 && (!lm->anim.step && (i == 0 ||
+(lm->anim.ants[i - 1].path[0] == ant->path[0] && lm->anim.ants
+[i - 1].step > 0) || (lm->anim.ants[i - 1].path[1] != ant->path[1]))))
 			ant->visible = 1;
 		else
 			return ((SDL_Rect){0, 0, 0, 0});
@@ -56,7 +55,7 @@ SDL_Rect	lem_sdl_anim_getrect(t_sdl *lm, int i)
 			(float)lm->anim.step / (float)lm->anim.parts)) + ret.w / 2;
 	ret.y = (int)((float)start.y + ((float)(end.y - start.y) *
 			(float)lm->anim.step / (float)lm->anim.parts)) - ret.h / 2;
-	return (ret);
+	return ((SDL_Rect){ret.x, ret.y, lm->anim.a_width, lm->anim.a_height});
 }
 
 void		lem_sdl_anim_control(t_sdl *lm)

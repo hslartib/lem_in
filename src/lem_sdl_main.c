@@ -12,14 +12,14 @@
 
 #include "lem_strt.h"
 
-void	lem_sdl_addcolour(SDL_Color *color, SDL_Color c)
+void	lem_sdl_addcolour(SDL_Color *color, SDL_Color c, int sign)
 {
-	if (color->r + c.r < 50 || color->r + c.r > 240)
+	if ((color->r <= 50 && sign < 0) || (color->r >= 240 && sign > 0))
 		return ;
-	color->r += c.r;
-	color->g += c.g;
-	color->b += c.b;
-	color->a += c.a;
+	color->r += c.r * sign;
+	color->g += c.g * sign;
+	color->b += c.b * sign;
+	color->a += c.a * sign;
 }
 
 void	lem_sdl_handle_more_events(SDL_Event e, t_sdl *lm)
@@ -27,6 +27,7 @@ void	lem_sdl_handle_more_events(SDL_Event e, t_sdl *lm)
 	if (e.key.keysym.sym == SDLK_s)
 	{
 		lm->soviet = lm->soviet ? 0 : 1;
+		lm->anim.parts = 61;
 		lem_sdl_music(lm);
 	}
 	if (e.key.keysym.sym == SDLK_f)
@@ -44,13 +45,13 @@ void	lem_sdl_handle_events(SDL_Event e, t_sdl *lm)
 		if (e.key.keysym.scancode == SDL_SCANCODE_ESCAPE)
 			lm->quit = 1;
 		else if (e.key.keysym.sym == SDLK_LEFTBRACKET)
-			lem_sdl_addcolour(&lm->c_path, (SDL_Color){-10, -10, -10, -10});
+			lem_sdl_addcolour(&lm->c_path, (SDL_Color){10, 10, 10, 10}, -1);
 		else if (e.key.keysym.sym == SDLK_RIGHTBRACKET)
-			lem_sdl_addcolour(&lm->c_path, (SDL_Color){10, 10, 10, 10});
+			lem_sdl_addcolour(&lm->c_path, (SDL_Color){10, 10, 10, 10}, 1);
 		else if (e.key.keysym.sym == SDLK_QUOTE)
-			lem_sdl_addcolour(&lm->c_room, (SDL_Color){-10, -10, -10, -10});
+			lem_sdl_addcolour(&lm->c_room, (SDL_Color){10, 10, 10, 10}, -1);
 		else if (e.key.keysym.sym == SDLK_BACKSLASH)
-			lem_sdl_addcolour(&lm->c_room, (SDL_Color){10, 10, 10, 10});
+			lem_sdl_addcolour(&lm->c_room, (SDL_Color){10, 10, 10, 10}, 1);
 		else if (e.key.keysym.sym == SDLK_EQUALS)
 			lm->anim.parts += 10;
 		else if (e.key.keysym.sym == SDLK_MINUS)

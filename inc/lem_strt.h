@@ -176,7 +176,7 @@ void			 	lem_sdl_anim_static(t_sdl *lm);
 void				lem_sdl_control(t_info *info);
 int					lem_sdl_init_main(t_sdl **lm, t_info *info);
 int 				lem_sdl_close(t_sdl *lm, int ret);
-void				lem_sdl_addcolour(SDL_Color *colour, SDL_Color c);
+void				lem_sdl_addcolour(SDL_Color *colour, SDL_Color c, int sign);
 void				lem_sdl_anim_control(t_sdl *lm);
 void				lem_sdl_setroompos(t_sdl *lm);
 int					lem_sdl_init_font(t_sdl *lm);
