@@ -6,7 +6,7 @@
 /*   By: dbrady <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/11 18:52:25 by dbrady            #+#    #+#             */
-/*   Updated: 2019/09/11 18:52:26 by dbrady           ###   ########.fr       */
+/*   Updated: 2019/09/14 14:53:20 by dbrady           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,8 @@ int			info_checkspecial(char *line, char *nextline, t_valid *v, int *find)
 	if (!ft_strcmp(line, "##start"))
 	{
 		if (!v->ant || v->link || v->start
-		|| !nextline || ft_strstr(nextline, "-"))
+		|| !nextline || ft_strstr(nextline, "-") ||
+		(nextline[0] == '#' && nextline[1] == '#'))
 			return (-1);
 		v->start = 1;
 		*find = 1;
@@ -92,7 +93,8 @@ int			info_checkspecial(char *line, char *nextline, t_valid *v, int *find)
 	else if (!ft_strcmp(line, "##end"))
 	{
 		if (!v->ant || v->link || v->end ||
-		!nextline || ft_strstr(nextline, "-"))
+		!nextline || ft_strstr(nextline, "-") ||
+		(nextline[0] == '#' && nextline[1] == '#'))
 			return (-1);
 		v->end = 1;
 		*find = 1;

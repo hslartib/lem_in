@@ -6,29 +6,29 @@
 /*   By: hslartib <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/13 12:58:29 by hslartib          #+#    #+#             */
-/*   Updated: 2019/09/11 17:47:24 by hslartib         ###   ########.fr       */
+/*   Updated: 2019/09/14 15:01:04 by dbrady           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LEM_IN_H
-# define LEM_IN_H
+#ifndef LEM_STRT_H
+# define LEM_STRT_H
 
-#include <limits.h>
-#include "../libft/libft.h"
-#include <math.h>
-#include "SDL.h"
-#include "SDL_image.h"
-#include "SDL_ttf.h"
-#include "SDL_mixer.h"
-#include "../Frameworks/SDL2.framework/Versions/A/Headers/SDL.h"
-#include "../Frameworks/SDL2_ttf.framework/Versions/A/Headers/SDL_ttf.h"
-#include "../Frameworks/SDL2_mixer.framework/Versions/A/Headers/SDL_mixer.h"
-#include "../Frameworks/SDL2_image.framework/Versions/A/Headers/SDL_image.h"
+# include <limits.h>
+# include "../libft/libft.h"
+# include <math.h>
+# include "SDL.h"
+# include "SDL_image.h"
+# include "SDL_ttf.h"
+# include "SDL_mixer.h"
+# include "../Frameworks/SDL2.framework/Versions/A/Headers/SDL.h"
+# include "../Frameworks/SDL2_ttf.framework/Versions/A/Headers/SDL_ttf.h"
+# include "../Frameworks/SDL2_mixer.framework/Versions/A/Headers/SDL_mixer.h"
+# include "../Frameworks/SDL2_image.framework/Versions/A/Headers/SDL_image.h"
 
 # define NUMBER_OF_FRAMES	8
 # define F_FRATE			10
 
-enum 				e_errcode
+enum				e_errcode
 {
 	ALLRIGHT,
 	ERROR,
@@ -48,51 +48,50 @@ enum 				e_errcode
 
 typedef struct		s_valid
 {
-	int 			ant;
+	int				ant;
 	int				room;
 	int				link;
-	int 			runner;
+	int				runner;
 	int				start;
 	int				end;
 }					t_valid;
 
 typedef struct		s_pos
 {
-	int pos1[2];
-	int pos2[2];
+	int				pos1[2];
+	int				pos2[2];
 }					t_pos;
 
-typedef struct	s_opredel
+typedef struct		s_opredel
 {
-	int			i;
-	int			k;
-	int			last;
-	int			end;
-	int			z;
-}				t_opredel;
+	int				i;
+	int				k;
+	int				last;
+	int				end;
+	int				z;
+}					t_opredel;
 
 typedef struct		s_path
 {
 	int				**root;
-	int 			*len_root;
-	int 			*count_ant;
+	int				*len_root;
+	int				*count_ant;
 	int				count_root;
-	int 			itog;
-	int             check;
-	int             score;
-
+	int				itog;
+	int				check;
+	int				score;
 }					t_path;
 
 typedef struct		s_room
 {
 	char			*name;
-	int             index;
-	int 			rebuild;
+	int				index;
+	int				rebuild;
 	int				*links;
-	int 			coord_x;
-	int 			coord_y;
+	int				coord_x;
+	int				coord_y;
 	int				links_len;
-	int 			true_index;
+	int				true_index;
 	char			*all_path;
 	SDL_Rect		pos;
 }					t_room;
@@ -108,12 +107,12 @@ typedef struct		s_info
 	int				*len_path;
 	t_room			**time;
 	int				count_time;
-	char 			*path;
+	char			*path;
 	t_path			*marshroot;
-	int 			count_string;
+	int				count_string;
 	t_room			**dop_rooms;
-	int 			cou_d;
-	int 			*denied_link_start;
+	int				cou_d;
+	int				*denied_link_start;
 	int				count_den_link;
 	char			**input;
 	t_path			*sdl_path;
@@ -121,27 +120,27 @@ typedef struct		s_info
 
 typedef struct		s_ant
 {
-	int 			*path;
-	int 			step;
-	int 			p_len;
-	int 			visible;
-	int 			frame;
+	int				*path;
+	int				step;
+	int				p_len;
+	int				visible;
+	int				frame;
 }					t_ant;
 
-typedef struct 		s_anim
+typedef struct		s_anim
 {
 	SDL_Texture		*f_arr[NUMBER_OF_FRAMES * 2];
 	t_ant			*ants;
-	int 			a_width;
-	int 			a_height;
-	int 			parts;
-	int 			step;
-	int 			ant_all;
-	int 			waiting;
-	int 			arrived;
+	int				a_width;
+	int				a_height;
+	int				parts;
+	int				step;
+	int				ant_all;
+	int				waiting;
+	int				arrived;
 }					t_anim;
 
-typedef	struct 		s_sdl
+typedef	struct		s_sdl
 {
 	SDL_Window		*window;
 	SDL_Renderer	*renderer;
@@ -154,24 +153,23 @@ typedef	struct 		s_sdl
 	SDL_Texture		*s_flag;
 	t_anim			anim;
 	t_info			*info;
-	int 			flow;
-	int 			move;
-	int 			soviet;
-	int 			w_width;
-	int 			w_height;
-	int 			quit;
-	int 			key;
-
+	int				flow;
+	int				move;
+	int				soviet;
+	int				w_width;
+	int				w_height;
+	int				quit;
+	int				key;
 }					t_sdl;
 
 /*
 **	visuals related functions
 */
 void				lem_sdl_text_countants(t_sdl *lm);
-void			 	lem_sdl_anim_static(t_sdl *lm);
+void				lem_sdl_anim_static(t_sdl *lm);
 void				lem_sdl_control(t_info *info);
 int					lem_sdl_init_main(t_sdl **lm, t_info *info);
-int 				lem_sdl_close(t_sdl *lm, int ret);
+int					lem_sdl_close(t_sdl *lm, int ret);
 void				lem_sdl_addcolour(SDL_Color *colour, SDL_Color c, int sign);
 void				lem_sdl_anim_control(t_sdl *lm);
 void				lem_sdl_setroompos(t_sdl *lm);
@@ -202,7 +200,6 @@ int					check_number(char *line);
 */
 void				cleanup_info(t_info *info);
 int					lem_errmsg(t_info *info, int errcode);
-
 
 /*
 **	algo functions
@@ -239,13 +236,16 @@ int					opredel_end(t_path *path, int *puti, int *z, int k);
 void				vivod(t_path *path, int *puti, int *komnat, int i);
 void				vivod2(t_info *info, int i, int index);
 void				null_n(int *i1, int *i2, int *i3, int *i4);
-void				opredel_path(t_info *info, t_path *path, int *puti, int *komnat);
-void				finish_algo(t_info *info, t_path *path, int *puti, int *komnat);
+void				opredel_path
+		(t_info *info, t_path *path, int *puti, int *komnat);
+void				finish_algo
+		(t_info *info, t_path *path, int *puti, int *komnat);
 void				output(t_info *info, t_path *path);
 int					check_end_start_link(t_info *info);
 void				output_start_end(t_info *info);
 
-void				umenshaem_do_path1(t_info *info, t_path ***path, int *rex, int *i);
+void				umenshaem_do_path1
+		(t_info *info, t_path ***path, int *rex, int *i);
 void				umenshaem_do_path2(int *rex, int *i);
 
 void				copy_first(int *src, int *dep, int count);
@@ -269,6 +269,5 @@ int					delite_prt1(t_info *info, t_path *path, int coo, int v);
 void				delite(t_info *info, t_path *path);
 void				clean_del(t_info *info);
 void				free_pathes(t_info *info, t_path **path, int count);
-
 
 #endif
