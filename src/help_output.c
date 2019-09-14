@@ -63,7 +63,7 @@ void				opredel_path(t_info *info, t_path *path, int *puti,
 		{
 			if (komnat[n.i] != -1)
 			{
-				n.i != n.last ? printf(" ") : 0;
+				n.i != n.last ? write(1, " ", 1) : 0;
 				vivod2(info, n.i, path->root[puti[n.i]][komnat[n.i] + 1]);
 				vivod(path, puti, komnat, n.i);
 			}
@@ -72,7 +72,7 @@ void				opredel_path(t_info *info, t_path *path, int *puti,
 		if (n.last == info->count_ants)
 			break ;
 		else
-			printf("\n");
+			write(1, "\n", 1);
 	}
 }
 

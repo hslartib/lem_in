@@ -14,7 +14,10 @@
 
 void				vivod2(t_info *info, int i, int index)
 {
-	printf("L%d-%s", i + 1, info->rooms[index]->name);
+	write(1, "L", 1);
+	ft_putnbr(i + 1);
+	write(1, "-", 1);
+	write(1, info->rooms[index]->name, ft_strlen(info->rooms[index]->name));
 }
 
 void				output(t_info *info, t_path *path)
@@ -53,8 +56,9 @@ void				output_start_end(t_info *info)
 	i = 0;
 	while (i < info->count_ants)
 	{
-		printf("L%d-%d ", i + 1, info->end);
+//		printf("L%d-%d ", i + 1, info->end);
+		vivod2(info, i, info->end);
 		i++;
 	}
-	printf("\n");
+	write(1, "\n", 1);
 }

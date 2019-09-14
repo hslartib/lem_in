@@ -27,8 +27,6 @@ int		lem_moreerrmsg(int errcode)
 		write(1, "Error : Map is not well formatted\n", 34);
 	else if (errcode == ROOM_INVALID_NAME && ++ret)
 		write(1, "Error : Room's name contains invalid characters\n", 48);
-	else if (errcode == NO_SOLUTION && ++ret)
-		write(1, "Error : No solution\n", 20);
 	else if (errcode == START_IS_END && ++ret)
 		write(1, "Error : Same room marked as start/end\n", 38);
 	else if (errcode == NO_LINKS && ++ret)
