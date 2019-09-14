@@ -28,9 +28,6 @@
 # define NUMBER_OF_FRAMES	8
 # define F_FRATE			10
 
-# define ABS_MINUS(a, b)	((a >= b) ? (a - b) : (b - a))
-# define ABS(x)				((x >= 0) ? x : -x)
-
 enum 				e_errcode
 {
 	ALLRIGHT,
@@ -119,7 +116,6 @@ typedef struct		s_info
 	int 			*denied_link_start;
 	int				count_den_link;
 	char			**input;
-	int 			silent;
 	t_path			*sdl_path;
 }					t_info;
 

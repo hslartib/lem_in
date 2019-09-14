@@ -49,8 +49,6 @@ SDL_Rect	lem_sdl_anim_getrect(t_sdl *lm, int i)
 		return ((SDL_Rect){0, 0, 0, 0});
 	start = lm->info->rooms[ant->path[ant->step]]->pos;
 	end = lm->info->rooms[ant->path[ant->step + 1]]->pos;
-	ret.w = lm->anim.a_width;
-	ret.h = lm->anim.a_height;
 	ret.x = (int)((float)start.x + ((float)(end.x - start.x) *
 			(float)lm->anim.step / (float)lm->anim.parts)) + ret.w / 2;
 	ret.y = (int)((float)start.y + ((float)(end.y - start.y) *

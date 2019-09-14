@@ -14,31 +14,31 @@
 
 SDL_Rect	lem_sdl_getcoord(t_sdl *lm, int i)
 {
-	SDL_Rect	rect;
+	SDL_Rect	r;
 	double		side;
 	int			parts_y;
 
 	side = (sqrt(((lm->w_height - 320) * (lm->w_width - 180))
 			/ lm->info->count_room) + 1) / 2;
-	rect.w = side * lm->w_width / lm->w_height;
-	rect.h = side * lm->w_height / lm->w_width;
-	if ((rect.w > 160 || rect.h > 90) && (rect.w = 160))
-		rect.h = 90;
-	parts_y = ((lm->w_height - 320) / rect.h) / 2 - 2;
-	rect.x = (i / parts_y) * rect.w * 32 / 19 - rect.w / 2 +
-	(lm->w_width - (lm->info->count_room * rect.w / parts_y * 32 / 19)) / 2;
-	rect.y = (i % parts_y) * rect.h * 2 +
-			(lm->w_height - (rect.h * parts_y * 2)) / 2;
-	!((i / parts_y) % 2) ? rect.y += rect.h * 2 : 0;
-	!(i % 2) ? rect.x += rect.w / 2 : 0;
-	if ((rect.w > 72 || rect.h > 40) && (rect.w = 72))
-		rect.h = 40;
+	r.w = side * lm->w_width / lm->w_height;
+	r.h = side * lm->w_height / lm->w_width;
+	if ((r.w > 160 || r.h > 90) && (r.w = 160))
+		r.h = 90;
+	parts_y = ((lm->w_height - 320) / r.h) / 2 - 2;
+	r.x = (i / parts_y) * r.w * 32 / 19 - r.w / 2 +
+	(lm->w_width - (lm->info->count_room * r.w / parts_y * 32 / 19)) / 2;
+	r.y = (i % parts_y) * r.h * 2 +
+			(lm->w_height - (r.h * parts_y * 2)) / 2;
+	!((i / parts_y) % 2) ? r.y += r.h * 2 : 0;
+	!(i % 2) ? r.x += r.w / 2 : 0;
+	if ((r.w > 72 || r.h > 40) && (r.w = 72))
+		r.h = 40;
 	if (i == lm->info->start || i == lm->info->end)
 	{
-		rect.x = (lm->w_width / 2) - (rect.w / 2);
-		rect.y = (i == lm->info->start) ? (rect.w) : (lm->w_height - rect.w * 3 / 2);
+		r.x = (lm->w_width / 2) - (r.w / 2);
+		r.y = (i == lm->info->start) ? (r.w) : (lm->w_height - r.w * 3 / 2);
 	}
-	return (rect);
+	return (r);
 }
 
 void		lem_sdl_setroompos(t_sdl *lm)

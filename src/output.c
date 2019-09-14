@@ -56,7 +56,6 @@ void				output_start_end(t_info *info)
 	i = 0;
 	while (i < info->count_ants)
 	{
-//		printf("L%d-%d ", i + 1, info->end);
 		vivod2(info, i, info->end);
 		i++;
 	}
