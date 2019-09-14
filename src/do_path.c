@@ -47,7 +47,7 @@ void				free_path0(t_path **path, t_info *info)
 {
 	free(path[0]);
 	free(path[0]->root);
-	free(path[0]->len_root);
+//	free(path[0]->len_root);
 	free(path);
 	free(info->len_path);
 }
