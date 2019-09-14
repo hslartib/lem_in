@@ -241,6 +241,7 @@ void				len_vrtc(t_info *info, int nbr);
 void				weight(t_info *info);
 int					opredel_end(t_path *path, int *puti, int *z, int k);
 void				vivod(t_path *path, int *puti, int *komnat, int i);
+void				vivod2(t_info *info, int i, int index);
 void				null_n(int *i1, int *i2, int *i3, int *i4);
 void				opredel_path(t_info *info, t_path *path, int *puti, int *komnat);
 void				finish_algo(t_info *info, t_path *path, int *puti, int *komnat);

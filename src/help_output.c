@@ -35,7 +35,6 @@ int					opredel_end(t_path *path, int *puti, int *z, int k)
 void				vivod(t_path *path, int *puti, int *komnat, int i)
 {
 	komnat[i]++;
-	printf("L%d-%d", i + 1, path->root[puti[i]][komnat[i]]);
 	komnat[i] == path->len_root[puti[i]] - 1 ? komnat[i] = -1 : 0;
 }
 
@@ -65,6 +64,7 @@ void				opredel_path(t_info *info, t_path *path, int *puti,
 			if (komnat[n.i] != -1)
 			{
 				n.i != n.last ? printf(" ") : 0;
+				vivod2(info, n.i, path->root[puti[n.i]][komnat[n.i] + 1]);
 				vivod(path, puti, komnat, n.i);
 			}
 			n.i++;

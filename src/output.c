@@ -12,6 +12,11 @@
 
 #include "../inc/lem_strt.h"
 
+void				vivod2(t_info *info, int i, int index)
+{
+	printf("L%d-%s", i + 1, info->rooms[index]->name);
+}
+
 void				output(t_info *info, t_path *path)
 {
 	int			i;
